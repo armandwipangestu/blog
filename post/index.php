@@ -92,13 +92,11 @@ $parsedown = new Parsedown();
   <!-- End Navbar -->
 
   <div class="container">
-    <div class="row">
-      <div class="col-lg-3 mt-4">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-9 mt-4">
         <label for="search" class="form-label"><i class="fas fa-search"></i> Search</label>
         <input type="text" class="form-control search" placeholder="Masukan keyword pencarian">
-      </div>
-      <div class="col-lg-9 mt-4">
-        <div class="container-post">
+        <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
             <div class="card mb-3 rounded">
               <?php if (pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
