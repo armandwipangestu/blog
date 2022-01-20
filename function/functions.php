@@ -76,7 +76,7 @@ function daftar($data)
   return mysqli_affected_rows($conn);
 }
 
-function gambar($path)
+function gambar($path, $gambar_lama)
 {
   $nama_file = $_FILES["gambar"]["name"];
   $type_file = $_FILES["gambar"]["type"];
@@ -84,11 +84,17 @@ function gambar($path)
   $error = $_FILES["gambar"]["error"];
   $tmp_file = $_FILES["gambar"]["tmp_name"];
 
-  //var_dump($error);
-  //die;
+  #var_dump($error);
+  #die;
 
   if ($error == 4) {
-    return 'default.png';
+  #  return 'default.png';
+  #  return $gambar_lama;
+    if($gambar_lama) {
+      return $gambar_lama;
+    } else {
+      return 'default.png';
+    }
   }
 
   $daftar_gambar = ["jpg", "jpeg", "png", "svg"];
@@ -167,7 +173,7 @@ function tambahPost($data)
   $tags = htmlspecialchars($data['tags']);
   $konten = $data['konten'];
   $path = "../../assets/img/post/";
-  $gambar = gambar($path);
+  $gambar = gambar($path, false);
   $tanggal_dibuat = tanggal_indonesia(date('Y-m-d'));
 
   if (!$gambar) {
@@ -205,7 +211,7 @@ function ubahPost($data)
   $path = "../assets/img/post/";
   $tanggal_diubah = tanggal_indonesia(date('Y-m-d'));
 
-  $gambar = gambar($path);
+  $gambar = gambar($path, $gambar_lama);
   //var_dump($gambar);
   //die;
 
@@ -226,14 +232,19 @@ function ubahPost($data)
   //   unlink($path . $gambar_lama);
   // }
 
-  if ($gambar == "default.png" && $gambar_lama == "default.png") {
-    $gambar == "default.png";
+  #if ($gambar_lama == "default.png") {
+  #  $gambar == "default.png";
     //} 
     //else if ($gambar_lama == "default.png") {
     //$gambar == "default.png";
-  } else if ($gambar_lama != $gambar && $gambar_lama != "default.png") {
+  #} else if ($gambar_lama != $gambar && $gambar_lama != "default.png") {
+    #unlink($path . $gambar_lama);
+  #}
+
+  if ($gambar_lama != "default.png") {
     unlink($path . $gambar_lama);
   }
+  
 
   $query = "UPDATE post SET
     judul = '$judul',

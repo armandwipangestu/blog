@@ -25,6 +25,7 @@ if (isset($_POST['preview'])) {
 if (isset($_POST['ubah'])) {
   #var_dump($_POST);
   #var_dump($_FILES['gambar']['type']);
+  #var_dump($_FILES);
   #die;
 
   if (ubahPost($_POST) > 0) {
