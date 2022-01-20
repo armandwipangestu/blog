@@ -169,7 +169,7 @@ if (isset($_POST['upload'])) {
         <div class="container mt-4">
           <?php if (isset($preview)) : ?>
             <?= $parsedown->text($preview['judul']); ?>
-            <?= $parsedown->text('<span class="btn btn-dark tag" style="border-radius: 10px;"><i class="fas fa-tag me-1"></i> ' . $preview['tags'] . '</span>'); ?>
+            <?= $parsedown->text('<span class="btn btn-light tag"><i class="fas fa-tag me-1"></i> ' . $preview['tags'] . '</span>'); ?>
             <?= $parsedown->text($preview['konten']); ?>
           <?php endif; ?>
         </div>

@@ -141,7 +141,7 @@ $parsedown = new Parsedown();
             Terakhir Diedit: <?= $data['tanggal_diubah']; ?>
           <?php endif; ?>
         </p>
-        <?= $parsedown->text('<span class="btn btn-dark tag"><i class="fas fa-tag me-1"></i> ' . $data['tag'] . '</span>'); ?>
+        <?= $parsedown->text('<span class="btn btn-light tag"><i class="fas fa-tag me-1"></i> ' . $data['tag'] . '</span>'); ?>
         <?php if (isset($_SESSION["login"])) : ?>
           <div class="action mb-3">
             <a class="btn btn-danger hapus" data-id="<?= $data["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>
