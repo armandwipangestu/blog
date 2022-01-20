@@ -2,7 +2,7 @@
     .switch {
       position: relative;
       display: inline-block;
-      width: 60px;
+      width: 70px;
       height: 34px;
     }
 
@@ -21,7 +21,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #000;
+      background-image: url("../img/navbar/sun.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-color: #fff;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -33,13 +36,19 @@
       width: 26px;
       left: 4px;
       bottom: 4px;
+      /* background-image: url("../img/navbar/moon.svg");
+      background-repeat: no-repeat;
+      background-position: left; */
       background-color: #6c757d;
       -webkit-transition: .4s;
       transition: .4s;
     }
 
     input:checked+.slider {
-      background-color: #fff;
+      background-image: url("../img/navbar/moon.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-color: #000;
       /* background-color: #6c757d; */
     }
 
@@ -50,7 +59,7 @@
     input:checked+.slider:before {
       -webkit-transform: translateX(26px);
       -ms-transform: translateX(26px);
-      transform: translateX(26px);
+      transform: translateX(35px);
     }
 
     /* Rounded sliders */
