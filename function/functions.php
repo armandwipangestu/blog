@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Jakarta');
 
 function koneksi()
 {
-  return mysqli_connect("localhost", "username", "password", "db_blog");
+  return mysqli_connect("localhost", "root", "roottoor", "blog");
 }
 
 function query($query)
