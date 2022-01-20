@@ -65,7 +65,7 @@ if (isset($_POST["submit"])) {
   </style>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -105,64 +105,69 @@ if (isset($_POST["submit"])) {
           </div>
       </div>
     </div>
-    </div>
   </nav>
   <!-- End Navbar -->
 
 
-  <div class="container mt-5">
-    <h1 class="text-center"><i class="fas fa-cog"></i> Pengaturan</h1>
-    <div class="container">
-      <form class="ubah" onsubmit="return submitForm(this);" action="" method="post" enctype="multipart/form-data">
-        <fieldset disabled>
-          <div class="row d-flex align-items-center justify-content-center mt-5">
-            <div class="col-md-6">
-              <div class="input-group">
-                <input type="hidden" name="id" id="id" class="form-control" value="<?= $u["id"]; ?>">
-              </div>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-5 mt-5">
 
-              <div class="mt-2">
-                <label for="username" class="form-label text-secondary mb-2"><i class="fas fa-user"></i> Username</label>
-                <input type="text" name="username" id="username" class="form-control" autofocus value="<?= $u["username"]; ?>" required>
-              </div>
+        <h1 class="text-center mb-4">
+          <i class="fas fa-cog"></i> Pengaturan
+        </h1>
 
-              <div class="mt-4">
-                <label for="passwordverify" class="form-label text-secondary"><i class="fas fa-lock"></i> Verifikasi Password</label>
-                <input type="hidden" name="password" id="password" class="form-control" value="<?= $u["password"]; ?>">
-                <input type="password" name="passwordverify" id="passwordverify" class="form-control" placeholder="Verifikas Password">
-              </div>
+        <form class="ubah" onsubmit="return submitForm(this);" action="" method="post" enctype="multipart/form-data">
+          <fieldset disabled>
 
+            <div class="input-group">
+              <input type="hidden" name="id" id="id" class="form-control" value="<?= $u["id"]; ?>">
             </div>
+
+            <div class="mt-2">
+              <label for="username" class="form-label text-secondary mb-2"><i class="fas fa-user"></i> Username</label>
+              <input type="text" name="username" id="username" class="form-control" autofocus value="<?= $u["username"]; ?>" required>
+            </div>
+
+            <div class="mt-4">
+              <label for="passwordverify" class="form-label text-secondary"><i class="fas fa-lock"></i> Verifikasi Password</label>
+              <input type="hidden" name="password" id="password" class="form-control" value="<?= $u["password"]; ?>">
+              <input type="password" name="passwordverify" id="passwordverify" class="form-control" placeholder="Verifikas Password">
+            </div>
+
+          </fieldset>
+
+          <div class="container mt-5 text-end">
+            <button type="submit" name="submit" value="submit" class="btn btn-warning newButton mb-15 text-dark" style="display: none;">
+              <i class="fas fa-save"></i> Save
+            </button>
           </div>
-        </fieldset>
-        <div class="container mt-3 text-end">
-          <button type="submit" name="submit" value="submit" class="btn btn-warning newButton mb-15 text-dark" style="display: none;">
-            <i class="fas fa-save"></i> Save
-          </button>
+
+        </form>
+
+        <div class="container mt-3 text-end mb-5">
+          <div class="button">
+
+            <button class="btn btn-primary">
+              <a class="text-white toggle-btn" onclick="showNewButton()"><i class="fas fa-user-edit"></i> Ubah</a>
+            </button>
+
+            <button class="btn btn-danger">
+              <a href="resetpass.php?id=<?= $u["id"]; ?>" class="text-white toggle-btn"><i class="fas fa-lock"></i> Reset Password</a>
+            </button>
+
+            <button class="btn btn-danger hapus" id="hapus" data-hapus="<?= $u["id"]; ?>" data-username="<?= $u["username"]; ?>" style="display: none;">
+              <i class="fas fa-trash"></i> Hapus
+            </button>
+
+            <button class="btn btn-success">
+              <a href="../index.php" class="text-white"><i class="fas fa-sign-in-alt"></i> Kembali</a>
+            </button>
+
+          </div>
         </div>
-      </form>
-    </div>
-    <div class="container mt-3 text-end mb-5">
-      <div class="button">
-        <button class="btn btn-primary">
-          <a class="text-white toggle-btn" onclick="showNewButton()"><i class="fas fa-user-edit"></i> Ubah</a>
-        </button>
-
-        <button class="btn btn-danger">
-          <a href="resetpass.php?id=<?= $u["id"]; ?>" class="text-white toggle-btn"><i class="fas fa-lock"></i> Reset Password</a>
-        </button>
-
-        <button class="btn btn-danger hapus" id="hapus" data-hapus="<?= $u["id"]; ?>" data-username="<?= $u["username"]; ?>" style="display: none;">
-          <i class="fas fa-trash"></i> Hapus
-        </button>
-
-        <button class="btn btn-success">
-          <a href="../index.php" class="text-white"><i class="fas fa-sign-in-alt"></i> Kembali</a>
-        </button>
       </div>
     </div>
-  </div>
-
   </div>
 
   <script src="../assets/js/highlight/highlight.min.js"></script>

@@ -65,7 +65,7 @@ if (isset($_POST["submit"])) {
   </style>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -105,51 +105,55 @@ if (isset($_POST["submit"])) {
           </div>
       </div>
     </div>
-    </div>
   </nav>
   <!-- End Navbar -->
 
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-5 mt-5">
 
-  <div class="container mt-5">
-    <h1 class="text-center"><i class="fas fa-cog"></i> Reset Password</h1>
-    <div class="container">
-      <form class="ubah" onsubmit="return submitForm(this);" action="" method="post" enctype="multipart/form-data">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
-            <div class="input-group">
-              <input type="hidden" name="id" id="id" class="form-control" value="<?= $u["id"]; ?>">
-            </div>
+        <h1 class="text-center mb-4">
+          <i class="fas fa-cog"></i> Reset Password
+        </h1>
 
-            <div class="mt-4">
-              <label for="passwordlama" class="form-label text-secondary"><i class="fas fa-lock"></i> Password Lama</label>
-              <input type="hidden" name="password" id="password" class="form-control" value="<?= $u["password"]; ?>">
-              <input type="password" name="passwordlama" id="passwordlama" class="form-control">
-            </div>
+        <form class="ubah" onsubmit="return submitForm(this);" action="" method="post" enctype="multipart/form-data">
+          <div class="input-group">
+            <input type="hidden" name="id" id="id" class="form-control" value="<?= $u["id"]; ?>">
+          </div>
 
-            <div class="mt-4">
-              <label for="passwordbaru" class="form-label text-secondary"><i class="fas fa-user-lock"></i> Password Baru</label>
-              <input type="password" name="passwordbaru" id="passwordbaru" class="form-control">
-            </div>
+          <div class="mt-4">
+            <label for="passwordlama" class="form-label text-secondary"><i class="fas fa-lock"></i> Password Lama</label>
+            <input type="hidden" name="password" id="password" class="form-control" value="<?= $u["password"]; ?>">
+            <input type="password" name="passwordlama" id="passwordlama" class="form-control">
+          </div>
 
-            <div class="mt-4">
-              <label for="konfirmasipassword" class="form-label text-secondary"><i class="fas fa-user-lock"></i> Konfirmasi Password Baru</label>
-              <input type="password" name="konfirmasipassword" id="konfirmasipassword" class="form-control">
-            </div>
+          <div class="mt-4">
+            <label for="passwordbaru" class="form-label text-secondary"><i class="fas fa-user-lock"></i> Password Baru</label>
+            <input type="password" name="passwordbaru" id="passwordbaru" class="form-control">
+          </div>
+
+          <div class="mt-4">
+            <label for="konfirmasipassword" class="form-label text-secondary"><i class="fas fa-user-lock"></i> Konfirmasi Password Baru</label>
+            <input type="password" name="konfirmasipassword" id="konfirmasipassword" class="form-control">
+          </div>
+
+          <div class="container mt-5 text-center mb-5">
+
+            <button type="submit" name="submit" value="submit" class="btn btn-danger mb-15">
+              Reset Password <i class="fas fa-save"></i>
+            </button>
+
+            <button class="btn btn-success">
+              <a href="index.php?id=<?= $u["id"]; ?>" class="text-white">
+                Kembali <i class="fas fa-sign-in-alt"></i>
+              </a>
+            </button>
 
           </div>
-        </div>
-        <div class="container mt-3 text-end mb-5">
-          <button type="submit" name="submit" value="submit" class="btn btn-danger mb-15">
-            Reset Password <i class="fas fa-save"></i>
-          </button>
-          <button class="btn btn-success">
-            <a href="index.php?id=<?= $u["id"]; ?>" class="text-white">Kembali <i class="fas fa-sign-in-alt"></i></a>
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-
   </div>
 
   <script src="../assets/js/highlight/highlight.min.js"></script>

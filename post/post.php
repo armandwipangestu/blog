@@ -72,7 +72,7 @@ $parsedown = new Parsedown();
   <title><?= getName(); ?> - <?= $parsedown->text($data['judul']); ?></title>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -117,24 +117,22 @@ $parsedown = new Parsedown();
   <!-- End Navbar -->
 
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-md-center">
       <div class="col-lg-9 mt-5">
-        <div class="mb-3">
-          <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
-            <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
-              <div class="ratio ratio-16x9">
-                <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
-                <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid bg-light" alt="<?= $data['thumbnail']; ?>">
-              </div>
-            </a>
-          <?php endif; ?>
-          <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg") : ?>
-            <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
-            <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
+        <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
+          <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
+            <div class="ratio ratio-16x9">
+              <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
               <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid bg-light" alt="<?= $data['thumbnail']; ?>">
-            </a>
-          <?php endif; ?>
-        </div>
+            </div>
+          </a>
+        <?php endif; ?>
+        <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg") : ?>
+          <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
+          <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
+            <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid bg-light" alt="<?= $data['thumbnail']; ?>">
+          </a>
+        <?php endif; ?>
         <?= $parsedown->text($data['judul']); ?>
         <p class="text-muted">
           Postingan Dibuat: <?= $data['tanggal_dibuat']; ?>

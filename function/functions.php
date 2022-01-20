@@ -85,7 +85,7 @@ function gambar($path, $gambar_lama)
   $tmp_file = $_FILES["gambar"]["tmp_name"];
 
   if ($error == 4) {
-    if($gambar_lama) {
+    if ($gambar_lama) {
       return $gambar_lama;
     } else {
       return 'default.png';
@@ -244,7 +244,7 @@ function ubahUser($data)
     $query = "UPDATE admin SET
             username = '$username'
             WHERE id = '$id'
-  ";
+    ";
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn) or die(mysqli_error($conn));
@@ -333,7 +333,7 @@ function cari($keyword)
             WHERE
             judul LIKE '%$keyword%' OR
             tag LIKE '%$keyword%'
-           ";
+  ";
 
   $result = mysqli_query($conn, $query);
   $rows = [];
