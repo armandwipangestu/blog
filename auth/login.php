@@ -59,35 +59,41 @@ if (isset($_POST['login'])) {
   <!-- End Navbar -->
 
   <!-- Start Form Login -->
-  <div class="container form">
-    <div class="p-4 bg-dark text-white about mb-5" style="border-radius: 15px; margin-top: 5rem !important;">
-      <h1 class="text-center">Login Administrator</h1>
-      <?php if (isset($login['error'])) : ?>
-        <div class="text-center mt-4 text-danger">
-          <i class="fas fa-exclamation-triangle">
-            <span><?= $login['pesan']; ?></span>
-          </i>
-        </div>
-      <?php endif; ?>
-      <form method="post">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
-            <div class="text-secondary">
-              <div class="mt-4 mb-3">
-                <label class="form-label"><i class="fas fa-user"></i> Username</label>
-                <input type="text" class="form-control" name="username" autofocus autocomplete="off" required>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-7 mt-2 mb-5">
+        <div class="container form">
+          <div class="p-4 bg-dark text-white about mb-5" style="border-radius: 15px; margin-top: 5rem !important;">
+            <h2 class="text-center">Login Administrator</h2>
+            <?php if (isset($login['error'])) : ?>
+              <div class="text-center mt-4 text-danger">
+                <i class="fas fa-exclamation-triangle">
+                  <span><?= $login['pesan']; ?></span>
+                </i>
               </div>
-              <div class="mb-3">
-                <label class="form-label"><i class="fas fa-lock"></i> Password</label>
-                <input type="password" class="form-control" name="password" required>
+            <?php endif; ?>
+            <form method="post">
+              <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6">
+                  <div class="text-secondary">
+                    <div class="mt-4 mb-3">
+                      <label class="form-label"><i class="fas fa-user"></i> Username</label>
+                      <input type="text" class="form-control" name="username" autofocus autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label"><i class="fas fa-lock"></i> Password</label>
+                      <input type="password" class="form-control" name="password" required>
+                    </div>
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-success" name="login">Login <i class="fas fa-sign-out-alt"></i></button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text-end">
-                <button type="submit" class="btn btn-light" name="login"><i class="fas fa-sign-out-alt"></i> Login</button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
   <!-- End Form Login -->

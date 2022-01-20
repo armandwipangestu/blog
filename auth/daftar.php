@@ -10,8 +10,7 @@ require_once '../function/functions.php';
 require_once '../function/constant.php';
 
 if (isset($_POST['daftar'])) {
-  // $daftar = daftar($_POST);
-  // var_dump($daftar);
+
   if (daftar($_POST) > 0) {
     $success = [
       'success' => true,
@@ -22,7 +21,6 @@ if (isset($_POST['daftar'])) {
       'error' => true,
       'pesan' => 'Username sudah di gunakan'
     ];
-    // header("Location: daftar.php");
   }
 }
 
@@ -88,44 +86,50 @@ if (isset($_POST['daftar'])) {
   <!-- End Navbar -->
 
   <!-- Start Form Daftar -->
-  <div class="container form">
-    <div class="p-4 mt-4 bg-dark text-white about mb-5" style="border-radius: 15px; margin-top: 5rem !important;">
-      <h1 class="text-center">Tambah Admin Baru</h1>
-      <?php if (isset($error['error'])) : ?>
-        <div class="text-center mt-4 text-danger">
-          <i class="fas fa-exclamation-triangle">
-            <span><?= $error['pesan']; ?></span>
-          </i>
-        </div>
-      <?php endif; ?>
-      <?php if (isset($success['success'])) : ?>
-        <div class="text-center mt-4 text-success">
-          <i class="fas fa-exclamation-triangle">
-            <span><?= $success['pesan']; ?></span>
-          </i>
-        </div>
-      <?php endif; ?>
-      <form method="post">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-7 mt-2 mb-5">
+        <div class="container form">
+          <div class="p-4 mt-4 bg-dark text-white about mb-5" style="border-radius: 15px; margin-top: 5rem !important;">
+            <h2 class="text-center">Tambah Admin Baru</h2>
+            <?php if (isset($error['error'])) : ?>
+              <div class="text-center mt-4 text-danger">
+                <i class="fas fa-exclamation-triangle">
+                  <span><?= $error['pesan']; ?></span>
+                </i>
+              </div>
+            <?php endif; ?>
+            <?php if (isset($success['success'])) : ?>
+              <div class="text-center mt-4 text-success">
+                <i class="fas fa-exclamation-triangle">
+                  <span><?= $success['pesan']; ?></span>
+                </i>
+              </div>
+            <?php endif; ?>
+            <form method="post">
+              <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6">
 
-            <div class="mt-2 mb-3">
-              <label for="username" class="form-label text-secondary mb-2"><i class="fas fa-user"></i> Username</label>
-              <input type="text" name="username" id="username" class="form-control" autofocus value="<?= $u["username"]; ?>" required>
-            </div>
+                  <div class="mt-2 mb-3">
+                    <label for="username" class="form-label text-secondary mb-2"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" name="username" id="username" class="form-control" autofocus value="<?= $u["username"]; ?>" required>
+                  </div>
 
-            <div class="mb-3">
-              <label class="form-label text-secondary"><i class="fas fa-lock"></i> Password</label>
-              <input type="password" class="form-control" name="password" required>
-            </div>
+                  <div class="mb-3">
+                    <label class="form-label text-secondary"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                  </div>
 
-            <div class="text-end">
-              <button type="submit" class="btn btn-light" name="daftar"><i class="fas fa-sign-out-alt"></i> Daftar</button>
-            </div>
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-success" name="daftar">Daftar <i class="fas fa-sign-out-alt"></i></button>
+                  </div>
 
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
   <!-- End Form Daftar -->
