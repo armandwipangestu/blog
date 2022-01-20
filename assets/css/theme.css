@@ -24,7 +24,7 @@
       background-image: url("../img/navbar/sun.svg");
       background-repeat: no-repeat;
       background-position: right;
-      background-color: #fff;
+      background-color: #4D4D4D;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -36,20 +36,18 @@
       width: 26px;
       left: 4px;
       bottom: 4px;
-      /* background-image: url("../img/navbar/moon.svg");
-      background-repeat: no-repeat;
-      background-position: left; */
-      background-color: #6c757d;
+      background-color: #fff;
       -webkit-transition: .4s;
       transition: .4s;
     }
 
     input:checked+.slider {
-      background-image: url("../img/navbar/moon.svg");
+      background-image: url("../img/navbar/moon.svg"); 
       background-repeat: no-repeat;
       background-position: left;
-      background-color: #000;
-      /* background-color: #6c757d; */
+      background-color: #4D4D4D;
+      -webkit-transition: .4s;
+      transition: .4s;
     }
 
     input:focus+.slider {
@@ -57,8 +55,8 @@
     }
 
     input:checked+.slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
+      -webkit-transform: translateX(35px);
+      -ms-transform: translateX(35px);
       transform: translateX(35px);
     }
 
