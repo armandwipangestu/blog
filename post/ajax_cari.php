@@ -29,6 +29,7 @@ $data = cari($_GET["keyword"]);
       </a>
       <p class="text-muted">
         Postingan Dibuat: <?= $d['tanggal_dibuat']; ?>
+        <br>
         <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
           Terakhir Diedit: <?= $d['tanggal_diubah']; ?>
         <?php endif; ?>
