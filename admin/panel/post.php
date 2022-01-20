@@ -65,7 +65,7 @@ if (isset($_POST['upload'])) {
   <title><?= getName(); ?> - Membuat Postingan</title>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

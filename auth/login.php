@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
   <title><?= getName(); ?> - Login</title>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

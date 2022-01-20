@@ -21,7 +21,7 @@ require_once 'function/constant.php';
   <title><?= getName(); ?> - Home</title>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -72,9 +72,9 @@ require_once 'function/constant.php';
     <div class="p-5 mt-4 bg-dark text-white about mb-5">
       <div class="row">
         <div class="col-lg-6">
-        <a href="assets/img/me/me.png" target="_blank">
-          <img src="assets/img/me/me.png" alt="Me" class="img-fluid rounded-circle avatar">
-        </a>
+          <a href="assets/img/me/me.png" target="_blank">
+            <img src="assets/img/me/me.png" alt="Me" class="img-fluid rounded-circle avatar">
+          </a>
         </div>
         <div class="col-lg-6 mt-5">
           <h4 class="about-text custom-font">

@@ -41,7 +41,7 @@ if (isset($_POST['daftar'])) {
   <title><?= getName(); ?> - Daftar</title>
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-dark text-white">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
