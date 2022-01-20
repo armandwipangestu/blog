@@ -27,10 +27,12 @@ $data = cari($_GET["keyword"]);
       <a href="post.php?id=<?= $d['id']; ?>" class="link text-white">
         <h5 class="card-title"><?= $d['judul']; ?></h5>
       </a>
-      <p class="text-muted">Postingan Dibuat: <?= $d['tanggal_dibuat']; ?></p>
-      <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
-        <p class="text-muted">Terakhir Diedit: <?= $d['tanggal_diubah']; ?></p>
-      <?php endif; ?>
+      <p class="text-muted">
+        Postingan Dibuat: <?= $d['tanggal_dibuat']; ?>
+        <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
+          Terakhir Diedit: <?= $d['tanggal_diubah']; ?>
+        <?php endif; ?>
+      </p>
       <a href="post.php?id=<?= $d['id']; ?>">
         <?= '<span class="btn btn-light"><i class="fas fa-tag me-1"></i> ' . $d['tag'] . '</span>'; ?>
       </a>
