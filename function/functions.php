@@ -84,12 +84,7 @@ function gambar($path, $gambar_lama)
   $error = $_FILES["gambar"]["error"];
   $tmp_file = $_FILES["gambar"]["tmp_name"];
 
-  #var_dump($error);
-  #die;
-
   if ($error == 4) {
-  #  return 'default.png';
-  #  return $gambar_lama;
     if($gambar_lama) {
       return $gambar_lama;
     } else {
@@ -199,8 +194,6 @@ function cekPerubahan($data)
 
 function ubahPost($data)
 {
-  // var_dump($data);
-  // die;
   $conn = koneksi();
 
   $id = $data['id'];
@@ -212,39 +205,14 @@ function ubahPost($data)
   $tanggal_diubah = tanggal_indonesia(date('Y-m-d'));
 
   $gambar = gambar($path, $gambar_lama);
-  //var_dump($gambar);
-  //die;
 
   if (!$gambar) {
     return false;
   }
 
-  // if ($gambar == "default.png") {
-  //   // $gambar = $gambar_lama;
-  //   $gambar = "default.png";
-  // }
-
-  // // if ($gambar_lama == "default.png") {
-  // //   $gambar = "default.png";
-  // // }
-  // else if ($gambar_lama != $gambar && $gambar_lama != "default.png") {
-  //   // unlink('img/mahasiswa/' . $gambar_lama);
-  //   unlink($path . $gambar_lama);
-  // }
-
-  #if ($gambar_lama == "default.png") {
-  #  $gambar == "default.png";
-    //} 
-    //else if ($gambar_lama == "default.png") {
-    //$gambar == "default.png";
-  #} else if ($gambar_lama != $gambar && $gambar_lama != "default.png") {
-    #unlink($path . $gambar_lama);
-  #}
-
   if ($gambar_lama != "default.png") {
     unlink($path . $gambar_lama);
   }
-  
 
   $query = "UPDATE post SET
     judul = '$judul',
@@ -268,11 +236,8 @@ function ubahUser($data)
   $username = htmlspecialchars($data["username"]);
   $password = htmlspecialchars($data["password"]);
   $password_verify = htmlspecialchars($data["passwordverify"]);
-  // $password_baru = htmlspecialchars($data["passwordbaru"]);
-  // $password_baru_verify = htmlspecialchars($data["konfirmasipassword"]);
 
   if (password_verify($password_verify, $password)) {
-    // $password = password_hash($password_baru, PASSWORD_DEFAULT);
 
     $query = "UPDATE admin SET
             username = '$username'
@@ -290,14 +255,6 @@ function ubahUser($data)
     return false;
   }
 
-  // if ($password_baru !== $password_baru_verify) {
-  //   echo "
-  //   <script>
-  //     alert('konfirmasi password salah');
-  //   </script>
-  // ";
-  //   return false;
-  // }
 }
 
 function resetpass($data)
@@ -356,7 +313,6 @@ function hapusPost($id)
 {
   $conn = koneksi();
 
-  // menghapus gambar di folder image
   $data = query("SELECT * FROM post WHERE id = '$id'");
   if ($data["thumbnail"] != "default.png") {
 
