@@ -211,7 +211,9 @@ function ubahPost($data)
   }
 
   if ($gambar_lama != "default.png") {
-    unlink($path . $gambar_lama);
+    if ($gambar_lama != $gambar && $gambar != '') {
+      unlink($path . $gambar_lama);
+    }
   }
 
   $query = "UPDATE post SET
