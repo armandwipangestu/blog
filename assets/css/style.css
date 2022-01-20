@@ -1,0 +1,117 @@
+/* Navbar */
+.navbar-brand {
+  margin-top: 2px;
+  font-size: 23px;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  margin-top: 3rem;
+}
+
+.jumbotron .about {
+  border-radius: 15px;
+}
+
+.jumbotron .about-text {
+  text-align: center;
+}
+
+.jumbotron .contact a {
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+/* .jumbotron .contact a:hover {
+  color: white !important;
+  border-bottom: 3px solid white;
+} */
+
+/* Start Panel Admin */
+/* End Panel Admin */
+
+/* Utility */
+
+
+.tombol {
+  border-radius: 40px;
+}
+
+/* Start Desktop Responsive */
+@media (min-width: 992px) {
+
+  .nav-link {
+    margin-right: 20px;
+  }
+
+  .nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid white;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+  .tombol {
+    border-radius: 5px;
+  }
+
+  .avatar {
+    width: 70%;
+  }
+
+  .jumbotron .about-text {
+    text-align: start;
+  }
+
+  .jumbotron .contact {
+    margin-top: 2rem;
+  }
+
+  /* Start Form Login */
+
+  /* End Form Login */
+
+  /* Start Panel Admin */
+  .admin {
+    border-radius: 15px !important;
+  }
+  /* End Panel Admin */
+
+}
+/* End Desktop Responsive */
+
+
+/* Highlight JS Number */
+/* for block of numbers */
+.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: gray;
+  /* border-right: 0.5px solid gray; */
+  vertical-align: top;
+  padding-right: 5px;
+
+  /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+  padding-left: 10px;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
