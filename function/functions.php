@@ -200,6 +200,7 @@ function ubahPost($data)
   $judul = htmlspecialchars($data['judul']);
   $tags = htmlspecialchars($data['tags']);
   $konten = $data['konten'];
+  $konten_escape = mysqli_real_escape_string($conn, $konten);
   $gambar_lama = htmlspecialchars($data["gambar_lama"]);
   $path = "../assets/img/post/";
   $tanggal_diubah = tanggal_indonesia(date('Y-m-d'));
@@ -219,7 +220,7 @@ function ubahPost($data)
   $query = "UPDATE post SET
     judul = '$judul',
     tag = '$tags',
-    konten = '$konten',
+    konten = '$konten_escape',
     thumbnail = '$gambar',
     tanggal_diubah = '$tanggal_diubah'
     WHERE id = '$id'
