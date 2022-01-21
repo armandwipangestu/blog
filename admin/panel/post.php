@@ -124,12 +124,21 @@ if (isset($_POST['upload'])) {
             <div class="konten mb-4">
               <label class="form-label"><i class="fas fa-book"></i> Konten</label>
               <textarea class="form-control bg-dark text-white" rows="35" placeholder="Something Text here . . ." name="konten"><?= $preview['konten']; ?></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk konten (isi) pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk konten (isi) pada postingan
+                <br>
+                * Note Penulisan untuk gambar (hapus tanda petik dua setelah <): <br>
+                  <"a href="..." target="_blank">
+                    <br>
+                    <"img src="..." alt="..." class="img-fluid rounded mx-auto d-block" "/>
+                    <br>
+                  <" /a>
+              </div>
             </div>
             <div class="gambar mb-4">
               <label class="form-label"><i class="fas fa-image"></i> Thumbnail</label>
-              <img src="../../assets/img/post/default.png" width="120" class="img-preview mb-5">
-              <input class="form-control bg-dark text-white mt-3" type="file" name="gambar" style="border: none;" value="<?= $_FILES["gambar"]; ?>">
+              <img src="../../assets/img/post/default.png" class="img-preview img-fluid rounded">
+              <input class="form-control gambar-preview bg-dark text-white mt-3" type="file" name="gambar" style="border: none;" value="<?= $_FILES["gambar"]; ?>" onchange="previewImage()">
             </div>
             <div class="button text-end">
               <button type="submit" class="btn btn-primary" name="preview"><i class="fas fa-eye"></i> Preview</button>
@@ -153,13 +162,12 @@ if (isset($_POST['upload'])) {
               <div class="form-text fst-italic">
                 * Digunakan untuk konten (isi) pada postingan
                 <br>
-                * Note Penulisan untuk gambar (hapus tanda petik dua setelah <):
-                <br>
+                * Note Penulisan untuk gambar (hapus tanda petik dua setelah <): <br>
                   <"a href="..." target="_blank">
                     <br>
                     <"img src="..." alt="..." class="img-fluid rounded mx-auto d-block" "/>
                     <br>
-                  <"/a>
+                  <" /a>
               </div>
             </div>
             <div class="gambar mb-4">
@@ -167,7 +175,7 @@ if (isset($_POST['upload'])) {
               <a href="../../assets/img/post/default.png" target="_blank">
                 <img src="../../assets/img/post/default.png" class="img-preview img-fluid rounded">
               </a>
-              <input class="form-control bg-dark text-white mt-3" type="file" name="gambar" style="border: none;">
+              <input class="form-control bg-dark text-white mt-3 gambar-preview" type="file" name="gambar" style="border: none;" onchange="previewImage()">
             </div>
             <div class="button text-end">
               <button type="submit" class="btn btn-primary" name="preview"><i class="fas fa-eye"></i> Preview</button>
@@ -208,6 +216,7 @@ if (isset($_POST['upload'])) {
   <script src="../../assets/js/script.js"></script>
   <script src="../../assets/js/sweetalert/sweetalert2.all.min.js"></script>
   <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/previewimage.js"></script>
   <script>
     function submitForm() {
       return confirm('Apakah anda yakin?');
