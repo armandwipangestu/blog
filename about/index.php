@@ -84,7 +84,7 @@ require_once '../function/constant.php';
       <div class="col-lg-7 mt-4">
         <div class="mt-4">
           <a href="../assets/img/me/me.png" target="_blank">
-            <img src="../assets/img/me/me.png" width="200px" class="rounded mx-auto d-block mb-5" />
+            <img src="../assets/img/me/me.png" width="290px" class="rounded mx-auto d-block mb-5 img-fluid" />
           </a>
           <h2 class="text-center">About Me</h2>
           <p class="mt-4 text-center">Computer Science, Network Technician, Linux Enthusiast</p>
