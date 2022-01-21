@@ -133,7 +133,9 @@ $parsedown = new Parsedown();
             <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid bg-light" alt="<?= $data['thumbnail']; ?>">
           </a>
         <?php endif; ?>
-        <?= $parsedown->text($data['judul']); ?>
+        <div class="mt-4">
+          <?= $parsedown->text($data['judul']); ?>
+        </div>
         <p class="text-muted">
           Postingan Dibuat: <?= $data['tanggal_dibuat']; ?>
           <br>
