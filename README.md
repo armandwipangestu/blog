@@ -18,6 +18,12 @@ mkdir blog/assets/img/post
 chmod 777 blog/assets/img/post 
 ```
 
+- Ubah query koneksi terhadap mysql pada file `function/functions.php`
+
+```php
+return mysqli_connect("localhost", "username", "password", "db_for_blog");
+```
+
 ### Demo Website
 
 [demo.xshin.tech](http://demo.xshin.tech)
