@@ -114,7 +114,7 @@ function gambar($path, $gambar_lama)
     return false;
   }
 
-  if ($ukuran_file > 5000000) {
+  if ($ukuran_file > 20000000) {
     echo "
       <script>
         alert('ukuran gambar terlalu besar!');
