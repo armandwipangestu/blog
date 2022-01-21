@@ -18,6 +18,13 @@ mkdir blog/assets/img/post
 chmod 777 blog/assets/img/post 
 ```
 
+- Import SQL File
+
+```sql
+Upload file demo_blog.sql ke dalam database melalui phpmyadmin
+
+```
+
 - Ubah query koneksi terhadap mysql pada file `function/functions.php`
 
 ```php
