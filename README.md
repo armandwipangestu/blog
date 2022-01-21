@@ -21,7 +21,7 @@ chmod 777 blog/assets/img/post
 - Ubah query koneksi terhadap mysql pada file `function/functions.php`
 
 ```php
-return mysqli_connect("localhost", "username", "password", "db_for_blog");
+return mysqli_connect("localhost", "username", "password", "demo_blog");
 ```
 
 ### Demo Website
