@@ -67,23 +67,14 @@ require_once '../function/constant.php';
 
   <!-- Start Panel -->
   <div class="container">
-    <div class="row p-3 mt-5 text-white">
-      <div class="col-lg bg-dark rounded me-3 mb-3">
+    <div class="row p-3 mt-5 text-white justify-content-md-center">
+      <div class="col-lg-7 bg-dark rounded me-3 mb-3">
         <div class="m-4">
           <h2><i class="fas fa-calendar-plus"></i> Buat Post</h2>
           <p class="text-muted">
             Membuat Postingan Blog baru
           </p>
           <a href="panel/post.php" class="btn btn-primary"><i class="fas fa-plus"></i> Buat Post</a>
-        </div>
-      </div>
-      <div class="col-lg bg-dark rounded me-3 mb-3">
-        <div class="m-4">
-          <h2><i class="fas fa-bookmark"></i> Buat Note</h2>
-          <p class="text-muted">
-            Membuat Note baru
-          </p>
-          <a href="#" class="btn btn-primary" id="errorAlert"><i class="fas fa-plus"></i> Buat Note</a>
         </div>
       </div>
     </div>
