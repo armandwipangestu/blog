@@ -78,8 +78,7 @@ if (isset($_POST["submit"])) {
         <ul class="nav navbar-nav ms-auto w-100 justify-content-end me-5">
           <a class="nav-link" aria-current="page" href="../index.php"><i class="fas fa-home"></i> Home</a>
           <a class="nav-link" href="../post/index.php"><i class="fas fa-book"></i> Blog</a>
-          <a class="nav-link" href="#" id="errorAlert"><i class="fas fa-bookmark"></i> Note</a>
-          <a class="nav-link" href="#" id="errorAlert"><i class="fas fa-address-card"></i> About</a>
+          <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
               <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>

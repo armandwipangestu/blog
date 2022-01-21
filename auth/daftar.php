@@ -54,8 +54,7 @@ if (isset($_POST['daftar'])) {
         <ul class="nav navbar-nav ms-auto w-100 justify-content-end me-5">
           <a class="nav-link" aria-current="page" href="../index.php"><i class="fas fa-home"></i> Home</a>
           <a class="nav-link" href="../post/index.php"><i class="fas fa-book"></i> Blog</a>
-          <a class="nav-link" href="#" id="errorAlert"><i class="fas fa-bookmark"></i> Note</a>
-          <a class="nav-link" href="#" id="errorAlert"><i class="fas fa-address-card"></i> About</a>
+          <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
               <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
@@ -66,7 +65,11 @@ if (isset($_POST['daftar'])) {
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="logout.php" id="logout"><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
+                <li>
+                <a class="dropdown-item logout" href="#" id="logout" data-id="<?= $_SESSION["id"]; ?>"><i class="fas fa-sign-out-alt"></i> 
+                    Keluar
+                  </a>
+                </li>
               </ul>
             </li>
           <?php endif; ?>
@@ -141,6 +144,25 @@ if (isset($_POST['daftar'])) {
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
   <script src="../assets/js/theme.js"></script>
+  <script>
+    const logout = document.querySelector(".logout");
+    logout.addEventListener("click", function() {
+
+      Swal.fire({
+        icon: 'warning',
+        title: 'Apakah anda yakin ingin keluar',
+        showCancelButton: true,
+        confirmButtonColor: '#d9534f',
+        cancelButtonColor: '#5cb85c',
+        confirmButtonText: `Ya`,
+        cancelButtonText: `Tidak`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = `../auth/logout.php`;
+        }
+      })
+    });
+  </script>
 </body>
 
 </html>
