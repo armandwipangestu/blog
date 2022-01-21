@@ -164,7 +164,9 @@ if (isset($_POST['upload'])) {
             </div>
             <div class="gambar mb-4">
               <label class="form-label"><i class="fas fa-image"></i> Thumbnail</label><br>
-              <img src="../../assets/img/post/default.png" class="img-preview img-fluid rounded">
+              <a href="../../assets/img/post/default.png" target="_blank">
+                <img src="../../assets/img/post/default.png" class="img-preview img-fluid rounded">
+              </a>
               <input class="form-control bg-dark text-white mt-3" type="file" name="gambar" style="border: none;">
             </div>
             <div class="button text-end">

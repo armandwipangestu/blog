@@ -179,7 +179,9 @@ if (isset($_POST['ubah'])) {
             </div>
             <div class="gambar mb-4">
               <label class="form-label"><i class="fas fa-image"></i> Thumbnail</label><br>
-              <img src="../assets/img/post/<?= $data["thumbnail"]; ?>" class="img-preview mb-3 img-fluid rounded">
+              <a href="../assets/img/post/<?= $data["thumbnail"]; ?>" target="_blank">
+                <img src="../assets/img/post/<?= $data["thumbnail"]; ?>" class="img-preview mb-3 img-fluid rounded">
+              </a>
               <input class="form-control" type="hidden" name="gambar_lama" value="<?= $data["thumbnail"]; ?>">
               <input class="form-control bg-dark text-white mt-3" type="file" name="gambar" style="border: none;" onchange="previewImage()">
             </div>
