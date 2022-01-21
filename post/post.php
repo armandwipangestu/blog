@@ -118,7 +118,7 @@ $parsedown = new Parsedown();
 
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-lg-9 mt-5">
+      <div class="col-lg-7 mt-5">
         <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
           <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
             <div class="ratio ratio-16x9">

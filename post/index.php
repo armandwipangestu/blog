@@ -93,7 +93,7 @@ $parsedown = new Parsedown();
 
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-lg-9 mt-4">
+      <div class="col-lg-7 mt-4">
         <label for="search" class="form-label"><i class="fas fa-search"></i> Search</label>
         <input type="text" class="form-control search" placeholder="Masukan keyword pencarian">
         <div class="container-post mt-4">
