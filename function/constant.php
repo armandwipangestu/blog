@@ -11,7 +11,7 @@ function getLink($value)
   $LIST_LINK = [
     "https://t.me/armandwipangestu",
     "https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A",
-    "https://github.com/nihsx",
+    "https://github.com/armandwipangestu",
     "armandwi.pangestu7@gmail.com"
   ];
 
