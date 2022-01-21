@@ -43,8 +43,7 @@ if (isset($_POST['login'])) {
         <div class="navbar-nav ms-auto w-100 justify-content-end me-5">
           <a class="nav-link" aria-current="page" href="../index.php"><i class="fas fa-home"></i> Home</a>
           <a class="nav-link" href="../post/index.php"><i class="fas fa-book"></i> Blog</a>
-          <a class="nav-link" href="#" id="errorAlert"><i class="fas fa-bookmark"></i> Note</a>
-          <a class="nav-link" href="#" id="errorAlert"><i class="fas fa-address-card"></i> About</a>
+          <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <a class="btn btn-light tombol" href="#"><i class="fas fa-user"></i> Login Admin</a>
           <div class="text-center ms-3 mt-1">
             <label class="switch">
