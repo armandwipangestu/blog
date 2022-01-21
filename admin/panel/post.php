@@ -150,11 +150,21 @@ if (isset($_POST['upload'])) {
             <div class="konten mb-4">
               <label class="form-label"><i class="fas fa-book"></i> Konten</label>
               <textarea class="form-control bg-dark text-white" rows="35" placeholder="Something Text here . . ." name="konten"></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk konten (isi) pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk konten (isi) pada postingan
+                <br>
+                * Note Penulisan untuk gambar (hapus tanda petik dua setelah <):
+                <br>
+                  <"a href="..." target="_blank">
+                    <br>
+                    <"img src="..." alt="..." class="img-fluid rounded mx-auto d-block" "/>
+                    <br>
+                  <"/a>
+              </div>
             </div>
             <div class="gambar mb-4">
               <label class="form-label"><i class="fas fa-image"></i> Thumbnail</label><br>
-              <img src="../../assets/img/post/default.png" width="120" class="img-preview">
+              <img src="../../assets/img/post/default.png" class="img-preview img-fluid rounded">
               <input class="form-control bg-dark text-white mt-3" type="file" name="gambar" style="border: none;">
             </div>
             <div class="button text-end">

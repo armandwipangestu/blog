@@ -158,16 +158,28 @@ if (isset($_POST['ubah'])) {
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
               <textarea type="text" class="form-control bg-dark text-white" name="tags"><?= $data['tag']; ?></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk tag pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk tag pada postingan
+              </div>
             </div>
             <div class="konten mb-4">
               <label class="form-label"><i class="fas fa-book"></i> Konten</label>
               <textarea class="form-control bg-dark text-white" rows="35" placeholder="Something Text here . . ." name="konten"><?= $data['konten']; ?></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk konten (isi) pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk konten (isi) pada postingan
+                <br>
+                * Note Penulisan untuk gambar (hapus tanda petik dua setelah <):
+                <br>
+                  <"a href="..." target="_blank">
+                    <br>
+                    <"img src="..." alt="..." class="img-fluid rounded mx-auto d-block" "/>
+                    <br>
+                  <"/a>
+              </div>
             </div>
             <div class="gambar mb-4">
               <label class="form-label"><i class="fas fa-image"></i> Thumbnail</label><br>
-              <img src="../assets/img/post/<?= $data["thumbnail"]; ?>" width="120" class="img-preview mb-3">
+              <img src="../assets/img/post/<?= $data["thumbnail"]; ?>" class="img-preview mb-3 img-fluid rounded">
               <input class="form-control" type="hidden" name="gambar_lama" value="<?= $data["thumbnail"]; ?>">
               <input class="form-control bg-dark text-white mt-3" type="file" name="gambar" style="border: none;" onchange="previewImage()">
             </div>
