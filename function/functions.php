@@ -167,6 +167,7 @@ function tambahPost($data)
   $judul = htmlspecialchars($data['judul']);
   $tags = htmlspecialchars($data['tags']);
   $konten = $data['konten'];
+  $konten_escape = mysqli_real_escape_string($conn, $konten);
   $path = "../../assets/img/post/";
   $gambar = gambar($path, false);
   $tanggal_dibuat = tanggal_indonesia(date('Y-m-d'));
@@ -176,7 +177,7 @@ function tambahPost($data)
   }
 
   $query = "INSERT INTO post
-    VALUES (NULL, '$judul', '$tags', '$konten', '$gambar', '$tanggal_dibuat', '')
+    VALUES (NULL, '$judul', '$tags', '$konten_escape', '$gambar', '$tanggal_dibuat', '')
   ";
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));
