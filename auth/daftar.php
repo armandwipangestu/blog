@@ -39,6 +39,7 @@ if (isset($_POST['daftar'])) {
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <title><?= getName(); ?> - Daftar</title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">
@@ -115,7 +116,7 @@ if (isset($_POST['daftar'])) {
 
                   <div class="mt-2 mb-3">
                     <label for="username" class="form-label text-secondary mb-2"><i class="fas fa-user"></i> Username</label>
-                    <input type="text" name="username" id="username" class="form-control" autofocus value="<?= $u["username"]; ?>" required>
+                    <input type="text" name="username" id="username" class="form-control" autofocus required>
                   </div>
 
                   <div class="mb-3">

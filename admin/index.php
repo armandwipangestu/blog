@@ -24,6 +24,7 @@ require_once '../function/constant.php';
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <title><?= getName(); ?> - Post</title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">

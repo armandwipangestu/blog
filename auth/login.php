@@ -28,6 +28,7 @@ if (isset($_POST['login'])) {
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <title><?= getName(); ?> - Login</title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">
