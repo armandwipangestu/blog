@@ -69,7 +69,7 @@ $parsedown = new Parsedown();
       border-radius: 5px;
     }
   </style>
-  <title><?= getName(); ?> - <?= $parsedown->text($data['judul']); ?></title>
+  <title><?= getName(); ?> - <?= $data['judul']; ?></title> 
   <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
@@ -134,7 +134,9 @@ $parsedown = new Parsedown();
           </a>
         <?php endif; ?>
         <div class="mt-4">
-          <?= $parsedown->text($data['judul']); ?>
+          <h3>
+            <?= $parsedown->text($data['judul']); ?>
+          </h3>
         </div>
         <p class="text-muted">
           Postingan Dibuat: <?= $data['tanggal_dibuat']; ?>
