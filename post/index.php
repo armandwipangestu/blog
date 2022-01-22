@@ -95,7 +95,7 @@ $parsedown = new Parsedown();
     <div class="row justify-content-md-center">
       <div class="col-lg-7 mt-4">
         <label for="search" class="form-label"><i class="fas fa-search"></i> Search</label>
-        <input type="text" class="form-control search" placeholder="Masukan keyword pencarian">
+        <input type="text" class="form-control search" placeholder="Masukan keyword pencarian" style="border-radius: 20px;">
         <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
             <div class="card mb-3 rounded">

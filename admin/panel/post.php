@@ -107,14 +107,18 @@ if (isset($_POST['upload'])) {
   <!-- Start Form Tambah Post -->
   <div class="container mt-2 p-5">
     <div class="row">
-      <div class="col-lg me-5">
+      <div class="col-lg me-5 mb-5">
         <h4><i class="fab fa-markdown"></i> Markdown</h4>
         <form onsubmit="return submitForm(this);" action="" class="mt-4" method="POST" enctype="multipart/form-data">
           <?php if (isset($preview)) : ?>
             <div class="judul mb-4">
               <label class="form-label"><i class="fas fa-calendar-plus"></i> Judul</label>
               <textarea type="text" class="form-control bg-dark text-white" name="judul"><?= $preview['judul']; ?></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk judul pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk judul pada postingan
+                <br>
+                * Catatan: Jangan di inputkan dalam bentuk markdown (cukup text nya saja)
+              </div>
             </div>
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
@@ -149,7 +153,11 @@ if (isset($_POST['upload'])) {
             <div class="judul mb-4">
               <label class="form-label"><i class="fas fa-calendar-plus"></i> Judul</label>
               <textarea type="text" class="form-control bg-dark text-white" name="judul"></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk judul pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk judul pada postingan
+                <br>
+                * Catatan: Jangan di inputkan dalam bentuk markdown (cukup text nya saja)
+              </div>
             </div>
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
