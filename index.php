@@ -10,16 +10,38 @@ require_once 'function/constant.php';
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="<?= getName(); ?> - Home" />
+  <meta name="author" content="<?= getName(); ?>" />
+  <meta property="og:locale" content="id" />
+  <meta name="description" content="Blog Dokumentasi" />
+  <link rel="canonical" href="http://blog.xshin.tech" />
+  <meta property="og:url" content="http://blog.xshin.tech" />
+  <meta property="og:site_name" content="<?= getName(); ?>" />
+
+  <meta property="og:country-name" content="Indonesia" />
+  <meta property="og:image" content="assets/img/me/me.png" />
+  <meta property="og:image:width" content="460" />
+  <meta property="og:image:height" content="230" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="<?= getName(); ?> - Home" />
+  <meta property="twitter:author" content="<?= getName(); ?>" />
+  <meta property="twitter:image:src" content="assets/img/me/me.png" />
+
+  <title><?= getName(); ?> - Home</title>
+  <link rel="icon" type="image/svg" href="<?= getFavIcon(); ?>">
+
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="assets/css/fontawesome/all.css">
   <link rel="stylesheet" href="assets/css/highlight/atom-one-dark.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/theme.css">
-  <title><?= getName(); ?> - Home</title>
-  <link rel="icon" type="image/svg" href="<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">
