@@ -33,6 +33,10 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 
 ### Demo Website
 
+<a href="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" target="_blank">
+  <img src="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" />
+</a>
+
 [demo.xshin.tech](http://demo.xshin.tech)
 
 - Username: `demo`
