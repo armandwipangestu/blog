@@ -107,7 +107,7 @@ if (isset($_POST['upload'])) {
   <!-- Start Form Tambah Post -->
   <div class="container mt-2 p-5">
     <div class="row">
-      <div class="col-lg me-5">
+      <div class="col-lg me-5 mb-5">
         <h4><i class="fab fa-markdown"></i> Markdown</h4>
         <form onsubmit="return submitForm(this);" action="" class="mt-4" method="POST" enctype="multipart/form-data">
           <?php if (isset($preview)) : ?>
