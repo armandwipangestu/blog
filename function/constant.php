@@ -25,3 +25,7 @@ function getLink($value)
     return $LIST_LINK[3];
   }
 }
+
+function getFavIcon() {
+  return "assets/img/favicon/terminal.svg";
+}

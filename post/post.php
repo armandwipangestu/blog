@@ -70,6 +70,7 @@ $parsedown = new Parsedown();
     }
   </style>
   <title><?= getName(); ?> - <?= $parsedown->text($data['judul']); ?></title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">

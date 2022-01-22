@@ -63,6 +63,7 @@ if (isset($_POST['upload'])) {
     }
   </style>
   <title><?= getName(); ?> - Membuat Postingan</title>
+  <link rel="icon" type="image/svg" href="../../<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">

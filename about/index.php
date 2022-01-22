@@ -19,6 +19,7 @@ require_once '../function/constant.php';
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <title><?= getName(); ?> - About</title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
   <style>
     .container .row .preview {
       margin-top: 3rem;

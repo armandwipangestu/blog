@@ -69,6 +69,7 @@ if (isset($_POST['ubah'])) {
     }
   </style>
   <title><?= getName(); ?> - Ubah Postingan</title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
 <body class="bg-dark text-white">
