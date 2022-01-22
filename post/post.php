@@ -20,26 +20,24 @@ $parsedown = new Parsedown();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Start Open Graph -->
-  <!-- <meta property="og:title" content="xShin Blog" />
-  <meta name=" author" content="xShin" />
-  <meta property="og:locale" content="en" />
-  <meta name="description" content="Blog ini dibuat menggunakan Sistem Operasi Arch Linux. Source code dan artikel-artikel ditulis menggunakan Text Editor Visual Studio Code & Neovim. Dihosting menggunakan GitHub Pages." />
-  <meta property="og:description" content="Blog ini dibuat menggunakan Sistem Operasi Arch Linux. Source code dan artikel-artikel ditulis menggunakan Text Editor Visual Studio Code & Neovim. Dihosting menggunakan GitHub Pages." />
-  <link rel="canonical" href="http://xshin.rf.gd/blog/index.php" />
-  <meta property="og:url" content="http://xshin.rf.gd/blog/index.php" />
-  <meta property="og:site_name" content="xShin" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
+  <meta name="author" content="<?= getName(); ?>" />
+  <meta property="og:locale" content="id" />
+  <meta name="description" content="<?= $data['judul']; ?>" />
+  <link rel="canonical" href="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:url" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:site_name" content="<?= getName(); ?>" />
 
   <meta property="og:country-name" content="Indonesia" />
-  <meta property="og:image" content="assets/img/post/default.png" />
+  <meta property="og:image" content="../assets/img/post/<?= $data['thumbnail']; ?>" />
   <meta property="og:image:width" content="460" />
   <meta property="og:image:height" content="230" />
 
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="xShin Blog" />
-  <meta property=" twitter:author" content="xShin" />
-  <meta property="twitter:image:src" content="assets/img/post/default.png" /> -->
-  <!-- End Open Graph -->
+  <meta property="twitter:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
+  <meta property="twitter:author" content="<?= getName(); ?>" />
+  <meta property="twitter:image:src" content="../assets/img/post/<?= $data['thumbnail']; ?>" />
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
