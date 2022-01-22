@@ -114,7 +114,11 @@ if (isset($_POST['upload'])) {
             <div class="judul mb-4">
               <label class="form-label"><i class="fas fa-calendar-plus"></i> Judul</label>
               <textarea type="text" class="form-control bg-dark text-white" name="judul"><?= $preview['judul']; ?></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk judul pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk judul pada postingan
+                <br>
+                * Catatan: Jangan di inputkan dalam bentuk markdown (cukup text nya saja)
+              </div>
             </div>
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
@@ -149,7 +153,11 @@ if (isset($_POST['upload'])) {
             <div class="judul mb-4">
               <label class="form-label"><i class="fas fa-calendar-plus"></i> Judul</label>
               <textarea type="text" class="form-control bg-dark text-white" name="judul"></textarea>
-              <div class="form-text fst-italic">* Digunakan untuk judul pada postingan</div>
+              <div class="form-text fst-italic">
+                * Digunakan untuk judul pada postingan
+                <br>
+                * Catatan: Jangan di inputkan dalam bentuk markdown (cukup text nya saja)
+              </div>
             </div>
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
