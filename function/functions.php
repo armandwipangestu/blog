@@ -352,3 +352,17 @@ function highlightTheme()
   //return "hybrid";
   return "dracula";
 }
+
+function potongText($text, $batas, $break = ".", $pad = "...") {
+  if(strlen($text) <= $batas) {
+    return $text;
+  }
+
+  if(false !== ($breakpoint = strpos($text, $break, $batas))) {
+    if($breakpoint < strlen($text) - 1) {
+      $text = substr($text, 0, $breakpoint) . $pad;
+    }
+  }
+
+  return $text;
+}

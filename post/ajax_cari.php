@@ -4,6 +4,7 @@ session_start();
 
 require '../function/functions.php';
 require '../assets/lib/Parsedown.php';
+$parsedown = new Parsedown();
 $data = cari($_GET["keyword"]);
 ?>
 
@@ -34,6 +35,11 @@ $data = cari($_GET["keyword"]);
           Terakhir Diedit: <?= $d['tanggal_diubah']; ?>
         <?php endif; ?>
       </p>
+      <!--
+      <p>
+        <?= potongText($parsedown->text($d['konten']), 300); ?>
+      </p>
+      -->
       <a href="post.php?id=<?= $d['id']; ?>">
         <?= '<span class="btn btn-light"><i class="fas fa-tag me-1"></i> ' . $d['tag'] . '</span>'; ?>
       </a>
