@@ -24,8 +24,8 @@ $parsedown = new Parsedown();
   <meta property="og:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
   <meta name="author" content="<?= getName(); ?>" />
   <meta property="og:locale" content="id" />
-  <meta name="description" content="<?= potongText($parsedown->text($data['konten']), 100); ?>" />
-  <meta property="og:description" content="<?= potongText($parsedown->text($data['konten']), 100); ?>" />
+  <meta name="description" content="<?= potongText($data['konten'], 300); ?>" />
+  <meta property="og:description" content="<?= potongText($data['konten'], 300); ?>" />
   <link rel="canonical" href="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
 
   <meta property="og:url" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
