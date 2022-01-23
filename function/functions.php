@@ -43,13 +43,13 @@ function login($data)
     } else {
       return [
         'error' => true,
-        'pesan' => 'Password Salah'
+        'pesan' => 'Username / Password Salah'
       ];
     }
   } else {
     return [
       'error' => true,
-      'pesan' => 'Username Salah'
+      'pesan' => 'Username / Password Salah'
     ];
   }
 }
