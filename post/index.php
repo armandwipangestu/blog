@@ -124,6 +124,10 @@ $parsedown = new Parsedown();
                     Terakhir Diedit: <?= $d['tanggal_diubah']; ?>
                   <?php endif; ?>
                 </p>
+                <!--<p>
+                  <?= potongText($parsedown->text($d['konten']), 50) ?>
+                </p>
+                -->
                 <a href="post.php?id=<?= $d['id']; ?>">
                   <?= $parsedown->text('<span class="btn btn-light"><i class="fas fa-tag me-1"></i> ' . $d['tag'] . '</span>'); ?>
                 </a>

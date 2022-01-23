@@ -24,20 +24,23 @@ $parsedown = new Parsedown();
   <meta property="og:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
   <meta name="author" content="<?= getName(); ?>" />
   <meta property="og:locale" content="id" />
-  <meta name="description" content="<?= $data['judul']; ?>" />
+  <meta name="description" content="<?= potongText($parsedown->text($data['konten']), 100); ?>" />
+  <meta property="og:description" content="<?= potongText($parsedown->text($data['konten']), 100); ?>" />
   <link rel="canonical" href="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+
   <meta property="og:url" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
   <meta property="og:site_name" content="<?= getName(); ?>" />
-
   <meta property="og:country-name" content="Indonesia" />
-  <meta property="og:image" content="../assets/img/post/<?= $data['thumbnail']; ?>" />
+  <meta property="og:image" content="http://blog.xshin.tech/assets/img/post/<?= $data['thumbnail']; ?>" />
   <meta property="og:image:width" content="460" />
   <meta property="og:image:height" content="230" />
+  <meta property="og:type" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:image:type" content="image/jpeg" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
   <meta property="twitter:author" content="<?= getName(); ?>" />
-  <meta property="twitter:image:src" content="../assets/img/post/<?= $data['thumbnail']; ?>" />
+  <meta property="twitter:image:src" content="http://blog.xshin.tech/assets/img/post/<?= $data['thumbnail']; ?>" />
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
