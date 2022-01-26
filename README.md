@@ -1,4 +1,6 @@
 ### Teknologi Yang Digunakan
+<hr>
+
 - HTML
 - CSS <br>
 └─ [Bootstrap](https://getbootstrap.com/)
@@ -8,6 +10,7 @@
 └─ [Parsedown](https://github.com/erusev/parsedown)
 
 ### Cara Install Di Localhost
+<hr>
 
 - Clone atau Download Repository
 
@@ -41,6 +44,7 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 ```
 
 ### Demo Website
+<hr>
 
 <a href="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" target="_blank">
   <img src="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" />
