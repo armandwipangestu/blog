@@ -1,3 +1,12 @@
+### Teknologi Yang Digunakan
+- HTML
+- CSS
+└─ [Bootstrap](https://getbootstrap.com/)
+- Javascript
+└─ [SweetAlert2](https://sweetalert2.github.io/)
+- PHP
+└─ [Parsedown](https://github.com/erusev/parsedown)
+
 ### Cara Install Di Localhost
 
 - Clone atau Download Repository
