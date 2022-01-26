@@ -244,7 +244,7 @@ function relatedPost($data)
   $relateds = [];
 
   for ($i = 0; $i < $rows_count; $i++) {
-    if ($rows[$i]["tag"] == $data["tag"]) {
+    if ($rows[$i]["tag"] == $data["tag"] && $rows[$i]["id"] != $data["id"]) {
       $relateds[] = $rows[$i];
     }
   }

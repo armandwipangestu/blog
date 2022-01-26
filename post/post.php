@@ -28,21 +28,21 @@ $relateds_count = count($relateds);
   <meta property="og:locale" content="id" />
   <meta name="description" content="<?php potongText($data['konten'], 300); ?>" />
   <meta property="og:description" content="<?php potongText($data['konten'], 300); ?>" />
-  <link rel="canonical" href="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <link rel="canonical" href="<?= getLink("Domain"); ?>/post/post.php?id=<?= $id; ?>" />
 
-  <meta property="og:url" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:url" content="<?= getLink("Domain"); ?>/post/post.php?id=<?= $id; ?>" />
   <meta property="og:site_name" content="<?= getName(); ?>" />
   <meta property="og:country-name" content="Indonesia" />
-  <meta property="og:image" content="http://blog.xshin.tech/assets/img/post/<?= $data['thumbnail']; ?>" />
+  <meta property="og:image" content="<?= getLink("Domain"); ?>/assets/img/post/<?= $data['thumbnail']; ?>" />
   <meta property="og:image:width" content="460" />
   <meta property="og:image:height" content="230" />
-  <meta property="og:type" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:type" content="<?= getLink("Domain"); ?>/post/post.php?id=<?= $id; ?>" />
   <meta property="og:image:type" content="image/jpeg" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
   <meta property="twitter:author" content="<?= getName(); ?>" />
-  <meta property="twitter:image:src" content="http://blog.xshin.tech/assets/img/post/<?= $data['thumbnail']; ?>" />
+  <meta property="twitter:image:src" content="<?= getLink("Domain"); ?>/assets/img/post/<?= $data['thumbnail']; ?>" />
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
@@ -157,11 +157,14 @@ $relateds_count = count($relateds);
         <?php endif; ?>
         <?= $parsedown->text($data['konten']); ?>
 
+        <?php if(empty($relateds) == false) : ?>
+
         <div class="recommendation-post mt-5">
           <h4><i class="fas fa-tag"></i> Related Post by Tag</h4>
           <hr>
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
+
               <?php
               for ($i = 0; $i < $relateds_count; $i++) {
                 if ($i == 0) {
@@ -175,9 +178,7 @@ $relateds_count = count($relateds);
                 }
               }
               ?>
-              <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+
             </div>
 
             <div class="carousel-inner">
@@ -188,7 +189,9 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item active'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <div class='ratio ratio-16x9'>
+                            <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          </div>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -200,7 +203,9 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <div class='ratio ratio-16x9'>
+                            <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          </div>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -211,6 +216,7 @@ $relateds_count = count($relateds);
                 }
               }
               ?>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -221,8 +227,9 @@ $relateds_count = count($relateds);
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-
         </div>
+        <?php endif; ?>
+
       </div>
     </div>
   </div>

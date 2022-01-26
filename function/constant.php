@@ -12,7 +12,8 @@ function getLink($value)
     "https://t.me/armandwipangestu",
     "https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A",
     "https://github.com/armandwipangestu",
-    "armandwi.pangestu7@gmail.com"
+    "armandwi.pangestu7@gmail.com",
+    "http://blog.xshin.tech"
   ];
 
   if ($value == "Telegram") {
@@ -23,6 +24,8 @@ function getLink($value)
     return $LIST_LINK[2];
   } else if ($value == "Email") {
     return $LIST_LINK[3];
+  } else if ($value == "Domain") {
+    return $LIST_LINK[4];
   }
 }
 
