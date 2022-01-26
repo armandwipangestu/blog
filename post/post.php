@@ -28,21 +28,21 @@ $relateds_count = count($relateds);
   <meta property="og:locale" content="id" />
   <meta name="description" content="<?php potongText($data['konten'], 300); ?>" />
   <meta property="og:description" content="<?php potongText($data['konten'], 300); ?>" />
-  <link rel="canonical" href="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <link rel="canonical" href="<?= getLink("Domain"); ?>/post/post.php?id=<?= $id; ?>" />
 
-  <meta property="og:url" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:url" content="<?= getLink("Domain"); ?>/post/post.php?id=<?= $id; ?>" />
   <meta property="og:site_name" content="<?= getName(); ?>" />
   <meta property="og:country-name" content="Indonesia" />
-  <meta property="og:image" content="http://blog.xshin.tech/assets/img/post/<?= $data['thumbnail']; ?>" />
+  <meta property="og:image" content="<?= getLink("Domain"); ?>/assets/img/post/<?= $data['thumbnail']; ?>" />
   <meta property="og:image:width" content="460" />
   <meta property="og:image:height" content="230" />
-  <meta property="og:type" content="http://blog.xshin.tech/post/post.php?id=<?= $id; ?>" />
+  <meta property="og:type" content="<?= getLink("Domain"); ?>/post/post.php?id=<?= $id; ?>" />
   <meta property="og:image:type" content="image/jpeg" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="<?= getName(); ?> - <?= $data['judul']; ?>" />
   <meta property="twitter:author" content="<?= getName(); ?>" />
-  <meta property="twitter:image:src" content="http://blog.xshin.tech/assets/img/post/<?= $data['thumbnail']; ?>" />
+  <meta property="twitter:image:src" content="<?= getLink("Domain"); ?>/assets/img/post/<?= $data['thumbnail']; ?>" />
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
