@@ -1,4 +1,18 @@
+### Teknologi Yang Digunakan
+<hr>
+
+- HTML
+- CSS <br>
+└─ [Bootstrap](https://getbootstrap.com/)<br>
+└─ [Font Awesome](https://fontawesome.com/)
+- Javascript <br>
+└─ [SweetAlert2](https://sweetalert2.github.io/)<br>
+└─ [Highlight JS](https://highlightjs.org/)
+- PHP <br>
+└─ [Parsedown](https://github.com/erusev/parsedown)
+
 ### Cara Install Di Localhost
+<hr>
 
 - Clone atau Download Repository
 
@@ -32,20 +46,27 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 ```
 
 ### Demo Website
+<hr>
 
-<a href="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" target="_blank">
-  <img src="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" />
-</a>
-
-<a href="https://i.ibb.co/RBy40P6/image.png" target="_blank">
-  <img src="https://i.ibb.co/RBy40P6/image.png" />
-</a>
-
-<a href="https://i.ibb.co/Prwdr5F/image.png" target="_blank">
-  <img src="https://i.ibb.co/Prwdr5F/image.png" />
-</a>
-
-[demo.xshin.tech](http://demo.xshin.tech)
+- Link Website: [demo.xshin.tech](http://demo.xshin.tech)
 
 - Username: `demo`
 - Password: `demo`
+
+- Screenshot:
+<br>
+<a href="https://i.ibb.co/chmfrQS/image.png" target="_blank">
+  <img src="https://i.ibb.co/chmfrQS/image.png" />
+</a>
+
+<a href="https://i.ibb.co/dPcmB5s/image.png" target="_blank">
+  <img src="https://i.ibb.co/dPcmB5s/image.png" />
+</a>
+
+<a href="https://i.ibb.co/phGzMTr/image.png" target="_blank">
+  <img src="https://i.ibb.co/phGzMTr/image.png" />
+</a>
+
+<a href="https://i.ibb.co/p2LrgB7/image.png" target="_blank">
+  <img src="https://i.ibb.co/p2LrgB7/image.png" />
+</a>
