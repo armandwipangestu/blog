@@ -10,42 +10,8 @@ $id = $_GET['id'];
 $data = query("SELECT * FROM post WHERE id = '$id'");
 $tag = $data["tag"];
 $parsedown = new Parsedown();
-$all_post = mysqli_query($conn, "SELECT * FROM post");
-$rows = [];
-$relateds = [];
-while( $row = mysqli_fetch_assoc($all_post) ) {
-  $rows[] = $row;
-}
-//for($i = 0; $i < $all_post->num_rows; $i++) {
-  //if($all_post[$i])
-//}
-$rows_count = count($rows);
-for($i = 0; $i < $rows_count; $i++) {
-  if($rows[$i]["tag"] == $data["tag"]) {
-    $relateds[] = $rows[$i];
-  }
-}
+$relateds = relatedPost($data);
 $relateds_count = count($relateds);
-#var_dump($relateds_count);
-
-//var_dump($rows[1]);
-//var_dump($relateds);
-//$relateds = mysqli_query($conn, "SELECT * FROM post WHERE tag = '$tag'");
-#$row_relateds = $relateds->fetch_array(MYSQLI_NUM);;
-#var_dump($row_relateds);
-// $relateds = mysqli_query($conn, "SELECT * FROM post WHERE tag = '$tag'");
-// var_dump($relateds->fetch_assoc());
-// // var_dump(mysqli_num_rows($relateds));
-//$result_relateds = mysqli_num_rows($relateds);
-
-#for($i = 0; $i < $relateds_count; $i++) {
-#  var_dump($relateds[$i]["id"]);
-#}
-
-//foreach ($relateds as $related) {
-//  var_dump($related);
-//}
-
 ?>
 
 <!DOCTYPE html>
@@ -192,7 +158,7 @@ $relateds_count = count($relateds);
         <?= $parsedown->text($data['konten']); ?>
 
         <div class="recommendation-post mt-5">
-          <h4>Related Post by Tag</h4>
+          <h4><i class="fas fa-tag"></i> Related Post by Tag</h4>
           <hr>
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -216,13 +182,13 @@ $relateds_count = count($relateds);
 
             <div class="carousel-inner">
 
-            <?php
-              for($i = 0; $i < $relateds_count; $i++) {
-                if($i == 0) {
+              <?php
+              for ($i = 0; $i < $relateds_count; $i++) {
+                if ($i == 0) {
                   echo "
                       <div class='carousel-item active'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -234,7 +200,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -243,29 +209,8 @@ $relateds_count = count($relateds);
                       </div>
                   ";
                 }
-              } 
-            ?>
-              <!-- <div class="carousel-item active">
-                <img src="../assets/img/post/default.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/post/default.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/post/default.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div> -->
+              }
+              ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>

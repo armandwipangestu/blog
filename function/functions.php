@@ -232,6 +232,26 @@ function ubahPost($data)
   return mysqli_affected_rows($conn) or die(mysqli_error($conn));
 }
 
+function relatedPost($data)
+{
+  $conn = koneksi();
+  $all_post = mysqli_query($conn, "SELECT * FROM post");
+  $rows = [];
+  while ($row = mysqli_fetch_assoc($all_post)) {
+    $rows[] = $row;
+  }
+  $rows_count = count($rows);
+  $relateds = [];
+
+  for ($i = 0; $i < $rows_count; $i++) {
+    if ($rows[$i]["tag"] == $data["tag"]) {
+      $relateds[] = $rows[$i];
+    }
+  }
+
+  return $relateds;
+}
+
 function ubahUser($data)
 {
   $conn = koneksi();
@@ -258,7 +278,6 @@ function ubahUser($data)
     ";
     return false;
   }
-
 }
 
 function resetpass($data)
@@ -353,13 +372,14 @@ function highlightTheme()
   return "dracula";
 }
 
-function potongText($text, $batas, $break = ".", $pad = "...") {
-  if(strlen($text) <= $batas) {
+function potongText($text, $batas, $break = ".", $pad = "...")
+{
+  if (strlen($text) <= $batas) {
     return $text;
   }
 
-  if(false !== ($breakpoint = strpos($text, $break, $batas))) {
-    if($breakpoint < strlen($text) - 1) {
+  if (false !== ($breakpoint = strpos($text, $break, $batas))) {
+    if ($breakpoint < strlen($text) - 1) {
       $text = substr($text, 0, $breakpoint) . $pad;
     }
   }
