@@ -188,7 +188,9 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item active'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <div class='ratio ratio-16x9'>
+                            <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          </div>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -200,7 +202,9 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <div class='ratio ratio-16x9'>
+                            <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          </div>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
