@@ -46,19 +46,25 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 ### Demo Website
 <hr>
 
-- Link: [demo.xshin.tech](http://demo.xshin.tech)
+- Link Website: [demo.xshin.tech](http://demo.xshin.tech)
 
 - Username: `demo`
 - Password: `demo`
 
-<a href="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" target="_blank">
-  <img src="https://i.ibb.co/TkzCCL9/Screenshot-2022-01-22-10-04-53-X.png" />
+- Screenshot:
+<br>
+<a href="https://i.ibb.co/chmfrQS/image.png" target="_blank">
+  <img src="https://i.ibb.co/chmfrQS/image.png" />
 </a>
 
-<a href="https://i.ibb.co/RBy40P6/image.png" target="_blank">
-  <img src="https://i.ibb.co/RBy40P6/image.png" />
+<a href="https://i.ibb.co/dPcmB5s/image.png" target="_blank">
+  <img src="https://i.ibb.co/dPcmB5s/image.png" />
 </a>
 
-<a href="https://i.ibb.co/Prwdr5F/image.png" target="_blank">
-  <img src="https://i.ibb.co/Prwdr5F/image.png" />
+<a href="https://i.ibb.co/phGzMTr/image.png" target="_blank">
+  <img src="https://i.ibb.co/phGzMTr/image.png" />
+</a>
+
+<a href="https://i.ibb.co/p2LrgB7/image.png" target="_blank">
+  <img src="https://i.ibb.co/p2LrgB7/image.png" />
 </a>
