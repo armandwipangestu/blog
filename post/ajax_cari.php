@@ -26,7 +26,7 @@ $data = cari($_GET["keyword"]);
     <?php endif; ?>
     <div class="card-body bg-dark rounded-bottom">
       <a href="post.php?id=<?= $d['id']; ?>" class="link text-white">
-        <h5 class="card-title"><?= $d['judul']; ?></h5>
+        <h3 class="card-title"><?= $d['judul']; ?></h3>
       </a>
       <p class="text-muted">
         Postingan Dibuat: <?= $d['tanggal_dibuat']; ?>

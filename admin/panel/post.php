@@ -196,7 +196,7 @@ if (isset($_POST['upload'])) {
         <h4 class="preview"><i class="fas fa-eye"></i> Preview</h4>
         <div class="container mt-4">
           <?php if (isset($preview)) : ?>
-            <?= $parsedown->text($preview['judul']); ?>
+            <h3><?= $parsedown->text($preview['judul']); ?></h3>
             <?= $parsedown->text('<span class="btn btn-light tag"><i class="fas fa-tag me-1"></i> ' . $preview['tags'] . '</span>'); ?>
             <?= $parsedown->text($preview['konten']); ?>
           <?php endif; ?>
