@@ -158,7 +158,7 @@ $relateds_count = count($relateds);
         <?= $parsedown->text($data['konten']); ?>
 
         <div class="recommendation-post mt-5">
-          <h4>Related Post by Tag</h4>
+          <h4><i class="fas fa-tag"></i> Related Post by Tag</h4>
           <hr>
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -188,7 +188,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item active'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -200,7 +200,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100' alt='" . $relateds[$i]['thumbnail'] . "'>
+                          <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           <div class='carousel-caption d-none d-md-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
@@ -211,27 +211,6 @@ $relateds_count = count($relateds);
                 }
               }
               ?>
-              <!-- <div class="carousel-item active">
-                <img src="../assets/img/post/default.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/post/default.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/post/default.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
