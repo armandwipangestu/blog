@@ -3,7 +3,8 @@
 
 - HTML
 - CSS <br>
-└─ [Bootstrap](https://getbootstrap.com/)
+└─ [Bootstrap](https://getbootstrap.com/)<br>
+└─ [Font Awesome](https://fontawesome.com/)
 - Javascript <br>
 └─ [SweetAlert2](https://sweetalert2.github.io/)<br>
 └─ [Highlight JS](https://highlightjs.org/)
