@@ -12,43 +12,6 @@ $tag = $data["tag"];
 $parsedown = new Parsedown();
 $relateds = relatedPost($data);
 $relateds_count = count($relateds);
-# Related post
-// $all_post = mysqli_query($conn, "SELECT * FROM post");
-// $rows = [];
-// $relateds = [];
-// while( $row = mysqli_fetch_assoc($all_post) ) {
-//   $rows[] = $row;
-// }
-//for($i = 0; $i < $all_post->num_rows; $i++) {
-//if($all_post[$i])
-//}
-// $rows_count = count($rows);
-// for($i = 0; $i < $rows_count; $i++) {
-//   if($rows[$i]["tag"] == $data["tag"]) {
-//     $relateds[] = $rows[$i];
-//   }
-// }
-// $relateds_count = count($relateds);
-#var_dump($relateds_count);
-
-//var_dump($rows[1]);
-//var_dump($relateds);
-//$relateds = mysqli_query($conn, "SELECT * FROM post WHERE tag = '$tag'");
-#$row_relateds = $relateds->fetch_array(MYSQLI_NUM);;
-#var_dump($row_relateds);
-// $relateds = mysqli_query($conn, "SELECT * FROM post WHERE tag = '$tag'");
-// var_dump($relateds->fetch_assoc());
-// // var_dump(mysqli_num_rows($relateds));
-//$result_relateds = mysqli_num_rows($relateds);
-
-#for($i = 0; $i < $relateds_count; $i++) {
-#  var_dump($relateds[$i]["id"]);
-#}
-
-//foreach ($relateds as $related) {
-//  var_dump($related);
-//}
-
 ?>
 
 <!DOCTYPE html>
