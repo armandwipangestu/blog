@@ -6,6 +6,8 @@
 └─ [Bootstrap](https://getbootstrap.com/)
 - Javascript <br>
 └─ [SweetAlert2](https://sweetalert2.github.io/)
+<br>
+└─ [Highlight JS](https://highlightjs.org/)
 - PHP <br>
 └─ [Parsedown](https://github.com/erusev/parsedown)
 
