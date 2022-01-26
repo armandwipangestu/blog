@@ -162,7 +162,7 @@ $relateds_count = count($relateds);
         <div class="recommendation-post mt-5">
           <h4><i class="fas fa-tag"></i> Related Post by Tag</h4>
           <hr>
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel carousel-fade slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
 
               <?php
@@ -187,12 +187,12 @@ $relateds_count = count($relateds);
               for ($i = 0; $i < $relateds_count; $i++) {
                 if ($i == 0) {
                   echo "
-                      <div class='carousel-item active'>
+                      <div class='carousel-item active' data-mdb-interval='1'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
                           <div class='ratio ratio-16x9'>
                             <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           </div>
-                          <div class='carousel-caption d-none d-md-block'>
+                          <div class='carousel-caption d-sm-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
                           </div>
@@ -201,12 +201,12 @@ $relateds_count = count($relateds);
                   ";
                 } else {
                   echo "
-                      <div class='carousel-item'>
+                      <div class='carousel-item' data-mdb-interval='1'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
                           <div class='ratio ratio-16x9'>
                             <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           </div>
-                          <div class='carousel-caption d-none d-md-block'>
+                          <div class='carousel-caption d-sm-block'>
                             <h5>" . $relateds[$i]['judul'] . "</h5>
                             <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
                           </div>
