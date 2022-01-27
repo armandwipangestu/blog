@@ -159,7 +159,7 @@ $relateds_count = count($relateds);
 
         <?php if(empty($relateds) == false) : ?>
 
-        <div class="recommendation-post mt-5">
+        <div class="recommendation-post mt-5 mb-5">
           <h4><i class="fas fa-tag"></i> Related Post by Tag</h4>
           <hr>
           <div id="carouselExampleCaptions" class="carousel carousel-fade slide" data-bs-ride="carousel">
