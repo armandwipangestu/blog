@@ -37,7 +37,7 @@ require_once '../function/constant.php';
   </style>
 </head>
 
-<body class="bg-dark text-white">
+<body class="<?= getDefaultTheme(); ?>">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

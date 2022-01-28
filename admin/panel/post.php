@@ -66,7 +66,7 @@ if (isset($_POST['upload'])) {
   <link rel="icon" type="image/svg" href="../../<?= getFavIcon(); ?>">
 </head>
 
-<body class="bg-dark text-white">
+<body class="<?= getDefaultTheme(); ?>">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -197,7 +197,7 @@ if (isset($_POST['upload'])) {
         <div class="container mt-4">
           <?php if (isset($preview)) : ?>
             <h3><?= $parsedown->text($preview['judul']); ?></h3>
-            <?= $parsedown->text('<span class="btn btn-light tag"><i class="fas fa-tag me-1"></i> ' . $preview['tags'] . '</span>'); ?>
+            <?= $parsedown->text('<span class="btn btn-dark tag"><i class="fas fa-tag me-1"></i> ' . $preview['tags'] . '</span>'); ?>
             <?= $parsedown->text($preview['konten']); ?>
           <?php endif; ?>
         </div>

@@ -48,7 +48,7 @@ $parsedown = new Parsedown();
   </style>
 </head>
 
-<body class="bg-dark text-white">
+<body class="<?= getDefaultTheme(); ?>">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -98,7 +98,7 @@ $parsedown = new Parsedown();
         <input type="text" class="form-control search" placeholder="Masukan keyword pencarian" style="border-radius: 20px;">
         <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
-            <div class="card mb-3 rounded">
+            <div class="card border-dark mb-3 rounded">
               <?php if (pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
                 <a href="post.php?id=<?= $d['id']; ?>">
                   <div class="ratio ratio-16x9">
