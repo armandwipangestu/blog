@@ -21,7 +21,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url("../img/navbar/sun.svg");
+      background-image: url("../img/navbar/moon.svg");
       background-repeat: no-repeat;
       background-position: right;
       background-color: #4D4D4D;
@@ -42,7 +42,7 @@
     }
 
     input:checked+.slider {
-      background-image: url("../img/navbar/moon.svg"); 
+      background-image: url("../img/navbar/sun.svg"); 
       background-repeat: no-repeat;
       background-position: left;
       background-color: #4D4D4D;

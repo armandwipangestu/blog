@@ -5,6 +5,10 @@ function getName()
   return "nihSx";
 }
 
+function getDefaultTheme() {
+  return "bg-light text-dark";
+}
+
 function getLink($value)
 {
 

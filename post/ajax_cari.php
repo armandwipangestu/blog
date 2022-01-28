@@ -9,7 +9,7 @@ $data = cari($_GET["keyword"]);
 ?>
 
 <?php foreach ($data as $d) : ?>
-  <div class="card mb-3 rounded">
+  <div class="card border-dark mb-3 rounded">
     <?php if (pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
       <a href="post.php?id=<?= $d['id']; ?>">
         <div class="ratio ratio-16x9">

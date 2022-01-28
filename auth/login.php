@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
   <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
-<body class="bg-dark text-white">
+<body class="<?= getDefaultTheme(); ?>">
 
   <!-- Start Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
