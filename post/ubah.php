@@ -76,7 +76,7 @@ if (isset($_POST['ubah'])) {
 <body class="<?= getDefaultTheme(); ?>">
 
   <!-- Start Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand custom-font" href="../index.php"><i class="fab fa-github me-1"></i> <?= getName(); ?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,7 +117,7 @@ if (isset($_POST['ubah'])) {
   <!-- End Navbar -->
 
   <!-- Start Form Tambah Post -->
-  <div class="container mt-2 p-5">
+  <div class="container mt-5 p-5">
     <div class="row">
       <div class="col-lg col-mg col-sm me-5 mb-5">
         <h4><i class="fab fa-markdown"></i> Markdown</h4>

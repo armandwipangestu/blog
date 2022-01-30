@@ -51,7 +51,7 @@ $parsedown = new Parsedown();
 <body class="<?= getDefaultTheme(); ?>">
 
   <!-- Start Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand custom-font" href="../index.php"><i class="fab fa-github me-1"></i> <?= getName(); ?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,8 +93,8 @@ $parsedown = new Parsedown();
 
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-lg-7 mt-4">
-        <label for="search" class="form-label"><i class="fas fa-search"></i> Search</label>
+      <div class="col-lg-7 mt-5">
+        <label for="search" class="form-label mt-5"><i class="fas fa-search"></i> Search</label>
         <input type="text" class="form-control search border-dark" placeholder="Masukan keyword pencarian" style="border-radius: 20px;">
         <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
