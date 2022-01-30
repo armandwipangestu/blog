@@ -68,14 +68,6 @@ $relateds_count = count($relateds);
     a {
       text-decoration: none;
     }
-
-    code {
-      border-radius: 5px;
-      display: inline-block;
-      padding: 0.1em 0.5em;
-      background-color: #282c34;
-      color: #abb2bf;
-    }
   </style>
   <title><?= getName(); ?> - <?= $data['judul']; ?></title>
   <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
