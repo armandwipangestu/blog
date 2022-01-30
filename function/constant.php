@@ -9,14 +9,20 @@ function getDefaultTheme() {
   return "bg-light text-dark";
 }
 
-function highlightTheme()
+function highlightDarkTheme()
 {
   //return "atom-one-dark-reasonable";
   //return "hybrid";
   //return "dracula";
-  return "github-dark.min";
+  //return "github-dark.min";
   //return "base16/onedark.min";
   //return "base16/material-darker.min";
+  return "atom-one-dark-reasonable.min";
+}
+
+function highlightLightTheme() {
+  //return "atom-one-light-reasonable.min";
+  return "base16/one-light.min";
 }
 
 function getLink($value)
