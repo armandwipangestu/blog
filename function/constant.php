@@ -9,6 +9,16 @@ function getDefaultTheme() {
   return "bg-light text-dark";
 }
 
+function highlightTheme()
+{
+  //return "atom-one-dark-reasonable";
+  //return "hybrid";
+  //return "dracula";
+  return "github-dark.min";
+  //return "base16/onedark.min";
+  //return "base16/material-darker.min";
+}
+
 function getLink($value)
 {
 
