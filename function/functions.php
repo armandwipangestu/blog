@@ -365,13 +365,6 @@ function cari($keyword)
   return $rows;
 }
 
-function highlightTheme()
-{
-  //return "atom-one-dark-reasonable";
-  //return "hybrid";
-  return "dracula";
-}
-
 function potongText($text, $batas, $break = ".", $pad = "...")
 {
   if (strlen($text) <= $batas) {

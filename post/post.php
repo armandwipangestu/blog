@@ -189,7 +189,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item active' data-mdb-interval='1'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <div class='ratio ratio-16x9'>
+                          <div class='ratio ratio-16x9 bg-dark rounded'>
                             <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           </div>
                           <div class='carousel-caption d-sm-block'>
@@ -203,7 +203,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item' data-mdb-interval='1'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <div class='ratio ratio-16x9'>
+                          <div class='ratio ratio-16x9 bg-dark rounded'>
                             <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           </div>
                           <div class='carousel-caption d-sm-block'>
