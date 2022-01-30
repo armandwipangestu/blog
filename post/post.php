@@ -46,7 +46,8 @@ $relateds_count = count($relateds);
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
-  <link rel="stylesheet" href="../assets/css/highlight/<?= highlightTheme(); ?>.css">
+  <link rel="stylesheet" title="<?= highlightDarkTheme(); ?>" href="../assets/css/highlight/<?= highlightDarkTheme(); ?>.css">
+  <link rel="stylesheet" title="<?= highlightLightTheme(); ?>" href="../assets/css/highlight/<?= highlightLightTheme(); ?>.css" disabled="disabled">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <style>
