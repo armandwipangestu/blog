@@ -6,8 +6,8 @@ const codes = document.querySelectorAll("code");
 //codes.forEach(code => {
 //  code.className = "code-dark";
 //});
-const highlightLightTheme = "base16/one-light.min";
-const highlightDarkTheme = "atom-one-dark-reasonable.min";
+const highlightLightTheme = "github.min";
+const highlightDarkTheme = "github-dark-dimmed.min";
 toggleTheme.addEventListener("click", function() {
   const bodyTheme = document.getElementsByTagName("BODY")[0].className;
   if (bodyTheme == "bg-dark text-white") {

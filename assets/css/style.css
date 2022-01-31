@@ -139,3 +139,23 @@ code {
   background-color: #282c34;
   color: #abb2bf;
 }
+
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #6c757d;
+    /*border-right: medium solid #abb2bf;*/
+    vertical-align: top;
+    padding-right: 2em;
+
+}
+
+.hljs-ln .hljs-ln-code {
+  padding-left: 10px;
+}
