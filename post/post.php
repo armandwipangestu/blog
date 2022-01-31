@@ -130,7 +130,7 @@ $relateds_count = count($relateds);
         <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg") : ?>
           <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
           <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
-            <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid bg-light" alt="<?= $data['thumbnail']; ?>">
+            <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
           </a>
         <?php endif; ?>
         <div class="mt-4">
@@ -186,7 +186,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item active' data-mdb-interval='1'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <div class='ratio ratio-16x9 bg-dark rounded'>
+                          <div class='ratio ratio-16x9 rounded'>
                             <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           </div>
                           <div class='carousel-caption d-sm-block'>
@@ -200,7 +200,7 @@ $relateds_count = count($relateds);
                   echo "
                       <div class='carousel-item' data-mdb-interval='1'>
                         <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <div class='ratio ratio-16x9 bg-dark rounded'>
+                          <div class='ratio ratio-16x9 rounded'>
                             <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
                           </div>
                           <div class='carousel-caption d-sm-block'>
