@@ -68,14 +68,6 @@ $relateds_count = count($relateds);
     a {
       text-decoration: none;
     }
-
-    code {
-      border-radius: 5px;
-      display: inline-block;
-      padding: 0.1em 0.5em;
-      background-color: #282c34;
-      color: #abb2bf;
-    }
   </style>
   <title><?= getName(); ?> - <?= $data['judul']; ?></title>
   <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
@@ -251,6 +243,7 @@ $relateds_count = count($relateds);
 
   <script src="../assets/js/bootstrap/bootstrap.js"></script>
   <script src="../assets/js/highlight/highlight.min.js"></script>
+  <script src="../assets/js/highlight/highlightjs-line-numbers.min.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
