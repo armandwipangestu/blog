@@ -150,10 +150,7 @@ code {
 
     text-align: center;
     color: #6c757d;
-    /*border-right: medium solid #abb2bf;*/
-    vertical-align: top;
-    padding-right: 2em;
-
+    border-right: medium solid #abb2bf;
 }
 
 .hljs-ln .hljs-ln-code {
