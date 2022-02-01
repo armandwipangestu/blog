@@ -122,13 +122,13 @@ $relateds_count = count($relateds);
         <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
           <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
             <div class="ratio ratio-16x9">
-              <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
+              <!-- <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank"> -->
               <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid bg-light" alt="<?= $data['thumbnail']; ?>">
             </div>
           </a>
         <?php endif; ?>
         <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg") : ?>
-          <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
+          <!-- <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank"> -->
           <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
             <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
           </a>
