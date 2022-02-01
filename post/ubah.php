@@ -243,6 +243,7 @@ if (isset($_POST['ubah'])) {
 
   <script src="../assets/js/bootstrap/bootstrap.js"></script>
   <script src="../assets/js/highlight/highlight.min.js"></script>
+  <script src="../assets/js/highlight/highlightjs-line-numbers.min.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
   <script src="../assets/js/theme.js"></script>
