@@ -20,8 +20,8 @@ require_once 'function/constant.php';
   <meta name="author" content="<?= getName(); ?>" />
   <meta property="og:locale" content="id" />
   <meta name="description" content="Blog Dokumentasi" />
-  <link rel="canonical" href="http://blog.xshin.tech" />
-  <meta property="og:url" content="http://blog.xshin.tech" />
+  <link rel="canonical" href="<?= getLink("Domain"); ?>" />
+  <meta property="og:url" content="<?= getLink("Domain"); ?>" />
   <meta property="og:site_name" content="<?= getName(); ?>" />
 
   <meta property="og:country-name" content="Indonesia" />
