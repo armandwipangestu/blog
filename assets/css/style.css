@@ -156,3 +156,23 @@ code {
 .hljs-ln .hljs-ln-code {
   padding-left: 10px;
 }
+
+blockquote {
+  /*background: #4d4523;*/
+  background: rgba(255, 231, 115, 0.2);
+  border-left: 5px solid #f2db6d;
+  margin: 1.5em 10px;
+  padding: 1.2em 15px;
+}
+
+blockquote:bofere {
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
