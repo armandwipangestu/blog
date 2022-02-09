@@ -176,3 +176,8 @@ blockquote:bofere {
 blockquote p {
   display: inline;
 }
+
+xmp {
+  margin: 0rem 0px;
+  padding: 0rem 0px;
+}
