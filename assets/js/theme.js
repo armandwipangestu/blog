@@ -3,9 +3,6 @@ const tag = document.querySelector(".tag");
 const links = document.querySelectorAll(".fa-link");
 const cards = document.querySelectorAll(".card");
 const codes = document.querySelectorAll("code");
-//codes.forEach(code => {
-//  code.className = "code-dark";
-//});
 const highlightLightTheme = "github.min";
 const highlightDarkTheme = "github-dark-dimmed.min";
 toggleTheme.addEventListener("click", function() {
@@ -19,9 +16,6 @@ toggleTheme.addEventListener("click", function() {
     cards.forEach(card => {
       card.className = "card border-light mb-3 rounded";
     });
-    //codes.forEach(code => {
-    //  code.className = "code-dark";
-    //});
     document
       .querySelector(`link[title="${highlightDarkTheme}"]`)
       .removeAttribute("disabled");
@@ -37,9 +31,6 @@ toggleTheme.addEventListener("click", function() {
     cards.forEach(card => {
       card.className = "card border-dark mb-3 rounded";
     });
-    //codes.forEach(code => {
-    //  code.className = "code-light";
-    //});
     document
       .querySelector(`link[title="${highlightLightTheme}"]`)
       .removeAttribute("disabled");
