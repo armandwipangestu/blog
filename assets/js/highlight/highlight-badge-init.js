@@ -9,9 +9,9 @@ var options = {   // optional
   //contentSelector: "#ArticleBody",
 
   // CSS class(es) used to render the copy icon.
-  copyIconClass: "fas fa-clone",
+  copyIconClass: "fa fa-clone",
   // CSS class(es) used to render the done icon.
-  checkIconClass: "fas fa-check text-success"
+  checkIconClass: "fa fa-check-circle text-success"
 };
 
 window.highlightJsBadge(options);

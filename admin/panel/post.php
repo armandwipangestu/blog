@@ -66,6 +66,7 @@ if (isset($_POST['upload'])) {
       background-color: #282c34;
       color: #abb2bf;
     }
+
   </style>
   <title><?= getName(); ?> - Membuat Postingan</title>
   <link rel="icon" type="image/svg" href="../../<?= getFavIcon(); ?>">
@@ -246,6 +247,8 @@ if (isset($_POST['upload'])) {
   <script src="../../assets/js/bootstrap/bootstrap.js"></script>
   <script src="../../assets/js/highlight/highlight.min.js"></script>
   <!--<script src="../../assets/js/highlight/highlightjs-line-numbers.min.js"></script>-->
+  <script src="../../assets/js/highlight/highlight-badge.min.js"></script>
+  <script src="../../assets/js/highlight/highlight-badge-init.js"></script>
   <script src="../../assets/js/script.js"></script>
   <script src="../../assets/js/sweetalert/sweetalert2.all.min.js"></script>
   <script src="../../assets/js/theme.js"></script>
