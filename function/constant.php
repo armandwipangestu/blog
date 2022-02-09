@@ -53,3 +53,11 @@ function getLink($value)
 function getFavIcon() {
   return "assets/img/favicon/terminal.svg";
 }
+
+function tagImg() {
+  return '
+    <a href="..." target="_blank">
+      <img src="..." alt="..." class="img-fluid rounded mx-auto d-block" />
+    </a>
+  ';
+}

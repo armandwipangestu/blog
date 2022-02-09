@@ -119,7 +119,7 @@ if (isset($_POST['upload'])) {
             <div class="judul mb-4">
               <label class="form-label"><i class="fas fa-calendar-plus"></i> Judul</label>
               <textarea type="text" class="form-control bg-dark text-white" name="judul"><?= $preview['judul']; ?></textarea>
-              <div class="form-text">
+              <div>
                 <blockquote>
                   <p class="fw-bold">
                     * Digunakan untuk judul pada postingan
@@ -132,7 +132,7 @@ if (isset($_POST['upload'])) {
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
               <textarea type="text" class="form-control bg-dark text-white" name="tags"><?= $preview['tags']; ?></textarea>
-              <div class="form-text">
+              <div>
                 <blockquote>
                   <p class="fw-bold">
                     * Digunakan untuk tag pada postingan
@@ -143,17 +143,13 @@ if (isset($_POST['upload'])) {
             <div class="konten mb-4">
               <label class="form-label"><i class="fas fa-book"></i> Konten</label>
               <textarea class="form-control bg-dark text-white" rows="35" placeholder="Something Text here . . ." name="konten"><?= $preview['konten']; ?></textarea>
-              <div class="form-text">
+              <div>
                 <blockquote>
                   <p class="fw-bold">
                     * Digunakan untuk konten (isi) pada postingan
                     <br>
-                    * Note Penulisan Tag untuk Gambar: <br>
-                    <xmp class="fw-bold">
-                      <a href="..." target="_blank">
-                        <img src="..." alt="..." class="img-fluid rounded mx-auto d-block"/>
-                      </a>
-                    </xmp>
+                    * Note Penulisan Tag untuk Gambar: <br><br>
+                    <?= $parsedown->text(tagImg()); ?>
                   </p>
                 </blockquote>
               </div>
@@ -172,7 +168,7 @@ if (isset($_POST['upload'])) {
             <div class="judul mb-4">
               <label class="form-label"><i class="fas fa-calendar-plus"></i> Judul</label>
               <textarea type="text" class="form-control bg-dark text-white" name="judul"></textarea>
-              <div class="form-text">
+              <div>
                 <blockquote>
                   <p class="fw-bold">
                     * Digunakan untuk judul pada postingan
@@ -185,7 +181,7 @@ if (isset($_POST['upload'])) {
             <div class="tags mb-4">
               <label class="form-label"><i class="fas fa-tags"></i> Tags</label>
               <textarea type="text" class="form-control bg-dark text-white" name="tags"></textarea>
-              <div class="form-text">
+              <div>
                 <blockquote>
                   <p class="fw-bold">
                     * Digunakan untuk tag pada postingan
@@ -196,17 +192,13 @@ if (isset($_POST['upload'])) {
             <div class="konten mb-4">
               <label class="form-label"><i class="fas fa-book"></i> Konten</label>
               <textarea class="form-control bg-dark text-white" rows="35" placeholder="Something Text here . . ." name="konten"></textarea>
-              <div class="form-text">
+              <div>
                 <blockquote>
                   <p class="fw-bold">
                     * Digunakan untuk konten (isi) pada postingan
                     <br>
-                    * Note Penulisan Tag untuk Gambar: <br>
-                    <xmp class="fw-bold">
-                      <a href="..." target="_blank">
-                        <img src="..." alt="..." class="img-fluid rounded mx-auto d-block"/>
-                      </a>
-                    </xmp>
+                    * Note Penulisan Tag untuk Gambar: <br><br>
+                    <?= $parsedown->text(tagImg()); ?>
                   </p>
                 </blockquote>
               </div>
