@@ -39,11 +39,11 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-document.addEventListener('copy', (event) => {
+/*document.addEventListener('copy', (event) => {
   const pagelink = "prank :v";
 
   event.clipboardData.setData('text/plan',
     document.getSelection() + pagelink);
 
   event.preventDefault();
-})
+})*/
