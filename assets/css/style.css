@@ -158,7 +158,13 @@ code {
 }
 
 .code-badge {
-  border-radius: 5px !important;
+  opacity: .75 !important;
+  border-radius: 0 4px 0 5px !important;
+  background: rgb(15 23 42) !important; 
+}
+
+.code-badge:hover {
+  opacity: 1 !important;
 }
 
 blockquote {
