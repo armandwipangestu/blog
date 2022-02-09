@@ -157,6 +157,10 @@ code {
   padding-left: 10px;
 }
 
+.code-badge {
+  border-radius: 5px !important;
+}
+
 blockquote {
   /*background: #4d4523;*/
   background: rgba(255, 231, 115, 0.2);
