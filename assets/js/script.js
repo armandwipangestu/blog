@@ -1,5 +1,5 @@
 hljs.highlightAll();
-hljs.initLineNumbersOnLoad();
+//hljs.initLineNumbersOnLoad();
 //hljs.initHighlightingOnLoad();
 //hljs.initLineNumbersOnLoad();
 
