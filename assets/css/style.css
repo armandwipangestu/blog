@@ -169,8 +169,12 @@ code {
 
 blockquote {
   /*background: #4d4523;*/
-  background: rgba(255, 231, 115, 0.2);
-  border-left: 5px solid #f2db6d;
+  /*background: rgba(255, 231, 115, 0.2);*/
+  background: rgba(253, 230, 115, 0.5);
+  /* Black background */
+  /*background: rgba(0, 0, 0, 0.4);*/
+  border: 1px solid #444;
+  border-left: 4px solid #f2db6d;
   border-radius: 5px;
   margin: 1.5em 10px;
   padding: 1.2em 15px;
