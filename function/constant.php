@@ -51,7 +51,8 @@ function getLink($value)
 }
 
 function getFavIcon() {
-  return "assets/img/favicon/terminal.svg";
+  #return "assets/img/favicon/terminal.svg";
+  return "assets/img/favicon/github.png";
 }
 
 function tagImg() {
