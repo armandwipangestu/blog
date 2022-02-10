@@ -9,7 +9,7 @@ var options = {   // optional
   //contentSelector: "#ArticleBody",
 
   // CSS class(es) used to render the copy icon.
-  copyIconClass: "fa fa-clone",
+  copyIconClass: "fa fa-copy",
   // CSS class(es) used to render the done icon.
   checkIconClass: "fa fa-check-circle text-success"
 };
