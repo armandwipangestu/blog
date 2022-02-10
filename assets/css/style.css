@@ -133,14 +133,21 @@
 }
 
 code {
+  max-width: 100%;
+  font-size: 75%;
   border-radius: 5px;
   display: inline-block;
   padding: 0.1em 0.5em;
   /*background-color: #282c34;*/
   /*color: #abb2bf;*/
-  background-color: #F8F9FA;
+  /*background-color: #F8F9FA;*/
+  background: #fff;
   color: #e74c3c;
   border: 1px solid #E1E4E5;
+}
+
+pre code.hljs {
+  border: none;
 }
 
 .hljs-ln-numbers {
