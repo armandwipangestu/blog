@@ -1,7 +1,8 @@
 const toggleTheme = document.querySelector(".toggle-theme");
 const tag = document.querySelector(".tag");
 const links = document.querySelectorAll(".fa-link");
-const cards = document.querySelectorAll(".card");
+const cardBodys = document.querySelectorAll(".card-body");
+const cardFooters = document.querySelectorAll(".card-footer");
 const codes = document.querySelectorAll("code");
 const highlightLightTheme = "github.min";
 const highlightDarkTheme = "github-dark-dimmed.min";
@@ -9,31 +10,51 @@ toggleTheme.addEventListener("click", function() {
   const bodyTheme = document.getElementsByTagName("BODY")[0].className;
   if (bodyTheme == "bg-dark text-white") {
     document.getElementsByTagName("BODY")[0].className = "bg-light text-dark";
-    tag.className = "btn btn-dark tag";
+
+    //tag.className = "btn btn-dark tag";
+    
     links.forEach(link => {
       link.className = "fas fa-link me-2 text-dark";
     });
-    cards.forEach(card => {
-      card.className = "card border-light mb-3 rounded";
+
+    cardBodys.forEach(cardBody => {
+      cardBody.className = "card-body bg-light text-dark";
     });
+
+    cardFooters.forEach(cardFooter => {
+      cardFooter.className = "card-footer bg-light text-dark";
+    });
+
     document
       .querySelector(`link[title="${highlightDarkTheme}"]`)
       .removeAttribute("disabled");
+
     document
       .querySelector(`link[title="${highlightLightTheme}"]`)
       .setAttribute("disabled", "disabled");
+
   } else if (bodyTheme == "bg-light text-dark") {
+
     document.getElementsByTagName("BODY")[0].className = "bg-dark text-white";
-    tag.className = "btn btn-light tag";
+
+    //tag.className = "btn btn-light tag";
+
     links.forEach(link => {
       link.className = "fas fa-link me-2 text-white";
     });
-    cards.forEach(card => {
-      card.className = "card border-dark mb-3 rounded";
+
+    cardBodys.forEach(cardBody => {
+      cardBody.className = "card-body bg-dark text-light";
     });
+
+    cardFooters.forEach(cardFooter => {
+      cardFooter.className = "card-footer bg-dark text-light";
+    });
+
     document
       .querySelector(`link[title="${highlightLightTheme}"]`)
       .removeAttribute("disabled");
+
     document
       .querySelector(`link[title="${highlightDarkTheme}"]`)
       .setAttribute("disabled", "disabled");

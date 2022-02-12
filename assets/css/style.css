@@ -116,6 +116,18 @@
   display: none;
 }
 
+.tag {
+  align-items: center;
+  font-size: .675rem;
+  border: 1px solid #a4a6a8;
+  border-radius: 12px;
+  padding: 0.275rem 0.75rem;
+  cursor: default;
+  display: inline-flex;
+  margin-bottom: 6px !important;
+  margin-right: 6px;
+}
+
 .code-dark {
   border-radius: 5px;
   display: inline-block;
