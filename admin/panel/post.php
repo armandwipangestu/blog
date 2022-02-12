@@ -59,14 +59,6 @@ if (isset($_POST['upload'])) {
       text-decoration: none;
     }
 
-    code {
-      border-radius: 5px;
-      display: inline-block;
-      padding: 0.1em 0.5em;
-      background-color: #282c34;
-      color: #abb2bf;
-    }
-
   </style>
   <title><?= getName(); ?> - Membuat Postingan</title>
   <link rel="icon" type="image/svg" href="../../<?= getFavIcon(); ?>">
@@ -223,7 +215,7 @@ if (isset($_POST['upload'])) {
         <div class="container mt-4">
           <?php if (isset($preview)) : ?>
             <h3><?= $parsedown->text($preview['judul']); ?></h3>
-            <?= $parsedown->text('<span class="btn btn-dark tag"><i class="fas fa-tag me-1"></i> ' . $preview['tags'] . '</span>'); ?>
+            <span class="tag"><i class="fas fa-tags me-1"></i> <?= $preview['tags']; ?></span><br>
             <?= $parsedown->text($preview['konten']); ?>
           <?php endif; ?>
         </div>

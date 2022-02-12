@@ -138,21 +138,20 @@ $relateds_count = count($relateds);
             <?= $parsedown->text($data['judul']); ?>
           </h3>
         </div>
-        <p class="text-muted">
-          Postingan Dibuat: <?= $data['tanggal_dibuat']; ?>
-          <br>
-          <?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
-            Terakhir Diedit: <?= $data['tanggal_diubah']; ?>
-          <?php endif; ?>
-        </p>
-        <?= $parsedown->text('<span class="btn btn-dark tag"><i class="fas fa-tag me-1"></i> ' . $data['tag'] . '</span>'); ?>
+        <span class="tag"><i class="fas fa-tags me-1"></i> <?= $data['tag']; ?></span><br>
+        <small class="text-muted" style="font-size: .675rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
+        <?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
+          <small class="text-muted" style="font-size: .675rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
+        <?php endif; ?>
         <?php if (isset($_SESSION["login"])) : ?>
-          <div class="action mb-3">
+          <div class="action mt-3 mb-3">
             <a class="btn btn-danger hapus" data-id="<?= $data["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>
             <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning"><i class="fas fa-pen me-1"></i> Ubah Post</a>
           </div>
         <?php endif; ?>
-        <?= $parsedown->text($data['konten']); ?>
+        <div class="mt-3">
+          <?= $parsedown->text($data['konten']); ?>
+        </div>
 
         <?php if(empty($relateds) == false) : ?>
 
