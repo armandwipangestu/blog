@@ -94,47 +94,31 @@ $parsedown = new Parsedown();
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-lg-7 mt-5">
-        <label for="search" class="form-label mt-5"><i class="fas fa-search"></i> Search</label>
-        <input type="text" class="form-control search border-dark" placeholder="Masukan keyword pencarian" style="border-radius: 20px;">
+        <label for="search" class="form-label mt-5"><i class="fas fa-search" style="font-size: .800rem;"></i> Search</label>
+        <input type="text" class="form-control search border-dark" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: .800rem;">
         <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
-            <div class="card border-dark mb-3 rounded">
-              <?php if (pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
-                <a href="post.php?id=<?= $d['id']; ?>">
-                  <div class="ratio ratio-16x9">
-                    <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
-                    <img src="../assets/img/post/<?= $d['thumbnail']; ?>" class="card-img-top" alt="<?= $d['thumbnail']; ?>">
-                  </div>
-                </a>
-              <?php endif; ?>
-              <?php if (pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($d["thumbnail"], PATHINFO_EXTENSION) == "jpeg") : ?>
-                <!-- <a href="../assets/img/post/<?= $d['thumbnail']; ?>" target="_blank"> -->
-                <a href="post.php?id=<?= $d['id']; ?>">
-                  <img src="../assets/img/post/<?= $d['thumbnail']; ?>" class="card-img-top" alt="<?= $d['thumbnail']; ?>">
-                </a>
-              <?php endif; ?>
-              <div class="card-body bg-dark rounded-bottom">
-                <a href="post.php?id=<?= $d['id']; ?>" class="link text-white">
-                  <h3 class="card-title"><?= $parsedown->text($d['judul']); ?></h3>
-                </a>
-                <p class="text-muted">
-                  Postingan Dibuat: <?= $d['tanggal_dibuat']; ?>
-                  <br>
+            <div class="col mb-5 rounded">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="">
+                </div>
+                <div class="card-body bg-light text-dark">
+                  <h5 class="card-title"><?= $d['judul']; ?></h5>
+                  <!-- <p class="card-text"><?= potongText($d['konten'], 5); ?></p> -->
+                  <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $d['tag']; ?></span><br>
+                  <small class="text-muted" style="font-size: .675rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
                   <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
-                    Terakhir Diedit: <?= $d['tanggal_diubah']; ?>
+                    <small class="text-muted" style="font-size: .675rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
                   <?php endif; ?>
-                </p>
-                <!--<p>
-                  <?= potongText($parsedown->text($d['konten']), 50) ?>
-                </p>
-                -->
-                <a href="post.php?id=<?= $d['id']; ?>">
-                  <?= $parsedown->text('<span class="btn btn-light"><i class="fas fa-tag me-1"></i> ' . $d['tag'] . '</span>'); ?>
-                </a>
-                <?php if (isset($_SESSION['login'])) : ?>
-                  <a class="btn btn-danger hapus" data-id="<?= $d["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>
-                  <a href="ubah.php?id=<?= $d['id']; ?>" class="btn btn-warning"><i class="fas fa-pen me-1"></i> Ubah Post</a>
-                <?php endif; ?>
+                </div>
+                <div class="card-footer bg-light text-dark" style="border: none;">
+                  <div class="text-end mb-3">
+                    <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: .700rem;">
+                      Read More <i class="fas fa-sign-in-alt"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           <?php endforeach; ?>
