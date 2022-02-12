@@ -10,9 +10,9 @@ $data = cari($_GET["keyword"]);
 
 <?php foreach ($data as $d) : ?>
   <div class="col mb-5 rounded">
-    <div class="card h-100">
+    <div class="card h-100" style="border-color: #a4a6a8;">
       <div class="ratio ratio-16x9">
-        <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="">
+        <img class="card-img-top" src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>">
       </div>
       <div class="card-body bg-light text-dark">
         <h5 class="card-title"><?= $d['judul']; ?></h5>

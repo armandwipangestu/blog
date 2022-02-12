@@ -95,13 +95,13 @@ $parsedown = new Parsedown();
     <div class="row justify-content-md-center">
       <div class="col-lg-7 mt-5">
         <label for="search" class="form-label mt-5"><i class="fas fa-search" style="font-size: .800rem;"></i> Search</label>
-        <input type="text" class="form-control search border-dark" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: .800rem;">
+        <input type="text" class="form-control search" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: .800rem; border-color: #a4a6a8;">
         <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
             <div class="col mb-5 rounded">
-              <div class="card h-100">
+              <div class="card h-100" style="border-color: #a4a6a8;">
                 <div class="ratio ratio-16x9">
-                  <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="">
+                  <img class="card-img-top" src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>">
                 </div>
                 <div class="card-body bg-light text-dark">
                   <h5 class="card-title"><?= $d['judul']; ?></h5>
