@@ -138,8 +138,14 @@ $relateds_count = count($relateds);
             <?= $parsedown->text($data['judul']); ?>
           </h3>
         </div>
-        <span class="tag"><i class="fas fa-tags me-1"></i> <?= $data['tag']; ?></span><br>
-        <small class="text-muted" style="font-size: .675rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
+        <?php
+          $tags = $data['tag'];
+          $tag = explode(" ", $tags);
+          foreach($tag as $t) :
+        ?>
+          <span class="tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
+        <?php endforeach; ?>
+        <br><small class="text-muted" style="font-size: .675rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
         <?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
           <small class="text-muted" style="font-size: .675rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
         <?php endif; ?>

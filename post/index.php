@@ -106,8 +106,14 @@ $parsedown = new Parsedown();
                 <div class="card-body bg-light text-dark">
                   <h5 class="card-title"><?= $d['judul']; ?></h5>
                   <!-- <p class="card-text"><?= potongText($d['konten'], 5); ?></p> -->
-                  <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $d['tag']; ?></span><br>
-                  <small class="text-muted" style="font-size: .675rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
+                  <?php
+                    $tags = $d["tag"];
+                    $tag = explode(" ", $tags);
+                    foreach($tag as $t) :
+                  ?>
+                    <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
+                  <?php endforeach; ?>
+                  <br><small class="text-muted" style="font-size: .675rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
                   <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
                     <small class="text-muted" style="font-size: .675rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
                   <?php endif; ?>
