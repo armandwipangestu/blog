@@ -215,7 +215,14 @@ if (isset($_POST['upload'])) {
         <div class="container mt-4">
           <?php if (isset($preview)) : ?>
             <h3><?= $parsedown->text($preview['judul']); ?></h3>
-            <span class="tag"><i class="fas fa-tags me-1"></i> <?= $preview['tags']; ?></span><br>
+            <?php
+              $tags = $preview["tags"];
+              $tag = explode(" ", $tags);
+              foreach($tag as $t) :
+            ?>
+              <span class="tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
+            <?php endforeach; ?>
+            <br>
             <?= $parsedown->text($preview['konten']); ?>
           <?php endif; ?>
         </div>
