@@ -127,7 +127,7 @@ $relateds_count = count($relateds);
             </div>
           </a>
         <?php endif; ?>
-        <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg") : ?>
+        <?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "gif" ) : ?>
           <!-- <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank"> -->
           <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
             <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
