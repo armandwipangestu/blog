@@ -150,6 +150,7 @@ code {
   border-radius: 5px;
   display: inline-block;
   padding: 0.1em 0.5em;
+  margin-bottom: 0.3em;
   /*background-color: #282c34;*/
   /*color: #abb2bf;*/
   /*background-color: #F8F9FA;*/
@@ -192,12 +193,11 @@ pre code.hljs {
 }
 
 blockquote {
-  /*background: #4d4523;*/
   /*background: rgba(255, 231, 115, 0.2);*/
-  background: rgba(253, 230, 115, 0.5);
+  /*background: rgba(253, 230, 115, 0.5);*/
   /* Black background */
   /*background: rgba(0, 0, 0, 0.4);*/
-  border: 1px solid #444;
+  border: 1px solid #e9ecef;
   border-left: 4px solid #f2db6d;
   border-radius: 5px;
   margin: 1.5em 10px;
