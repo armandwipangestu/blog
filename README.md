@@ -53,20 +53,38 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 - Username: `demo`
 - Password: `demo`
 
-- Screenshot:
+- Screenshot Light Theme:
 <br>
-<a href="https://i.ibb.co/chmfrQS/image.png" target="_blank">
-  <img src="https://i.ibb.co/chmfrQS/image.png" />
+<a href="https://i.ibb.co/qrzCK9T/image.png" target="_blank">
+  <img src="https://i.ibb.co/qrzCK9T/image.png" />
 </a>
 
-<a href="https://i.ibb.co/dPcmB5s/image.png" target="_blank">
-  <img src="https://i.ibb.co/dPcmB5s/image.png" />
+<a href="https://i.ibb.co/k26sdV9/image.png" target="_blank">
+  <img src="https://i.ibb.co/k26sdV9/image.png" />
 </a>
 
-<a href="https://i.ibb.co/phGzMTr/image.png" target="_blank">
-  <img src="https://i.ibb.co/phGzMTr/image.png" />
+<a href="https://i.ibb.co/41mB13T/image.png" target="_blank">
+  <img src="https://i.ibb.co/41mB13T/image.png" />
 </a>
 
-<a href="https://i.ibb.co/p2LrgB7/image.png" target="_blank">
-  <img src="https://i.ibb.co/p2LrgB7/image.png" />
+<a href="https://i.ibb.co/vH18632/image.png" target="_blank">
+  <img src="https://i.ibb.co/vH18632/image.png" />
+</a>
+
+- Screenshot Dark Theme:
+<br>
+<a href="https://i.ibb.co/RH8xMBh/image.png" target="_blank">
+  <img src="https://i.ibb.co/RH8xMBh/image.png" />
+</a>
+
+<a href="https://i.ibb.co/LpCHYbT/image.png" target="_blank">
+  <img src="https://i.ibb.co/LpCHYbT/image.png" />
+</a>
+
+<a href="https://i.ibb.co/6DJ99Hr/image.png" target="_blank">
+  <img src="https://i.ibb.co/6DJ99Hr/image.png" />
+</a>
+
+<a href="https://i.ibb.co/P1rtyfv/image.png" target="_blank">
+  <img src="https://i.ibb.co/P1rtyfv/image.png" />
 </a>
