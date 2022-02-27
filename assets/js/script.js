@@ -51,17 +51,18 @@ function backToTop() {
 
 // Get h3
 const headings3 = document.querySelectorAll("h3");
-const anchor = document.createElement("a");
-const iconAnchor = document.createElement("i");
-const nodeAnchor = document.createTextNode("# ");
-anchor.appendChild(iconAnchor);
 
 headings3.forEach(h3 => {
+  const anchor = document.createElement("a");
+  const iconAnchor = document.createElement("i");
+  //const nodeAnchor = document.createTextNode("# ");
+  anchor.appendChild(iconAnchor);
   //console.log(h3.innerHTML);
-  iconAnchor.setAttribute("class", "fas fa-link me-2 text-dark");
+  iconAnchor.setAttribute("class", "fas fa-hashtag me-2 text-dark");
   iconAnchor.setAttribute("style", "font-size: 20px");
   anchor.setAttribute("href", `#${h3.innerHTML}`);
   anchor.setAttribute("name", `${h3.innerHTML}`);
+  //anchor.setAttribute("id", `${h3.innerHTML}`);
   //console.log(anchor);
   h3.insertBefore(anchor, h3.firstChild);
 });

@@ -2,6 +2,7 @@
 const toggleTheme = document.querySelector(".toggle-theme");
 const tag = document.querySelector(".tag");
 const links = document.querySelectorAll(".fa-link");
+const hashtags = document.querySelectorAll(".fa-hashtag");
 const cardBodys = document.querySelectorAll(".card-body");
 const cardFooters = document.querySelectorAll(".card-footer");
 const codes = document.querySelectorAll("code");
@@ -18,6 +19,10 @@ toggleTheme.addEventListener("click", function() {
     
     links.forEach(link => {
       link.className = "fas fa-link me-2 text-dark";
+    });
+
+    hashtags.forEach(hashtag => {
+      hashtag.className = "fas fa-hashtag me-2 text-dark";
     });
 
     cardBodys.forEach(cardBody => {
@@ -48,6 +53,10 @@ toggleTheme.addEventListener("click", function() {
 
     links.forEach(link => {
       link.className = "fas fa-link me-2 text-white";
+    });
+
+    hashtags.forEach(hashtag => {
+      hashtag.className = "fas fa-hashtag me-2 text-white";
     });
 
     cardBodys.forEach(cardBody => {

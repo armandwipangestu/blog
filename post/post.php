@@ -155,7 +155,9 @@ $relateds_count = count($relateds);
             <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning"><i class="fas fa-pen me-1"></i> Ubah Post</a>
           </div>
         <?php endif; ?>
-        <div class="mt-3">
+        <div class="js-toc">
+        </div>
+        <div class="mt-3 js-toc-content">
           <?= $parsedown->text($data['konten']); ?>
         </div>
 
