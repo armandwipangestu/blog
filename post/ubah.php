@@ -232,7 +232,7 @@ if (isset($_POST['ubah'])) {
         <h4 class="preview"><i class="fas fa-eye"></i> Preview</h4>
         <div class="container mt-4">
           <?php if (isset($preview)) : ?>
-            <h3><?= $parsedown->text($preview['judul']); ?></h3>
+            <h2><?= $parsedown->text($preview['judul']); ?></h2>
             <?php
               $tags = $preview["tags"];
               $tag = explode(" ", $tags);

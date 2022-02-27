@@ -133,10 +133,10 @@ $relateds_count = count($relateds);
             <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
           </a>
         <?php endif; ?>
-        <div class="mt-4">
-          <h3>
+        <div class="mt-3 mb-4">
+          <h2>
             <?= $parsedown->text($data['judul']); ?>
-          </h3>
+          </h2>
         </div>
         <?php
           $tags = $data['tag'];
