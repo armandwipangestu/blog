@@ -245,3 +245,13 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-bottom-right-radius: 0.25rem !important;
 }
+
+h3:after {
+  content: " ";
+  display: block;
+  height: 1.5px;
+  /*width: 96%;
+  float: right;*/
+  background: #484f58;
+  margin: 7px 0 15px 0;
+}
