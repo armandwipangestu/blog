@@ -1,3 +1,4 @@
+// Get Element
 const toggleTheme = document.querySelector(".toggle-theme");
 const tag = document.querySelector(".tag");
 const links = document.querySelectorAll(".fa-link");
@@ -6,6 +7,8 @@ const cardFooters = document.querySelectorAll(".card-footer");
 const codes = document.querySelectorAll("code");
 const highlightLightTheme = "github.min";
 const highlightDarkTheme = "github-dark-dimmed.min";
+const tables = document.querySelectorAll("table");
+
 toggleTheme.addEventListener("click", function() {
   const bodyTheme = document.getElementsByTagName("BODY")[0].className;
   if (bodyTheme == "bg-dark text-white") {
@@ -23,6 +26,10 @@ toggleTheme.addEventListener("click", function() {
 
     cardFooters.forEach(cardFooter => {
       cardFooter.className = "card-footer bg-light text-dark";
+    });
+
+    tables.forEach(table => {
+      table.className = "table table-dark table-striped table-bordered";
     });
 
     document
@@ -49,6 +56,10 @@ toggleTheme.addEventListener("click", function() {
 
     cardFooters.forEach(cardFooter => {
       cardFooter.className = "card-footer bg-dark text-light";
+    });
+
+    tables.forEach(table => {
+      table.className = "table table-secondary table-striped table-bordered";
     });
 
     document

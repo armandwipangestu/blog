@@ -220,3 +220,28 @@ xmp {
   margin: 0rem 0px;
   padding: 0rem 0px;
 }
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* top-left border-radius */
+table tr:first-child th:first-child {
+  border-top-left-radius: 0.25rem !important;
+}
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 0.25rem !important;
+}
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 0.25rem !important;
+}
