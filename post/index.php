@@ -94,8 +94,8 @@ $parsedown = new Parsedown();
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-lg-7 mt-5">
-        <label for="search" class="form-label mt-5"><i class="fas fa-search" style="font-size: .800rem;"></i> Search</label>
-        <input type="text" class="form-control search" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: .800rem; border-color: #a4a6a8;">
+        <label for="search" class="form-label mt-5"><i class="fas fa-search" style="font-size: 1rem;"></i> Search</label>
+        <input type="text" class="form-control search" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
         <div class="container-post mt-4">
           <?php foreach ($data as $d) : ?>
             <div class="col mb-5 rounded">
@@ -113,14 +113,14 @@ $parsedown = new Parsedown();
                   ?>
                     <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
                   <?php endforeach; ?>
-                  <br><small class="text-muted" style="font-size: .675rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
+                  <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
                   <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
-                    <small class="text-muted" style="font-size: .675rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
+                    <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
                   <?php endif; ?>
                 </div>
                 <div class="card-footer bg-light text-dark" style="border: none;">
                   <div class="text-end mb-3">
-                    <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: .700rem;">
+                    <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: 1rem;">
                       Read More <i class="fas fa-sign-in-alt"></i>
                     </a>
                   </div>

@@ -133,10 +133,10 @@ $relateds_count = count($relateds);
             <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
           </a>
         <?php endif; ?>
-        <div class="mt-4">
-          <h3>
+        <div class="mt-3 mb-3">
+          <h2>
             <?= $parsedown->text($data['judul']); ?>
-          </h3>
+          </h2>
         </div>
         <?php
           $tags = $data['tag'];
@@ -145,9 +145,9 @@ $relateds_count = count($relateds);
         ?>
           <span class="tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
         <?php endforeach; ?>
-        <br><small class="text-muted" style="font-size: .675rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
+        <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
         <?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
-          <small class="text-muted" style="font-size: .675rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
+          <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
         <?php endif; ?>
         <?php if (isset($_SESSION["login"])) : ?>
           <div class="action mt-3 mb-3">

@@ -24,14 +24,14 @@ $data = cari($_GET["keyword"]);
         ?>
           <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
         <?php endforeach; ?>
-        <br><small class="text-muted" style="font-size: .675rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
+        <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
         <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
-          <small class="text-muted" style="font-size: .675rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
+          <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
         <?php endif; ?>
       </div>
       <div class="card-footer bg-light text-dark" style="border: none;">
         <div class="text-end mb-3">
-          <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: .700rem;">
+          <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: 1rem;">
             Read More <i class="fas fa-sign-in-alt"></i>
           </a>
         </div>

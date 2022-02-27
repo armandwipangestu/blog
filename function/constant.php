@@ -5,7 +5,8 @@ function getName()
   return "nihSx";
 }
 
-function getDefaultTheme() {
+function getDefaultTheme()
+{
   return "bg-light text-dark";
 }
 
@@ -20,7 +21,8 @@ function highlightDarkTheme()
   //return "atom-one-dark-reasonable.min";
 }
 
-function highlightLightTheme() {
+function highlightLightTheme()
+{
   //return "atom-one-light-reasonable.min";
   //return "base16/one-light.min";
   return "github.min";
@@ -50,12 +52,14 @@ function getLink($value)
   }
 }
 
-function getFavIcon() {
+function getFavIcon()
+{
   #return "assets/img/favicon/terminal.svg";
   return "assets/img/favicon/github.png";
 }
 
-function tagImg() {
+function tagImg()
+{
   return '
     <a href="..." target="_blank">
       <img src="..." alt="..." class="img-fluid rounded mx-auto d-block" />

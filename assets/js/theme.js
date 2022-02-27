@@ -1,11 +1,15 @@
+// Get Element
 const toggleTheme = document.querySelector(".toggle-theme");
 const tag = document.querySelector(".tag");
 const links = document.querySelectorAll(".fa-link");
+const hashtags = document.querySelectorAll(".fa-hashtag");
 const cardBodys = document.querySelectorAll(".card-body");
 const cardFooters = document.querySelectorAll(".card-footer");
 const codes = document.querySelectorAll("code");
 const highlightLightTheme = "github.min";
 const highlightDarkTheme = "github-dark-dimmed.min";
+const tables = document.querySelectorAll("table");
+
 toggleTheme.addEventListener("click", function() {
   const bodyTheme = document.getElementsByTagName("BODY")[0].className;
   if (bodyTheme == "bg-dark text-white") {
@@ -17,12 +21,20 @@ toggleTheme.addEventListener("click", function() {
       link.className = "fas fa-link me-2 text-dark";
     });
 
+    hashtags.forEach(hashtag => {
+      hashtag.className = "fas fa-hashtag me-2 text-dark";
+    });
+
     cardBodys.forEach(cardBody => {
       cardBody.className = "card-body bg-light text-dark";
     });
 
     cardFooters.forEach(cardFooter => {
       cardFooter.className = "card-footer bg-light text-dark";
+    });
+
+    tables.forEach(table => {
+      table.className = "table table-dark table-striped table-bordered";
     });
 
     document
@@ -43,12 +55,20 @@ toggleTheme.addEventListener("click", function() {
       link.className = "fas fa-link me-2 text-white";
     });
 
+    hashtags.forEach(hashtag => {
+      hashtag.className = "fas fa-hashtag me-2 text-white";
+    });
+
     cardBodys.forEach(cardBody => {
       cardBody.className = "card-body bg-dark text-light";
     });
 
     cardFooters.forEach(cardFooter => {
       cardFooter.className = "card-footer bg-dark text-light";
+    });
+
+    tables.forEach(table => {
+      table.className = "table table-secondary table-striped table-bordered";
     });
 
     document
