@@ -133,7 +133,7 @@ $relateds_count = count($relateds);
             <img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
           </a>
         <?php endif; ?>
-        <div class="mt-3 mb-4">
+        <div class="mt-3 mb-3">
           <h2>
             <?= $parsedown->text($data['judul']); ?>
           </h2>
@@ -145,9 +145,9 @@ $relateds_count = count($relateds);
         ?>
           <span class="tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
         <?php endforeach; ?>
-        <br><small class="text-muted" style="font-size: .675rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
+        <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
         <?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
-          <small class="text-muted" style="font-size: .675rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
+          <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
         <?php endif; ?>
         <?php if (isset($_SESSION["login"])) : ?>
           <div class="action mt-3 mb-3">
@@ -155,9 +155,7 @@ $relateds_count = count($relateds);
             <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning"><i class="fas fa-pen me-1"></i> Ubah Post</a>
           </div>
         <?php endif; ?>
-        <div class="js-toc">
-        </div>
-        <div class="mt-3 js-toc-content">
+        <div class="mt-3">
           <?= $parsedown->text($data['konten']); ?>
         </div>
 

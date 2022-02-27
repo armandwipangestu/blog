@@ -118,14 +118,14 @@
 
 .tag {
   align-items: center;
-  font-size: .675rem;
+  font-size: 0.8rem;
   border: 1px solid #a4a6a8;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 0.275rem 0.75rem;
   cursor: default;
   display: inline-flex;
-  margin-bottom: 6px !important;
-  margin-right: 6px;
+  margin-bottom: 1rem !important;
+  margin-right: 0.5rem;
 }
 
 .code-dark {
