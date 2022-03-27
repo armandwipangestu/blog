@@ -3,6 +3,10 @@
 session_start();
 require_once '../function/functions.php';
 require_once '../function/constant.php';
+require_once '../assets/lib/Parsedown.php';
+
+$parsedown = new Parsedown();
+$filename = file_get_contents("./about.md", true);
 
 ?>
 
@@ -87,19 +91,7 @@ require_once '../function/constant.php';
           <a href="../assets/img/me/me.png" target="_blank">
             <img src="../assets/img/me/me.png" width="290px" class="rounded mx-auto d-block mb-5 img-fluid" />
           </a>
-          <h2 class="text-center">About Me</h2>
-          <p class="mt-4 text-center">Computer Science, Network Technician, Linux Enthusiast</p>
-        </div>
-        <div class="mt-5 mb-5">
-          <h2 class="text-center">Contact Me</h2>
-          <div class="mt-4 text-center">
-            <a href="<?= getLink("Telegram"); ?>" target="_blank" class="text-muted me-4">
-              <i class="fab fa-telegram"></i> Telegram
-            </a>
-            <a href="mailto:<?= getLink("Email"); ?>" target="_blank" class="text-muted">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </div>
+          <?= $parsedown->text($filename); ?>
         </div>
       </div>
     </div>
