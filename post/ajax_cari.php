@@ -14,7 +14,7 @@ $data = cari($_GET["keyword"]);
       <div class="ratio ratio-16x9">
         <img class="card-img-top" src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>">
       </div>
-      <div class="card-body bg-light text-dark">
+      <div class="card-body bg-dark text-light">
         <h5 class="card-title"><?= $d['judul']; ?></h5>
         <!-- <p class="card-text"><?= potongText($d['konten'], 5); ?></p> -->
         <?php
@@ -29,7 +29,7 @@ $data = cari($_GET["keyword"]);
           <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
         <?php endif; ?>
       </div>
-      <div class="card-footer bg-light text-dark" style="border: none;">
+      <div class="card-footer bg-dark text-light" style="border: none;">
         <div class="text-end mb-3">
           <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: 1rem;">
             Read More <i class="fas fa-sign-in-alt"></i>
