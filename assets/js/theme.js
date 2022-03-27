@@ -10,9 +10,15 @@ const highlightLightTheme = "github.min";
 const highlightDarkTheme = "github-dark-dimmed.min";
 const tables = document.querySelectorAll("table");
 
+const setTheme = (theme) => {
+  document.documentElement.className = theme;
+}
+
 toggleTheme.addEventListener("click", function() {
   const bodyTheme = document.getElementsByTagName("BODY")[0].className;
-  if (bodyTheme == "bg-dark text-white") {
+  if (bodyTheme == "bg-dark text-light") {
+    setTheme('bg-light text-dark');
+    console.log(setTheme());
     document.getElementsByTagName("BODY")[0].className = "bg-light text-dark";
 
     //tag.className = "btn btn-dark tag";
@@ -47,16 +53,16 @@ toggleTheme.addEventListener("click", function() {
 
   } else if (bodyTheme == "bg-light text-dark") {
 
-    document.getElementsByTagName("BODY")[0].className = "bg-dark text-white";
+    document.getElementsByTagName("BODY")[0].className = "bg-dark text-light";
 
     //tag.className = "btn btn-light tag";
 
     links.forEach(link => {
-      link.className = "fas fa-link me-2 text-white";
+      link.className = "fas fa-link me-2 text-light";
     });
 
     hashtags.forEach(hashtag => {
-      hashtag.className = "fas fa-hashtag me-2 text-white";
+      hashtag.className = "fas fa-hashtag me-2 text-light";
     });
 
     cardBodys.forEach(cardBody => {

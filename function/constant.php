@@ -7,7 +7,8 @@ function getName()
 
 function getDefaultTheme()
 {
-  return "bg-light text-dark";
+  //return "bg-light text-dark";
+  return "bg-dark text-light";
 }
 
 function highlightDarkTheme()
