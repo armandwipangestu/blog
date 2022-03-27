@@ -20,7 +20,8 @@ $parsedown = new Parsedown();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
-  <link rel="stylesheet" href="../assets/css/highlight/atom-one-dark.css">
+  <link rel="stylesheet" title="<?= highlightDarkTheme(); ?>" href="../assets/css/highlight/<?= highlightDarkTheme(); ?>.css" disabled="disabled">
+  <link rel="stylesheet" title="<?= highlightLightTheme(); ?>" href="../assets/css/highlight/<?= highlightLightTheme(); ?>.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <title><?= getName(); ?> - Post</title>
@@ -91,46 +92,39 @@ $parsedown = new Parsedown();
   </nav>
   <!-- End Navbar -->
 
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-lg-7 mt-5">
-        <label for="search" class="form-label mt-5"><i class="fas fa-search" style="font-size: 1rem;"></i> Search</label>
-        <input type="text" class="form-control search" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
-        <div class="container-post mt-4">
-          <?php foreach ($data as $d) : ?>
-            <div class="col mb-5 rounded">
-              <div class="card h-100" style="border-color: #a4a6a8;">
-                <div class="ratio ratio-16x9">
-                  <img class="card-img-top" src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>">
-                </div>
-                <div class="card-body bg-dark text-light">
-                  <h5 class="card-title"><?= $d['judul']; ?></h5>
-                  <!-- <p class="card-text"><?= potongText($d['konten'], 5); ?></p> -->
-                  <?php
-                    $tags = $d["tag"];
-                    $tag = explode(" ", $tags);
-                    foreach($tag as $t) :
-                  ?>
-                    <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
-                  <?php endforeach; ?>
-                  <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
-                  <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
-                    <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
-                  <?php endif; ?>
-                </div>
-                <div class="card-footer bg-dark text-light" style="border: none;">
-                  <div class="text-end mb-3">
-                    <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end" style="font-size: 1rem;">
-                      Read More <i class="fas fa-sign-in-alt"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <?php endforeach; ?>
+  <div style="margin: 6rem 2rem 2rem 2rem;">
+    <input type="text" class="form-control search bg-dark text-light text-center" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
+  </div>
+  <div class="row row-cols-1 row-cols-md-4 g-4 ms-4 me-4 mb-5 container-post">
+    <?php foreach ($data as $d) : ?>
+      <div class="col rounded">
+        <div class="card h-100 bg-dark text-light" style="border-color: #a4a6a8;">
+          <div class="ratio ratio-16x9">
+            <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" />
+          </div>
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title"><?= $d['judul']; ?></h5>
+            <?php
+            $tags = $d["tag"];
+            $tag = explode(" ", $tags);
+            foreach ($tag as $t) :
+            ?>
+              <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
+            <?php endforeach; ?>
+            <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
+            <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
+              <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
+            <?php endif; ?>
+          </div>
+          <div class="card-footer bg-dark text-light text-end">
+            <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end">
+              Read More
+              <i class="fas fa-sign-in-alt ms-1"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    <?php endforeach; ?>
   </div>
 
   <div class="container text-white">
@@ -195,9 +189,19 @@ $parsedown = new Parsedown();
     search.addEventListener("keyup", function() {
       fetch("ajax_cari.php?keyword=" + search.value)
         .then(response => response.text())
-        .then(response => (containerPost.innerHTML = response));
+        .then(response => ( containerPost.innerHTML = response));
     });
   </script>
+  <script>
+    toggleTheme.addEventListener("click", function() {
+      const bodyTheme = document.getElementsByTagName("BODY")[0].className;
+      if(bodyTheme == "bg-dark text-light") {
+        searchBar.className = "form-control search bg-dark text-light mt-5 text-center";
+      } else if (bodyTheme == "bg-light text-dark") {
+        searchBar.className = "form-control search bg-light text-dark mt-5 text-center";
+      }
+    });
+   </script>
 </body>
 
 </html>

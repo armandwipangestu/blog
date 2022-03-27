@@ -58,7 +58,7 @@ headings3.forEach(h3 => {
   //const nodeAnchor = document.createTextNode("# ");
   anchor.appendChild(iconAnchor);
   //console.log(h3.innerHTML);
-  iconAnchor.setAttribute("class", "fas fa-hashtag me-2 text-dark");
+  iconAnchor.setAttribute("class", "fas fa-hashtag me-2 text-light");
   iconAnchor.setAttribute("style", "font-size: 20px");
   anchor.setAttribute("href", `#${h3.innerHTML}`);
   anchor.setAttribute("name", `${h3.innerHTML}`);
