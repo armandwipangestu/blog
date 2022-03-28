@@ -41,15 +41,15 @@ toggleTheme.addEventListener("click", function () {
     });
 
     tables.forEach(table => {
-      table.className = "table table-dark table-striped table-bordered";
+      table.className = "table table-secondary table-striped table-bordered";
     });
 
     document
-      .querySelector(`link[title="${highlightDarkTheme}"]`)
+      .querySelector(`link[title="${highlightLightTheme}"]`)
       .removeAttribute("disabled");
 
     document
-      .querySelector(`link[title="${highlightLightTheme}"]`)
+      .querySelector(`link[title="${highlightDarkTheme}"]`)
       .setAttribute("disabled", "disabled");
 
   } else if (bodyTheme == "bg-light text-dark") {
@@ -80,15 +80,15 @@ toggleTheme.addEventListener("click", function () {
     });
 
     tables.forEach(table => {
-      table.className = "table table-secondary table-striped table-bordered";
+      table.className = "table table-dark table-striped table-bordered";
     });
 
     document
-      .querySelector(`link[title="${highlightLightTheme}"]`)
+      .querySelector(`link[title="${highlightDarkTheme}"]`)
       .removeAttribute("disabled");
 
     document
-      .querySelector(`link[title="${highlightDarkTheme}"]`)
+      .querySelector(`link[title="${highlightLightTheme}"]`)
       .setAttribute("disabled", "disabled");
   }
 });

@@ -154,9 +154,13 @@ code {
   /*background-color: #282c34;*/
   /*color: #abb2bf;*/
   /*background-color: #F8F9FA;*/
-  background: #fff;
-  color: #e74c3c;
-  border: 1px solid #E1E4E5;
+  /*background: #fff;*/
+  background: rgba(110, 118, 129, 0.4);
+  /*color: #e74c3c;*/
+  color: #8b949e;
+  /*border: 1px solid #E1E4E5;*/
+  border: 1px solid rgba(110, 118, 129, 0.4);
+
 }
 
 pre code.hljs {
