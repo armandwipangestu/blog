@@ -203,7 +203,8 @@ blockquote {
   /*background: rgba(253, 230, 115, 0.5);*/
   /* Black background */
   /*background: rgba(0, 0, 0, 0.4);*/
-  border: 1px solid #e9ecef;
+  /*border: 1px solid #e9ecef;*/
+  border: 1px solid #a4a6a8;
   border-left: 4px solid #f2db6d;
   border-radius: 5px;
   margin: 1.5em 10px;
