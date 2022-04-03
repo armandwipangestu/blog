@@ -88,8 +88,8 @@ $filename = file_get_contents("./about.md", true);
     <div class="row justify-content-md-center">
       <div class="col-lg-7 mt-4">
         <div class="mt-4">
-          <a href="../assets/img/me/me.png" target="_blank">
-            <img src="../assets/img/me/me.png" width="290px" class="rounded mx-auto d-block mb-5 img-fluid" />
+          <a href="../assets/img/me/me2.png" target="_blank">
+            <img src="../assets/img/me/me2.png" width="290px" class="rounded mx-auto d-block mb-5 img-fluid" />
           </a>
           <?= $parsedown->text($filename); ?>
         </div>
