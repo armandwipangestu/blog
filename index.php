@@ -25,14 +25,14 @@ require_once 'function/constant.php';
   <meta property="og:site_name" content="<?= getName(); ?>" />
 
   <meta property="og:country-name" content="Indonesia" />
-  <meta property="og:image" content="assets/img/me/me.png" />
+  <meta property="og:image" content="assets/img/me/me2.png" />
   <meta property="og:image:width" content="460" />
   <meta property="og:image:height" content="230" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="<?= getName(); ?> - Home" />
   <meta property="twitter:author" content="<?= getName(); ?>" />
-  <meta property="twitter:image:src" content="assets/img/me/me.png" />
+  <meta property="twitter:image:src" content="assets/img/me/me2.png" />
 
   <title><?= getName(); ?> - Home</title>
   <link rel="icon" type="image/svg" href="<?= getFavIcon(); ?>">
