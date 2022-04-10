@@ -153,11 +153,10 @@ if (isset($_POST['ubah'])) {
                   <p class="fw-bold">
                     * Digunakan untuk konten (isi) pada postingan
                     <br>
-                    * Note Penulisan Tag untuk Gambar: <br><br>
-                    <?= $parsedown->text(tagImg()); ?>
-                    <br>
-                    * Note Penulisan Tag untuk table: <br><br>
-                    <?= $parsedown->text(tagTable()); ?>
+                    * Penulisan tag pada konten 
+                    <a href="../help/index.php" target="_blank">
+                      disini
+                    </a>
                   </p>
                 </blockquote>
               </div>
@@ -206,11 +205,10 @@ if (isset($_POST['ubah'])) {
                   <p class="fw-bold">
                     * Digunakan untuk konten (isi) pada postingan
                     <br>
-                    * Note Penulisan Tag untuk Gambar: <br><br>
-                    <?= $parsedown->text(tagImg()); ?>
-                    <br>
-                    * Note Penulisan Tag untuk table: <br><br>
-                    <?= $parsedown->text(tagTable()); ?>
+                    * Penulisan tag pada konten 
+                    <a href="../help/index.php" target="_blank">
+                      disini
+                    </a>
                   </p>
                 </blockquote>
               </div>
