@@ -155,6 +155,9 @@ if (isset($_POST['ubah'])) {
                     <br>
                     * Note Penulisan Tag untuk Gambar: <br><br>
                     <?= $parsedown->text(tagImg()); ?>
+                    <br>
+                    * Note Penulisan Tag untuk table: <br><br>
+                    <?= $parsedown->text(tagTable()); ?>
                   </p>
                 </blockquote>
               </div>
@@ -205,6 +208,9 @@ if (isset($_POST['ubah'])) {
                     <br>
                     * Note Penulisan Tag untuk Gambar: <br><br>
                     <?= $parsedown->text(tagImg()); ?>
+                    <br>
+                    * Note Penulisan Tag untuk table: <br><br>
+                    <?= $parsedown->text(tagTable()); ?>
                   </p>
                 </blockquote>
               </div>
