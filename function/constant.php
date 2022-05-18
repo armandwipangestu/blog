@@ -7,7 +7,8 @@ function getName()
 
 function getDefaultTheme()
 {
-  return "bg-light text-dark";
+  //return "bg-light text-dark";
+  return "bg-dark text-light";
 }
 
 function highlightDarkTheme()
@@ -56,13 +57,4 @@ function getFavIcon()
 {
   #return "assets/img/favicon/terminal.svg";
   return "assets/img/favicon/github.png";
-}
-
-function tagImg()
-{
-  return '
-    <a href="..." target="_blank">
-      <img src="..." alt="..." class="img-fluid rounded mx-auto d-block" />
-    </a>
-  ';
 }

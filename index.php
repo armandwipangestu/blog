@@ -25,14 +25,14 @@ require_once 'function/constant.php';
   <meta property="og:site_name" content="<?= getName(); ?>" />
 
   <meta property="og:country-name" content="Indonesia" />
-  <meta property="og:image" content="assets/img/me/me.png" />
+  <meta property="og:image" content="assets/img/me/me2.png" />
   <meta property="og:image:width" content="460" />
   <meta property="og:image:height" content="230" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="<?= getName(); ?> - Home" />
   <meta property="twitter:author" content="<?= getName(); ?>" />
-  <meta property="twitter:image:src" content="assets/img/me/me.png" />
+  <meta property="twitter:image:src" content="assets/img/me/me2.png" />
 
   <title><?= getName(); ?> - Home</title>
   <link rel="icon" type="image/svg" href="<?= getFavIcon(); ?>">
@@ -94,8 +94,8 @@ require_once 'function/constant.php';
     <div class="p-5 mt-4 bg-dark text-white about mb-5">
       <div class="row">
         <div class="col-lg-6">
-          <a href="assets/img/me/me.png" target="_blank">
-            <img src="assets/img/me/me.png" alt="Me" class="img-fluid rounded-circle avatar">
+          <a href="assets/img/me/me2.png" target="_blank">
+            <img src="assets/img/me/me2.png" alt="Me" class="img-fluid rounded-circle avatar">
           </a>
         </div>
         <div class="col-lg-6 mt-5">

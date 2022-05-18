@@ -141,8 +141,10 @@ if (isset($_POST['upload'])) {
                   <p class="fw-bold">
                     * Digunakan untuk konten (isi) pada postingan
                     <br>
-                    * Note Penulisan Tag untuk Gambar: <br><br>
-                    <?= $parsedown->text(tagImg()); ?>
+                    * Penulisan tag pada konten 
+                    <a href="../../help/index.php" target="_blank">
+                      disini
+                    </a>
                   </p>
                 </blockquote>
               </div>
@@ -190,8 +192,10 @@ if (isset($_POST['upload'])) {
                   <p class="fw-bold">
                     * Digunakan untuk konten (isi) pada postingan
                     <br>
-                    * Note Penulisan Tag untuk Gambar: <br><br>
-                    <?= $parsedown->text(tagImg()); ?>
+                    * Penulisan tag pada konten 
+                    <a href="../../help/index.php" target="_blank">
+                      disini
+                    </a>
                   </p>
                 </blockquote>
               </div>

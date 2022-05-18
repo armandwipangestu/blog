@@ -1,13 +1,18 @@
 <?php
 
 session_start();
+
+if (!isset($_SESSION['login'])) {
+  header("Location: ../auth/login.php");
+}
+
 require_once '../function/functions.php';
 require_once '../function/constant.php';
+require_once '../lib/functions.php';
 require_once '../assets/lib/Parsedown.php';
+$help = file_get_contents('help.md');
 
 $parsedown = new Parsedown();
-$filename = file_get_contents("./about.md", true);
-
 ?>
 
 <!DOCTYPE html>
@@ -19,26 +24,18 @@ $filename = file_get_contents("./about.md", true);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
-  <link rel="stylesheet" href="../assets/css/highlight/atom-one-dark.css">
+  <link rel="stylesheet" title="<?= highlightDarkTheme(); ?>" href="../assets/css/highlight/<?= highlightDarkTheme(); ?>.css">
+  <link rel="stylesheet" title="<?= highlightLightTheme(); ?>" href="../assets/css/highlight/<?= highlightLightTheme(); ?>.css" disabled="disabled">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
-  <title><?= getName(); ?> - About</title>
-  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
   <style>
-    .container .row .preview {
-      margin-top: 3rem;
-    }
-
-    @media (min-width: 992px) {
-      .container .row .preview {
-        margin-top: -0rem;
-      }
-    }
-    
     a {
       text-decoration: none;
     }
+
   </style>
+  <title><?= getName(); ?> - Ubah Postingan</title>
+  <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
 
 <body class="<?= getDefaultTheme(); ?>">
@@ -54,7 +51,7 @@ $filename = file_get_contents("./about.md", true);
         <ul class="nav navbar-nav ms-auto w-100 justify-content-end me-5">
           <a class="nav-link" aria-current="page" href="../index.php"><i class="fas fa-home"></i> Home</a>
           <a class="nav-link" href="../post/index.php"><i class="fas fa-book"></i> Blog</a>
-          <a class="nav-link" href=""><i class="fas fa-address-card"></i> About</a>
+          <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
               <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
@@ -84,21 +81,26 @@ $filename = file_get_contents("./about.md", true);
   </nav>
   <!-- End Navbar -->
 
-  <div class="container mt-5">
+    <div class="container mt-5">
     <div class="row justify-content-md-center">
-      <div class="col-lg-7 mt-4">
-        <div class="mt-4">
-          <a href="../assets/img/me/me2.png" target="_blank">
-            <img src="../assets/img/me/me2.png" width="290px" class="rounded mx-auto d-block mb-5 img-fluid" />
+      <div class="col-lg-7 mt-5">
+          <a href="../assets/img/post/default.png" target="_blank">
+            <img src="../assets/img/post/default.png" class="card-img-top rounded mb-3 img-fluid" alt="default.png">
           </a>
-          <?= $parsedown->text($filename); ?>
+        <div class="mt-3 mb-3">
+          <h2>
+            Penulisan Tag Pada Konten
+          </h2>
         </div>
+        <div class="mt-3">
+          <?= $parsedown->text($help); ?>
+        </div>
+
       </div>
     </div>
   </div>
-  </div>
 
-  <div class="container text-white">
+  <div class="container">
     <div class="row">
       <div class="col-lg-auto">
         <button type="button" class="btn btn-success btn-floating btn-lg rounded-circle" id="btn-back-to-top">
@@ -110,59 +112,12 @@ $filename = file_get_contents("./about.md", true);
 
   <script src="../assets/js/bootstrap/bootstrap.js"></script>
   <script src="../assets/js/highlight/highlight.min.js"></script>
+  <!--<script src="../assets/js/highlight/highlightjs-line-numbers.min.js"></script>-->
+  <script src="../assets/js/highlight/highlight-badge.min.js"></script>
+  <script src="../assets/js/highlight/highlight-badge-init.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
   <script src="../assets/js/theme.js"></script>
-  <?php if (isset($_SESSION["login"])) : ?>
-    <script>
-      const logout = document.querySelector('.logout');
-      logout.addEventListener("click", function() {
-        const dataid = this.dataset.id;
-        Swal.fire({
-          icon: 'warning',
-          title: 'Apakah anda yakin ingin keluar',
-          showCancelButton: true,
-          confirmButtonColor: '#d9534f',
-          cancelButtonColor: '#5cb85c',
-          confirmButtonText: `Ya`,
-          cancelButtonText: `Tidak`,
-        }).then((result) => {
-          if (result.isConfirmed) {
-            location.href = `../auth/logout.php?id=${dataid}`
-          }
-        })
-      });
-
-      const hapus = document.querySelectorAll('.hapus');
-      hapus.forEach(hps => {
-        hps.addEventListener("click", function() {
-          const dataid = this.dataset.id;
-          Swal.fire({
-            icon: 'warning',
-            title: 'Apakah anda yakin ingin menghapus post ini?',
-            showCancelButton: true,
-            confirmButtonColor: '#d9534f',
-            cancelButtonColor: '#5cb85c',
-            confirmButtonText: `Ya`,
-            cancelButtonText: `Tidak`,
-          }).then((result) => {
-            if (result.isConfirmed) {
-              location.href = `hapus.php?id=${dataid}`
-            }
-          })
-        })
-      })
-    </script>
-  <?php endif; ?>
-  <script>
-    const search = document.querySelector(".search");
-    const containerPost = document.querySelector(".container-post");
-    search.addEventListener("keyup", function() {
-      fetch("ajax_cari.php?keyword=" + search.value)
-        .then(response => response.text())
-        .then(response => (containerPost.innerHTML = response));
-    });
-  </script>
+  <script src="../assets/js/previewimage.js"></script>
 </body>
-
 </html>
