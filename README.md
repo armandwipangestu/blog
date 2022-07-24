@@ -48,20 +48,20 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 
 - Screenshot Light Theme:
   <br>
-  <a href="https://i.ibb.co/qrzCK9T/image.png" target="_blank">
-  <img src="https://i.ibb.co/qrzCK9T/image.png" />
+  <a href="https://i.ibb.co/tzTRpF0/image.png" target="_blank">
+  <img src="https://i.ibb.co/tzTRpF0/image.png" />
   </a>
 
-<a href="https://i.ibb.co/k26sdV9/image.png" target="_blank">
-  <img src="https://i.ibb.co/k26sdV9/image.png" />
+<a href="https://i.ibb.co/Pg6PmbW/image.png" target="_blank">
+  <img src="https://i.ibb.co/Pg6PmbW/image.png" />
 </a>
 
-<a href="https://i.ibb.co/41mB13T/image.png" target="_blank">
-  <img src="https://i.ibb.co/41mB13T/image.png" />
+<a href="https://i.ibb.co/n0KcZM9/image.png" target="_blank">
+  <img src="https://i.ibb.co/n0KcZM9/image.png" />
 </a>
 
-<a href="https://i.ibb.co/vH18632/image.png" target="_blank">
-  <img src="https://i.ibb.co/vH18632/image.png" />
+<a href="https://i.ibb.co/crj49HJ/image.png" target="_blank">
+  <img src="https://i.ibb.co/crj49HJ/image.png" />
 </a>
 
 - Screenshot Dark Theme:
