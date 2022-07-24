@@ -66,10 +66,12 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 </a>
 
 - Screenshot Dark Theme:
+
   <br>
-  <a href="https://user-images.githubusercontent.com/64394320/180656764-7dd6dc0b-476e-4d0d-af93-563f8624c689.png" target="_blank">
+
+<a href="https://user-images.githubusercontent.com/64394320/180656764-7dd6dc0b-476e-4d0d-af93-563f8624c689.png" target="_blank">
   <img src="https://user-images.githubusercontent.com/64394320/180656764-7dd6dc0b-476e-4d0d-af93-563f8624c689.png" />
-  </a>
+</a>
 
 <a href="https://user-images.githubusercontent.com/64394320/180656803-40723d5a-fa8b-4b88-a4af-0a577552ed57.png" target="_blank">
   <img src="https://user-images.githubusercontent.com/64394320/180656803-40723d5a-fa8b-4b88-a4af-0a577552ed57.png" />
