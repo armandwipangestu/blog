@@ -62,7 +62,7 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `judul`, `tag`, `konten`, `thumbnail`, `tanggal_dibuat`, `tanggal_diubah`) VALUES
-(1, 'Demo Postingan', 'demo', '```php\r\nclass FooBar {\r\n   private $demo = \"Hello World!\";\r\n\r\n   public function __construct() {\r\n      echo $this->demo;\r\n   }\r\n}\r\n\r\nnew FooBar();\r\n```\r\n\r\n- Output\r\n\r\n```php\r\nHello World!\r\n```\r\n\r\n<a href=\"https://i.ibb.co/dQrcKps/image.png\" target=\"_blank\">\r\n   <img src=\"https://i.ibb.co/dQrcKps/image.png\" class=\"img-fluid rounded mx-auto d-block\" />\r\n</a>', 'default.png', '20 Januari 2022 09:54', '20 Januari 2022 21:16');
+(1, 'Demo Postingan', 'demo', '```php\r\nclass FooBar {\r\n   private $demo = \"Hello World!\";\r\n\r\n   public function __construct() {\r\n      echo $this->demo;\r\n   }\r\n}\r\n\r\nnew FooBar();\r\n```\r\n\r\n- Output\r\n\r\n```php\r\nHello World!\r\n```\r\n\r\n<a href=\"https://i.ibb.co/N7Z3T14/image.png\" target=\"_blank\">\r\n   <img src=\"https://i.ibb.co/N7Z3T14/image.png\" class=\"img-fluid rounded mx-auto d-block\" />\r\n</a>', 'default.png', '20 Januari 2022 09:54', '20 Januari 2022 21:16');
 
 --
 -- Indexes for dumped tables
