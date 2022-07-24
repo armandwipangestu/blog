@@ -66,18 +66,18 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 
 - Screenshot Dark Theme:
   <br>
-  <a href="https://i.ibb.co/RH8xMBh/image.png" target="_blank">
-  <img src="https://i.ibb.co/RH8xMBh/image.png" />
+  <a href="https://user-images.githubusercontent.com/64394320/180656764-7dd6dc0b-476e-4d0d-af93-563f8624c689.png" target="_blank">
+  <img src="https://user-images.githubusercontent.com/64394320/180656764-7dd6dc0b-476e-4d0d-af93-563f8624c689.png" />
   </a>
 
-<a href="https://i.ibb.co/LpCHYbT/image.png" target="_blank">
-  <img src="https://i.ibb.co/LpCHYbT/image.png" />
+<a href="https://user-images.githubusercontent.com/64394320/180656803-40723d5a-fa8b-4b88-a4af-0a577552ed57.png" target="_blank">
+  <img src="https://user-images.githubusercontent.com/64394320/180656803-40723d5a-fa8b-4b88-a4af-0a577552ed57.png" />
 </a>
 
-<a href="https://i.ibb.co/6DJ99Hr/image.png" target="_blank">
-  <img src="https://i.ibb.co/6DJ99Hr/image.png" />
+<a href="https://user-images.githubusercontent.com/64394320/180656852-b3e81699-2022-4513-914e-6f7305ed6a4c.png" target="_blank">
+  <img src="https://user-images.githubusercontent.com/64394320/180656852-b3e81699-2022-4513-914e-6f7305ed6a4c.png" />
 </a>
 
-<a href="https://i.ibb.co/P1rtyfv/image.png" target="_blank">
-  <img src="https://i.ibb.co/P1rtyfv/image.png" />
+<a href="https://user-images.githubusercontent.com/64394320/180656884-a0d3857c-33f3-4f5e-b4c0-d73598967bf3.png" target="_blank">
+  <img src="https://user-images.githubusercontent.com/64394320/180656884-a0d3857c-33f3-4f5e-b4c0-d73598967bf3.png" />
 </a>
