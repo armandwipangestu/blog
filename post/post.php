@@ -151,7 +151,7 @@ $relateds_count = count($relateds);
 				<?php endif; ?>
 				<?php if (isset($_SESSION["login"])) : ?>
 					<div class="action mt-3 mb-3">
-						<a class="btn btn-danger hapus" data-id="<?= $data["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>
+						<a class="btn btn-danger hapus me-2" data-id="<?= $data["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>
 						<a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning"><i class="fas fa-pen me-1"></i> Ubah Post</a>
 					</div>
 				<?php endif; ?>
