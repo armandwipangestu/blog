@@ -41,7 +41,7 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 
 <hr>
 
-- Link Website: [demo.armandwipangestu.site](http://armandwipangestu.rf.gd/demo_blog/)
+- Link Website: [armandwipangestu.rf.gd/demo_blog/](http://armandwipangestu.rf.gd/demo_blog/)
 
 - Username: `demo`
 - Password: `demo`
