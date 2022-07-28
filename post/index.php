@@ -46,6 +46,49 @@ $parsedown = new Parsedown();
       height: 15vw;
       object-fit: cover;
     } */
+
+.card {
+    border-radius: 10px;
+}
+
+.c-details span {
+    font-weight: 300;
+    font-size: 13px
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 39px
+}
+
+.badge span {
+    /* background-color: #fffbec; */
+    background-color: #0d6efd;
+    width: 60px;
+    height: 25px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    display: flex;
+    /* color: #fed85d; */
+    color: #fff;
+    justify-content: center;
+    align-items: center
+}
+
+.text1 {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.text2 {
+    color: #a5aec0
+}
   </style>
 </head>
 
@@ -95,32 +138,52 @@ $parsedown = new Parsedown();
   <div style="margin: 6rem 2rem 2rem 2rem;">
     <input type="text" class="form-control search bg-dark text-light text-center" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
   </div>
+
+  <!-- <div class="container mt-3 mb-3 container-post">
+    <div class="row">
+      <?php foreach ($data as $d) : ?>
+        <div class="col-md-3 p-2 mb-3">
+              <div class="card p-3 mb-2" style="border: 1px solid #a4a6a8; cursor: pointer;" data-id="<?= $d["id"]; ?>">
+                  <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-row align-items-center ratio ratio-16x9">
+                          <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" style="border-radius: 10px 10px 0 0;" />
+                      </div>
+                  </div>
+                  <div class="mt-2 ms-3">
+                      <h5 class="heading"><?= $d['judul']; ?></h5>
+                      <?php
+                        $tags = $d["tag"];
+                        $tag = explode(" ", $tags);
+                        foreach ($tag as $t) :
+                      ?>
+
+                        <span class="card-text tag mt-2"><i class="fas fa-tags me-1"></i><?= $t; ?></span>
+                      <?php endforeach; ?>
+                  </div>
+              </div>
+          </div>
+      <?php endforeach; ?>
+    </div>
+  </div> -->
+
   <div class="row row-cols-1 row-cols-md-4 g-4 ms-4 me-4 mb-5 container-post">
     <?php foreach ($data as $d) : ?>
-      <div class="col rounded">
-        <div class="card h-100 bg-dark text-light" style="border-color: #a4a6a8;">
-          <div class="ratio ratio-16x9">
-            <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" />
+      <div class="col-md-3 p-2 mb-3">
+        <div class="card p-3 mb-2" style="border: 1px solid #a4a6a8; cursor: pointer;" data-id="<?= $d["id"]; ?>">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex flex-row align-items-center ratio ratio-16x9">
+              <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" style="border-radius: 10px 10px 0 0;" />
+            </div>
           </div>
-          <div class="card-body bg-dark text-light">
-            <h5 class="card-title"><?= $d['judul']; ?></h5>
+          <div class="mt-2 ms-3">
+            <a href="post.php?id=<?= $d["id"] ?>" style="text-decoration: none; color: inherit;"><h5 class="heading"><?= $d['judul']; ?></h5></a>
             <?php
-            $tags = $d["tag"];
-            $tag = explode(" ", $tags);
-            foreach ($tag as $t) :
+              $tags = $d["tag"];
+              $tag = explode(" ", $tags);
+              foreach ($tag as $t) :
             ?>
-              <span class="card-text tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
+              <span class="card-text tag mt-2"><i class="fas fa-tags me-1"></i><?= $t; ?></span>
             <?php endforeach; ?>
-            <br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $d['tanggal_dibuat']; ?></small><br>
-            <?php if (cekPerubahan($d['tanggal_diubah'])) : ?>
-              <small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $d['tanggal_diubah']; ?></small>
-            <?php endif; ?>
-          </div>
-          <div class="card-footer bg-dark text-light text-end">
-            <a href="post.php?id=<?= $d['id']; ?>" class="btn btn-primary text-end">
-              Read More
-              <i class="fas fa-sign-in-alt ms-1"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -142,6 +205,14 @@ $parsedown = new Parsedown();
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
   <script src="../assets/js/theme.js"></script>
+  <script>
+    const articles = document.querySelectorAll(".card")
+    articles.forEach(article => {
+      article.addEventListener("click", () => {
+        location.href = `post.php?id=${article.dataset.id}`
+      })
+    })
+    </script>
   <?php if (isset($_SESSION["login"])) : ?>
     <script>
       const logout = document.querySelector('.logout');

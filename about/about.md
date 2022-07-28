@@ -1,6 +1,12 @@
 ### About Me:
 
-Saya adalah mahasiswa **STMIK Bandung** dengan program studi `Teknik Informatika` saat ini saya berada di semester 2 (genap). Sembari kuliah saya juga bekerja di perusahaan ISP (`Internet Service Provider`) di Kota Bandung sebagai Teknisi Jaringan Wireless.
+Perkenalkan nama saya Arman Dwi Pangestu, saya adalah seorang Teknisi Jaringan Wireless dengan pengalaman 1 tahun.
+
+Selain itu saya juga hobby mempelajari hal - hal yang berhubungan dengan IT, seperti:
+
+- Programming
+- GNU/Linux
+- Dll
 
 ### Skill or Experience:
 
