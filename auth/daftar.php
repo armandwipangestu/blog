@@ -102,14 +102,14 @@ if (isset($_POST['daftar'])) {
 
       <?php if (isset($error['error'])) : ?>
         <div class="text-center mt-4 text-danger mb-4 border p-1">
-          <i class="fas fa-exclamation-triangle">
+          <i class="fa-solid fa-circle-exclamation">
             <span><?= $error['pesan']; ?></span>
           </i>
         </div>
       <?php endif; ?>
       <?php if (isset($success['success'])) : ?>
         <div class="text-center mt-4 text-success mb-4 border p-1">
-          <i class="fas fa-exclamation-triangle">
+          <i class="fa-solid fa-check">
             <span><?= $success['pesan']; ?></span>
           </i>
         </div>

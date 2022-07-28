@@ -73,8 +73,8 @@ require_once 'function/constant.php';
             </li>
           <?php endif; ?>
           <?php if (!isset($_SESSION['login'])) : ?>
-            <a class="btn btn-light tombol" href="auth/login.php">
-              <i class="fas fa-user"></i> Login Admin
+            <a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="auth/login.php">
+              Sign in
             </a>
           <?php endif; ?>
           <div class="text-center ms-3 mt-1">
@@ -100,7 +100,7 @@ require_once 'function/constant.php';
         </div>
         <div class="col-lg-6 mt-5">
           <h4 class="about-text custom-font">
-            Tentang Blog
+            <i class="fa-solid fa-book me-2"></i> Tentang Blog
           </h4>
           <p class="mt-3 text-muted">Blog ini dibuat menggunakan Sistem Operasi <b class="text-white">Arch Linux</b>. Source code ditulis menggunakan Text Editor <b class="text-white">Visual Studio Code</b> & <b class="text-white">Neovim</b>. Blog ini adalah media online yang saya pergunakan untuk mendokumentasikan kegiatan belajar.
             Sebagian besar blog ini berisi catatan yang berhubungan dengan teknologi komputer. Seperti, sistem operasi GNU/Linux, jaringan komputer, bahasa pemrograman

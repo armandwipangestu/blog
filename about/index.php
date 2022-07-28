@@ -70,7 +70,9 @@ $filename = file_get_contents("./about.md", true);
             </li>
           <?php endif; ?>
           <?php if (!isset($_SESSION['login'])) : ?>
-            <a class="btn btn-light tombol" href="../auth/login.php"><i class="fas fa-user"></i> Login Admin</a>
+            <a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="../auth/login.php">
+              Sign in
+            </a>
           <?php endif; ?>
           <div class="text-center ms-3 mt-1">
             <label class="switch">
