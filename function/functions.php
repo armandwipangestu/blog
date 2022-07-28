@@ -310,17 +310,17 @@ function ubahUser($data)
 	if ($gambar_lama != "default.png") {
 		if ($gambar_lama != $gambar && $gambar != '') {
 			unlink($path . $gambar_lama);
-			$_SESSION['avatar'] = $gambar;
 		}
 	}
-
+	
 	if (password_verify($password_verify, $password)) {
-
+		
 		$query = "UPDATE admin SET
             username = '$username',
 			avatar = '$gambar'
             WHERE id = '$id'
     ";
+		$_SESSION['avatar'] = $gambar;
 		mysqli_query($conn, $query);
 
 		return mysqli_affected_rows($conn) or die(mysqli_error($conn));
