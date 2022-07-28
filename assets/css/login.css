@@ -1,0 +1,28 @@
+input {
+    width: 100%;
+    padding: 12px 40px;
+    margin: 8px 0;
+    display: inline-block;
+  }
+  
+  .span {
+    position: absolute;
+    transform: translate(100%, 100%);
+    top: 55%;
+    right: 43%;
+    cursor: pointer;
+  }
+  
+  .input-icon {
+    position: absolute;
+    right: 10px;
+    top: calc(
+      75% - 0.5em
+    ); /* Keep icon in center of input, regardless of the input height */
+  }
+  input {
+    padding-left: 17px;
+  }
+  .input-wrapper {
+    position: relative;
+  }

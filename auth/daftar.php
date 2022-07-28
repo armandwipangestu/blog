@@ -38,6 +38,7 @@ if (isset($_POST['daftar'])) {
   <link rel="stylesheet" href="../assets/css/highlight/atom-one-dark.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
   <title><?= getName(); ?> - Daftar</title>
   <link rel="icon" type="image/svg" href="../<?= getFavIcon(); ?>">
 </head>
@@ -90,55 +91,71 @@ if (isset($_POST['daftar'])) {
   <!-- End Navbar -->
 
   <!-- Start Form Daftar -->
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-lg-7 mt-2 mb-5">
-        <div class="container form">
-          <div class="p-4 mt-4 bg-dark text-white about mb-5" style="border-radius: 15px; margin-top: 5rem !important;">
-            <h2 class="text-center">Tambah Admin Baru</h2>
-            <?php if (isset($error['error'])) : ?>
-              <div class="text-center mt-4 text-danger">
-                <i class="fas fa-exclamation-triangle">
-                  <span><?= $error['pesan']; ?></span>
-                </i>
-              </div>
-            <?php endif; ?>
-            <?php if (isset($success['success'])) : ?>
-              <div class="text-center mt-4 text-success">
-                <i class="fas fa-exclamation-triangle">
-                  <span><?= $success['pesan']; ?></span>
-                </i>
-              </div>
-            <?php endif; ?>
-            <form method="post">
-              <div class="row d-flex align-items-center justify-content-center">
-                <div class="col-md-6">
 
-                  <div class="mt-2 mb-3">
-                    <label for="username" class="form-label text-secondary mb-2"><i class="fas fa-user"></i> Username</label>
-                    <input type="text" name="username" id="username" class="form-control" autofocus required>
-                  </div>
+  <div class="d-flex justify-content-center mb-5">
+    <div class="mt-5">
 
-                  <div class="mb-3">
-                    <label class="form-label text-secondary"><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" class="form-control" name="password" required>
-                  </div>
-
-                  <div class="text-end">
-                    <button type="submit" class="btn btn-success" name="daftar">Daftar <i class="fas fa-sign-out-alt"></i></button>
-                  </div>
-
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+      <div class="text-center fs-1">
+        <i class="fa fa-boxes"></i>
+        <h4 class="pt-3 mb-4">Sign up to blog</h4>
       </div>
+
+      <?php if (isset($error['error'])) : ?>
+        <div class="text-center mt-4 text-danger mb-4 border p-1">
+          <i class="fas fa-exclamation-triangle">
+            <span><?= $error['pesan']; ?></span>
+          </i>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($success['success'])) : ?>
+        <div class="text-center mt-4 text-success mb-4 border p-1">
+          <i class="fas fa-exclamation-triangle">
+            <span><?= $success['pesan']; ?></span>
+          </i>
+        </div>
+      <?php endif; ?>
+
+      <form class="rounded pt-2" method="post">
+
+        <div class="mb-3" style="weight: 300px; width: 300px;">
+          <label class="form-label">Username</label>
+          <input type="text" name="username" class="form-control" id="username" required autofocus />
+        </div>
+
+        <div class="mb-3 password-field input-wrapper">
+          <label class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password" />
+          <span id="togglePassword" class="text-muted"
+            ><i
+              class="fas fa-eye input-icon"
+              id="iconTogglePassword"
+              style="cursor: pointer"
+            ></i
+          ></span>
+        </div>
+        
+        <div class="mb-3 ">
+          <button
+            class="w-100 btn btn-primary mt-2"
+            type="submit"
+            name="daftar"
+          >
+            Sign up
+          </button>
+        </div>
+      </form>
+
     </div>
   </div>
+
   <!-- End Form Daftar -->
 
-
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous">
+  </script>
+  <script src="../assets/js/togglePassword.js"></script>
   <script src="../assets/js/bootstrap/bootstrap.js"></script>
   <script src="../assets/js/highlight/highlight.min.js"></script>
   <script src="../assets/js/highlight/highlightjs-line-numbers.min.js"></script>
