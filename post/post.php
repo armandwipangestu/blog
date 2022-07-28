@@ -89,7 +89,7 @@ $relateds_count = count($relateds);
 					<a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
 					<?php if (isset($_SESSION['login'])) : ?>
 						<li class="nav-item dropdown mt-2">
-							<a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
+						<a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><img src="../assets/img/avatar/<?= $_SESSION['avatar']; ?>" alt="" class="rounded-circle" style="width: 30px;"></a>
 							<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
 								<li><a class="dropdown-item" href="../admin/index.php"><i class="fas fa-plus"></i> Tambah Post</a></li>
 								<li><a href="../auth/daftar.php" class="dropdown-item"><i class="fas fa-user-plus"></i> Tambah Admin</a></li>
@@ -102,7 +102,9 @@ $relateds_count = count($relateds);
 						</li>
 					<?php endif; ?>
 					<?php if (!isset($_SESSION['login'])) : ?>
-						<a class="btn btn-light tombol" href="../auth/login.php"><i class="fas fa-user"></i> Login Admin</a>
+						<a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="../auth/login.php">
+							Sign in
+						</a>
 					<?php endif; ?>
 					<div class="text-center ms-3 mt-1">
 						<label class="switch">
@@ -145,10 +147,12 @@ $relateds_count = count($relateds);
 				?>
 					<span class="tag"><i class="fa-solid fa-tag me-1"></i> <?= $t; ?></span>
 				<?php endforeach; ?>
-				<br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
+
+				<br><small class="text-muted" style="font-size: 0.8rem;">Created <?= timeAgo($data["tanggal_dibuat"]); ?></small><br>
 				<?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
-					<small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
+					<small class="text-muted" style="font-size: 0.8rem;">Last updated <?= timeAgo($data['tanggal_diubah']); ?></small>
 				<?php endif; ?>
+
 				<?php if (isset($_SESSION["login"])) : ?>
 					<div class="action mt-3 mb-3">
 						<a class="btn btn-danger hapus me-2" data-id="<?= $data["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>

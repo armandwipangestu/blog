@@ -108,7 +108,7 @@ $parsedown = new Parsedown();
           <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
-              <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
+            <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><img src="../assets/img/avatar/<?= $_SESSION['avatar']; ?>" alt="" class="rounded-circle" style="width: 30px;"></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="../admin/index.php"><i class="fas fa-plus"></i> Tambah Post</a></li>
                 <li><a href="../auth/daftar.php" class="dropdown-item"><i class="fas fa-user-plus"></i> Tambah Admin</a></li>
@@ -121,7 +121,9 @@ $parsedown = new Parsedown();
             </li>
           <?php endif; ?>
           <?php if (!isset($_SESSION['login'])) : ?>
-            <a class="btn btn-light tombol" href="../auth/login.php"><i class="fas fa-user"></i> Login Admin</a>
+            <a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="../auth/login.php">
+              Sign in
+            </a>
           <?php endif; ?>
           <div class="text-center ms-3 mt-1">
             <label class="switch">
@@ -148,16 +150,17 @@ $parsedown = new Parsedown();
               <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" style="border-radius: 10px 10px 0 0;" />
             </div>
           </div>
-          <div class="mt-2 ms-3">
-            <a href="post.php?id=<?= $d["id"] ?>" style="text-decoration: none; color: inherit;"><h5 class="heading"><?= $d['judul']; ?></h5></a>
+          <div class="ms-3 mb-3">
+            <a href="post.php?id=<?= $d["id"] ?>" style="text-decoration: none; color: inherit;"><h5 class="heading mt-2"><?= $d['judul']; ?></h5></a>
             <?php
               $tags = $d["tag"];
               $tag = explode(" ", $tags);
               foreach ($tag as $t) :
-            ?>
+                ?>
               <span class="card-text tag mt-2"><i class="fa-solid fa-tag me-1"></i><?= $t; ?></span>
             <?php endforeach; ?>
-          </div>
+            <br><small class="text-muted" style="font-size: 0.8rem;"><?= timeAgo($d["tanggal_dibuat"]); ?></small><br>
+            </div>
         </div>
       </div>
     <?php endforeach; ?>

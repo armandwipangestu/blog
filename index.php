@@ -60,7 +60,7 @@ require_once 'function/constant.php';
           <a class="nav-link" href="about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
-              <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
+            <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><img src="assets/img/avatar/<?= $_SESSION['avatar']; ?>" alt="" class="rounded-circle" style="width: 30px;"></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="admin/index.php"><i class="fas fa-plus"></i> Tambah Post</a></li>
                 <li><a href="auth/daftar.php" class="dropdown-item"><i class="fas fa-user-plus"></i> Tambah Admin</a></li>
@@ -73,8 +73,8 @@ require_once 'function/constant.php';
             </li>
           <?php endif; ?>
           <?php if (!isset($_SESSION['login'])) : ?>
-            <a class="btn btn-light tombol" href="auth/login.php">
-              <i class="fas fa-user"></i> Login Admin
+            <a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="auth/login.php">
+              Sign in
             </a>
           <?php endif; ?>
           <div class="text-center ms-3 mt-1">
@@ -100,7 +100,7 @@ require_once 'function/constant.php';
         </div>
         <div class="col-lg-6 mt-5">
           <h4 class="about-text custom-font">
-            Tentang Blog
+            <i class="fa-solid fa-book me-2"></i> Tentang Blog
           </h4>
           <p class="mt-3 text-muted">Blog ini dibuat menggunakan Sistem Operasi <b class="text-white">Arch Linux</b>. Source code ditulis menggunakan Text Editor <b class="text-white">Visual Studio Code</b> & <b class="text-white">Neovim</b>. Blog ini adalah media online yang saya pergunakan untuk mendokumentasikan kegiatan belajar.
             Sebagian besar blog ini berisi catatan yang berhubungan dengan teknologi komputer. Seperti, sistem operasi GNU/Linux, jaringan komputer, bahasa pemrograman

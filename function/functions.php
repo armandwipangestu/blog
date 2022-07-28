@@ -38,6 +38,7 @@ function login($data)
 			$_SESSION['login'] = true;
 			$_SESSION['id'] = $id;
 			$_SESSION['username'] = $username;
+			$_SESSION['avatar'] = $user['avatar'];
 			header("Location: ../admin/index.php");
 			exit;
 		} else {
@@ -59,6 +60,13 @@ function daftar($data)
 	$conn = koneksi();
 	$username = htmlspecialchars($data['username']);
 	$password = mysqli_real_escape_string($conn, $data['password']);
+	// $path = "../../assets/img/avatar";
+	// $gambar = gambar($path, false);
+
+	// if (!$gambar) {
+	// 	return false;
+	// }
+	$gambar = "default.png";
 
 	if (empty($username) || empty($password)) {
 		return false;
@@ -70,7 +78,7 @@ function daftar($data)
 
 	$password_baru = password_hash($password, PASSWORD_DEFAULT);
 
-	$query = "INSERT INTO admin VALUES (NULL, '$username', '$password_baru')";
+	$query = "INSERT INTO admin VALUES (NULL, '$username', '$password_baru', '$gambar')";
 
 	mysqli_query($conn, $query) or die(mysqli_error($conn));
 	return mysqli_affected_rows($conn);
@@ -160,6 +168,35 @@ function tanggal_indonesia($tanggal)
 	return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0] . ' ' . date("H:i");
 }
 
+function timeAgo($datetime, $full = false) {
+    $now = new DateTime;
+    $ago = new DateTime($datetime);
+    $diff = $now->diff($ago);
+
+    $diff->w = floor($diff->d / 7);
+    $diff->d -= $diff->w * 7;
+
+    $string = array(
+        'y' => 'year',
+        'm' => 'month',
+        'w' => 'week',
+        'd' => 'day',
+        'h' => 'hour',
+        'i' => 'minute',
+        's' => 'second',
+    );
+    foreach ($string as $k => &$v) {
+        if ($diff->$k) {
+            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+        } else {
+            unset($string[$k]);
+        }
+    }
+
+    if (!$full) $string = array_slice($string, 0, 1);
+    return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
+
 function tambahPost($data)
 {
 	$conn = koneksi();
@@ -171,7 +208,7 @@ function tambahPost($data)
 	$path = "../../assets/img/post/";
 	$gambar = gambar($path, false);
 	//$tanggal_dibuat = tanggal_indonesia(date('Y-m-d'));
-	$tanggal_dibuat = date('d M y');
+	$tanggal_dibuat = date('d F Y H:i:s');
 
 	if (!$gambar) {
 		return false;
@@ -206,7 +243,7 @@ function ubahPost($data)
 	$gambar_lama = htmlspecialchars($data["gambar_lama"]);
 	$path = "../assets/img/post/";
 	//$tanggal_diubah = tanggal_indonesia(date('Y-m-d'));
-	$tanggal_diubah = date('d M y');
+	$tanggal_diubah = date('d F Y H:i:s');
 
 	$gambar = gambar($path, $gambar_lama);
 
@@ -262,13 +299,28 @@ function ubahUser($data)
 	$username = htmlspecialchars($data["username"]);
 	$password = htmlspecialchars($data["password"]);
 	$password_verify = htmlspecialchars($data["passwordverify"]);
+	$gambar_lama = htmlspecialchars($data["gambar_lama"]);
+	$path = "../assets/img/avatar/";
+	$gambar = gambar($path, $gambar_lama);
 
+	if (!$gambar) {
+		return false;
+	}
+
+	if ($gambar_lama != "default.png") {
+		if ($gambar_lama != $gambar && $gambar != '') {
+			unlink($path . $gambar_lama);
+		}
+	}
+	
 	if (password_verify($password_verify, $password)) {
-
+		
 		$query = "UPDATE admin SET
-            username = '$username'
+            username = '$username',
+			avatar = '$gambar'
             WHERE id = '$id'
     ";
+		$_SESSION['avatar'] = $gambar;
 		mysqli_query($conn, $query);
 
 		return mysqli_affected_rows($conn) or die(mysqli_error($conn));

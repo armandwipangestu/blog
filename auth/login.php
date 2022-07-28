@@ -46,7 +46,9 @@ if (isset($_POST['login'])) {
           <a class="nav-link" aria-current="page" href="../index.php"><i class="fas fa-home"></i> Home</a>
           <a class="nav-link" href="../post/index.php"><i class="fas fa-book"></i> Blog</a>
           <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
-          <a class="btn btn-light tombol" href="#"><i class="fas fa-user"></i> Login Admin</a>
+          <a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="">
+              Sign in
+          </a>
           <div class="text-center ms-3 mt-1">
             <label class="switch">
               <input type="checkbox">
@@ -70,7 +72,7 @@ if (isset($_POST['login'])) {
 
       <?php if (isset($login['error'])) : ?>
         <div class="text-center mt-4 text-danger mb-4 border p-1">
-          <i class="fas fa-exclamation-triangle">
+          <i class="fa-solid fa-circle-exclamation" style="text-transform: lowercase;">
             <span><?= $login['pesan']; ?></span>
           </i>
         </div>

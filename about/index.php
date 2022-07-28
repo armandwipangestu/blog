@@ -57,7 +57,7 @@ $filename = file_get_contents("./about.md", true);
           <a class="nav-link" href=""><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
-              <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
+            <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><img src="../assets/img/avatar/<?= $_SESSION['avatar']; ?>" alt="" class="rounded-circle" style="width: 30px;"></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="../admin/index.php"><i class="fas fa-plus"></i> Tambah Post</a></li>
                 <li><a href="../auth/daftar.php" class="dropdown-item"><i class="fas fa-user-plus"></i> Tambah Admin</a></li>
@@ -70,7 +70,9 @@ $filename = file_get_contents("./about.md", true);
             </li>
           <?php endif; ?>
           <?php if (!isset($_SESSION['login'])) : ?>
-            <a class="btn btn-light tombol" href="../auth/login.php"><i class="fas fa-user"></i> Login Admin</a>
+            <a class="btn btn-outline-light tombol me-2 ps-3 pe-3" href="../auth/login.php">
+              Sign in
+            </a>
           <?php endif; ?>
           <div class="text-center ms-3 mt-1">
             <label class="switch">

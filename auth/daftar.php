@@ -59,7 +59,7 @@ if (isset($_POST['daftar'])) {
           <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
-              <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
+            <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><img src="../assets/img/avatar/<?= $_SESSION['avatar']; ?>" alt="" class="rounded-circle" style="width: 30px;"></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="../admin/index.php"><i class="fas fa-plus"></i> Tambah Post</a></li>
                 <li><a href="auth/daftar.php" class="dropdown-item"><i class="fas fa-user-plus"></i> Tambah Admin</a></li>
@@ -102,14 +102,14 @@ if (isset($_POST['daftar'])) {
 
       <?php if (isset($error['error'])) : ?>
         <div class="text-center mt-4 text-danger mb-4 border p-1">
-          <i class="fas fa-exclamation-triangle">
+          <i class="fa-solid fa-circle-exclamation">
             <span><?= $error['pesan']; ?></span>
           </i>
         </div>
       <?php endif; ?>
       <?php if (isset($success['success'])) : ?>
         <div class="text-center mt-4 text-success mb-4 border p-1">
-          <i class="fas fa-exclamation-triangle">
+          <i class="fa-solid fa-check">
             <span><?= $success['pesan']; ?></span>
           </i>
         </div>
