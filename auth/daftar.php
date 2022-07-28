@@ -96,7 +96,7 @@ if (isset($_POST['daftar'])) {
     <div class="mt-5">
 
       <div class="text-center fs-1">
-        <i class="fa fa-boxes"></i>
+        <i class="fa-solid fa-boxes-stacked"></i>
         <h4 class="pt-3 mb-4">Sign up to blog</h4>
       </div>
 
@@ -150,6 +150,7 @@ if (isset($_POST['daftar'])) {
 
   <!-- End Form Daftar -->
 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

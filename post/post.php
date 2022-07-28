@@ -143,7 +143,7 @@ $relateds_count = count($relateds);
 				$tag = explode(" ", $tags);
 				foreach ($tag as $t) :
 				?>
-					<span class="tag"><i class="fas fa-tags me-1"></i> <?= $t; ?></span>
+					<span class="tag"><i class="fa-solid fa-tag me-1"></i> <?= $t; ?></span>
 				<?php endforeach; ?>
 				<br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
 				<?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
@@ -246,6 +246,7 @@ $relateds_count = count($relateds);
 		</div>
 	</div>
 
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 	<script src="../assets/js/bootstrap/bootstrap.js"></script>
 	<script src="../assets/js/highlight/highlight.min.js"></script>
 	<!--<script src="../assets/js/highlight/highlightjs-line-numbers.min.js"></script>-->
