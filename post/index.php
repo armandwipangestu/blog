@@ -150,16 +150,17 @@ $parsedown = new Parsedown();
               <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" style="border-radius: 10px 10px 0 0;" />
             </div>
           </div>
-          <div class="mt-2 ms-3">
-            <a href="post.php?id=<?= $d["id"] ?>" style="text-decoration: none; color: inherit;"><h5 class="heading"><?= $d['judul']; ?></h5></a>
+          <div class="ms-3 mb-3">
+            <a href="post.php?id=<?= $d["id"] ?>" style="text-decoration: none; color: inherit;"><h5 class="heading mt-2"><?= $d['judul']; ?></h5></a>
             <?php
               $tags = $d["tag"];
               $tag = explode(" ", $tags);
               foreach ($tag as $t) :
-            ?>
+                ?>
               <span class="card-text tag mt-2"><i class="fa-solid fa-tag me-1"></i><?= $t; ?></span>
             <?php endforeach; ?>
-          </div>
+            <br><small class="text-muted" style="font-size: 0.8rem;"><?= timeAgo($d["tanggal_dibuat"]); ?></small><br>
+            </div>
         </div>
       </div>
     <?php endforeach; ?>

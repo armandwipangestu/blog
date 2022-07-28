@@ -147,10 +147,12 @@ $relateds_count = count($relateds);
 				?>
 					<span class="tag"><i class="fa-solid fa-tag me-1"></i> <?= $t; ?></span>
 				<?php endforeach; ?>
-				<br><small class="text-muted" style="font-size: 0.8rem;">Created <?= $data['tanggal_dibuat']; ?></small><br>
+
+				<br><small class="text-muted" style="font-size: 0.8rem;">Created <?= timeAgo($data["tanggal_dibuat"]); ?></small><br>
 				<?php if (cekPerubahan($data['tanggal_diubah'])) : ?>
-					<small class="text-muted" style="font-size: 0.8rem;">Last updated <?= $data['tanggal_diubah']; ?></small>
+					<small class="text-muted" style="font-size: 0.8rem;">Last updated <?= timeAgo($data['tanggal_diubah']); ?></small>
 				<?php endif; ?>
+
 				<?php if (isset($_SESSION["login"])) : ?>
 					<div class="action mt-3 mb-3">
 						<a class="btn btn-danger hapus me-2" data-id="<?= $data["id"]; ?>"><i class="fas fa-trash me-1"></i> Hapus Post</a>
