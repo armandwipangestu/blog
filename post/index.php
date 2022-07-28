@@ -139,33 +139,6 @@ $parsedown = new Parsedown();
     <input type="text" class="form-control search bg-dark text-light text-center" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
   </div>
 
-  <!-- <div class="container mt-3 mb-3 container-post">
-    <div class="row">
-      <?php foreach ($data as $d) : ?>
-        <div class="col-md-3 p-2 mb-3">
-              <div class="card p-3 mb-2" style="border: 1px solid #a4a6a8; cursor: pointer;" data-id="<?= $d["id"]; ?>">
-                  <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center ratio ratio-16x9">
-                          <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" style="border-radius: 10px 10px 0 0;" />
-                      </div>
-                  </div>
-                  <div class="mt-2 ms-3">
-                      <h5 class="heading"><?= $d['judul']; ?></h5>
-                      <?php
-                        $tags = $d["tag"];
-                        $tag = explode(" ", $tags);
-                        foreach ($tag as $t) :
-                      ?>
-
-                        <span class="card-text tag mt-2"><i class="fas fa-tags me-1"></i><?= $t; ?></span>
-                      <?php endforeach; ?>
-                  </div>
-              </div>
-          </div>
-      <?php endforeach; ?>
-    </div>
-  </div> -->
-
   <div class="row row-cols-1 row-cols-md-4 g-4 ms-4 me-4 mb-5 container-post">
     <?php foreach ($data as $d) : ?>
       <div class="col-md-3 p-2 mb-3">
