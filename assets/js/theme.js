@@ -8,6 +8,7 @@ const cards = document.querySelectorAll(".card");
 const cardBodys = document.querySelectorAll(".card-body");
 const cardFooters = document.querySelectorAll(".card-footer");
 const codes = document.querySelectorAll("code");
+const textArea = document.querySelectorAll("textarea")
 const highlightLightTheme = "github.min";
 const highlightDarkTheme = "github-dark-dimmed.min";
 const tables = document.querySelectorAll("table");
@@ -52,6 +53,12 @@ const lightTheme = () => {
   if (searchBar) {
     searchBar.className = "form-control search bg-light text-dark mt-5 text-center";
   }
+
+  if (textArea) {
+    textArea.forEach(ta => {
+      ta.className = "form-control bg-light text-dark"
+    })
+  }
 }
 
 const darkTheme = () => {
@@ -93,6 +100,12 @@ const darkTheme = () => {
   
   if (searchBar) {
     searchBar.className = "form-control search bg-dark text-light mt-5 text-center";
+  }
+
+  if (textArea) {
+    textArea.forEach(ta => {
+      ta.className = "form-control bg-dark text-light"
+    })
   }
 }
 
