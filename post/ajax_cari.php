@@ -29,6 +29,7 @@ $data = cari($_GET["keyword"]);
 
                 <span class="card-text tag mt-2"><i class="fas fa-tags me-1"></i><?= $t; ?></span>
               <?php endforeach; ?>
+              <br><small class="text-muted" style="font-size: 0.8rem;"><?= timeAgo($d["tanggal_dibuat"]); ?></small><br>
           </div>
       </div>
   </div>
