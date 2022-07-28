@@ -82,7 +82,7 @@ if (isset($_POST["submit"])) {
           <a class="nav-link" href="../about/index.php"><i class="fas fa-address-card"></i> About</a>
           <?php if (isset($_SESSION['login'])) : ?>
             <li class="nav-item dropdown mt-2">
-              <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><i class="fas fa-user"></i> <?= $_SESSION['username']; ?></a>
+              <a class="dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;"><img src="../assets/img/avatar/<?= $_SESSION['avatar']; ?>" alt="" class="rounded-circle" style="width: 30px;"></a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="../admin/index.php"><i class="fas fa-plus"></i> Tambah Post</a></li>
                 <li><a href="../auth/daftar.php" class="dropdown-item"><i class="fas fa-user-plus"></i> Tambah Admin</a></li>
@@ -126,6 +126,14 @@ if (isset($_POST["submit"])) {
 
             <div class="input-group">
               <input type="hidden" name="id" id="id" class="form-control" value="<?= $u["id"]; ?>">
+            </div>
+
+            <div class="mt-2 text-center">
+              <img src="../assets/img/avatar/<?= $u["avatar"]; ?>" alt="" class="rounded-circle img-preview" style="width: 200px;">
+              <div class="input-group mt-3 mb-3">
+                  <input class="form-control" type="hidden" name="gambar_lama" value="<?= $u["avatar"]; ?>">
+                  <input class="form-control gambar-preview mt-3" type="file" name="gambar" style="border: none;" onchange="previewImage()">
+              </div>
             </div>
 
             <div class="mt-2">
@@ -174,7 +182,18 @@ if (isset($_POST["submit"])) {
     </div>
   </div>
 
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-lg-auto">
+        <button type="button" class="btn btn-success btn-floating btn-lg rounded-circle" id="btn-back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="../assets/js/previewimage.js"></script>
   <script src="../assets/js/highlight/highlight.min.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>

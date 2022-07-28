@@ -38,6 +38,7 @@ function login($data)
 			$_SESSION['login'] = true;
 			$_SESSION['id'] = $id;
 			$_SESSION['username'] = $username;
+			$_SESSION['avatar'] = $user['avatar'];
 			header("Location: ../admin/index.php");
 			exit;
 		} else {
@@ -59,6 +60,13 @@ function daftar($data)
 	$conn = koneksi();
 	$username = htmlspecialchars($data['username']);
 	$password = mysqli_real_escape_string($conn, $data['password']);
+	// $path = "../../assets/img/avatar";
+	// $gambar = gambar($path, false);
+
+	// if (!$gambar) {
+	// 	return false;
+	// }
+	$gambar = "default.png";
 
 	if (empty($username) || empty($password)) {
 		return false;
@@ -70,7 +78,7 @@ function daftar($data)
 
 	$password_baru = password_hash($password, PASSWORD_DEFAULT);
 
-	$query = "INSERT INTO admin VALUES (NULL, '$username', '$password_baru')";
+	$query = "INSERT INTO admin VALUES (NULL, '$username', '$password_baru', '$gambar')";
 
 	mysqli_query($conn, $query) or die(mysqli_error($conn));
 	return mysqli_affected_rows($conn);
@@ -291,11 +299,26 @@ function ubahUser($data)
 	$username = htmlspecialchars($data["username"]);
 	$password = htmlspecialchars($data["password"]);
 	$password_verify = htmlspecialchars($data["passwordverify"]);
+	$gambar_lama = htmlspecialchars($data["gambar_lama"]);
+	$path = "../assets/img/avatar/";
+	$gambar = gambar($path, $gambar_lama);
+
+	if (!$gambar) {
+		return false;
+	}
+
+	if ($gambar_lama != "default.png") {
+		if ($gambar_lama != $gambar && $gambar != '') {
+			unlink($path . $gambar_lama);
+			$_SESSION['avatar'] = $gambar;
+		}
+	}
 
 	if (password_verify($password_verify, $password)) {
 
 		$query = "UPDATE admin SET
-            username = '$username'
+            username = '$username',
+			avatar = '$gambar'
             WHERE id = '$id'
     ";
 		mysqli_query($conn, $query);
