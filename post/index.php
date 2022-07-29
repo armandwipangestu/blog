@@ -138,7 +138,7 @@ $parsedown = new Parsedown();
   <!-- End Navbar -->
 
   <div style="margin: 6rem 2rem 2rem 2rem;">
-    <input type="text" class="form-control search bg-dark text-light text-center" placeholder="Masukan keyword pencarian" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
+    <input type="text" class="form-control search bg-dark text-light text-center" placeholder="Enter keyword" style="border-radius: 20px; font-size: 1rem; border-color: #a4a6a8;">
   </div>
 
   <div class="row row-cols-1 row-cols-md-4 g-4 ms-4 me-4 mb-5 container-post">
