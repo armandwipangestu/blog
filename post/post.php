@@ -50,6 +50,8 @@ $relateds_count = count($relateds);
 	<link rel="stylesheet" title="<?= highlightLightTheme(); ?>" href="../assets/css/highlight/<?= highlightLightTheme(); ?>.css" disabled="disabled">
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<link rel="stylesheet" href="../assets/css/theme.css">
+	<link rel="stylesheet" href="../assets/css/relatedPost.css">
+
 	<style>
 		.container .row .preview {
 			margin-top: 3rem;
@@ -165,74 +167,36 @@ $relateds_count = count($relateds);
 
 				<?php if (empty($relateds) == false) : ?>
 
-					<div class="recommendation-post mt-5 mb-5">
+					<div class="mt-5">
 						<h4><i class="fas fa-tag"></i> Related Post by Tag</h4>
 						<hr>
-						<div id="carouselExampleCaptions" class="carousel carousel-fade slide" data-bs-ride="carousel">
-							<div class="carousel-indicators">
+					</div>
 
-								<?php
-								for ($i = 0; $i < $relateds_count; $i++) {
-									if ($i == 0) {
-										echo "
-                    <button type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='$i' class='active' aria-current='true' aria-label='Slide $i'></button>
-                    ";
-									} else {
-										echo "
-                    <button type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='$i' aria-label='Slide $i'></button>
-                    ";
-									}
+					<div class="wrapper mb-5">
+						<?php
+							for ($i = 0; $i < $relateds_count; $i++) {
+								echo '
+									<div class="item">
+										<a href="post.php?id=' . $relateds[$i]["id"] . '" class="text-dark">
+											<div class="ratio ratio-16x9">
+												<img src="../assets/img/post/' . $relateds[$i]["thumbnail"] . '" class="rounded">
+											</div>
+											<h6 class="mt-2">' . $relateds[$i]["judul"] . '</h6>
+								';
+								
+								$related_tags = $relateds[$i]["tag"];
+								$related_tag = explode(" ", $related_tags);
+								foreach($related_tag as $rl) {
+									echo '
+											<span class="tag" style="font-size: 10px;"><i class="fa-solid fa-tag me-1"></i>' . $rl . '</span>
+									';
 								}
-								?>
-
-							</div>
-
-							<div class="carousel-inner">
-
-								<?php
-								for ($i = 0; $i < $relateds_count; $i++) {
-									if ($i == 0) {
-										echo "
-                      <div class='carousel-item active' data-mdb-interval='1'>
-                        <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <div class='ratio ratio-16x9 rounded'>
-                            <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
-                          </div>
-                          <div class='carousel-caption d-sm-block'>
-                            <h5>" . $relateds[$i]['judul'] . "</h5>
-                            <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
-                          </div>
-                        </a>
-                      </div>
-                  ";
-									} else {
-										echo "
-                      <div class='carousel-item' data-mdb-interval='1'>
-                        <a href='post.php?id=" . $relateds[$i]["id"] . "'>
-                          <div class='ratio ratio-16x9 rounded'>
-                            <img src='../assets/img/post/" . $relateds[$i]['thumbnail'] . "' class='d-block w-100 img-fluid rounded mx-auto' alt='" . $relateds[$i]['thumbnail'] . "'>
-                          </div>
-                          <div class='carousel-caption d-sm-block'>
-                            <h5>" . $relateds[$i]['judul'] . "</h5>
-                            <span class='btn btn-light tag'><i class='fas fa-tag me-1'></i>" . $relateds[$i]['tag'] . "</span> 
-                          </div>
-                        </a>
-                      </div>
-                  ";
-									}
-								}
-								?>
-
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Next</span>
-							</button>
-						</div>
+								echo '
+										</a>
+									</div>
+								';
+							}
+						?>
 					</div>
 				<?php endif; ?>
 
