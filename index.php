@@ -108,8 +108,6 @@ require_once 'function/constant.php';
           </p>
           <div class="contact">
             <!-- <a href="#" class="text-muted" id="errorAlert"><i class="fas fa-envelope"></i> Email</a> -->
-            <a href="<?= getLink("Telegram"); ?>" target="_blank" class="text-muted"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="<?= getLink("YouTube"); ?>" target="_blank" class="text-muted"><i class="fab fa-youtube"></i> YouTube</a>
             <a href="<?= getLink("GitHub"); ?>" target="_blank" class="text-muted"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>

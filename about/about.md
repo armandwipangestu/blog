@@ -18,10 +18,6 @@ Selain itu saya juga hobby mempelajari hal - hal yang berhubungan dengan IT, sep
 
 ### Contact Me:
 
-- <a href="https://t.me/armandwipangestu" target="_blank" class="text-muted">
-  <i class="fab fa-telegram"></i> Telegram
-</a>
-
 - <a href="mailto:armandwi.pangestu7@gmail.com" target="_blank" class="text-muted">
   <i class="fas fa-envelope"></i> Email
 </a>
