@@ -50,8 +50,9 @@ return mysqli_connect("localhost", "username", "password", "demo_blog");
 
 ### Sebagai user
 
-https://user-images.githubusercontent.com/64394320/181878176-132da75b-29c8-4f92-bc7e-64636941c678.mp4
+https://user-images.githubusercontent.com/64394320/185077351-e60a473f-ef4a-4ac0-ac71-9fe72a001d4c.mp4
 
 ### Sebagai admin
 
-https://user-images.githubusercontent.com/64394320/181878184-3f36e17c-e911-4f49-9c50-7a8c8398bda3.mp4
+https://user-images.githubusercontent.com/64394320/185077988-51612d16-02df-44e2-9cea-7bd00a63eaf2.mp4
+
