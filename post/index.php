@@ -150,7 +150,7 @@ $parsedown = new Parsedown();
               <img src="../assets/img/post/<?= $d['thumbnail']; ?>" alt="<?= $d['thumbnail']; ?>" class="card-img-top img-fluid" style="border-radius: 10px 10px 0 0;" />
             </div>
           </div>
-          <div class="ms-3 mb-3">
+          <div class="ms-3 mb-3 me-3">
             <a href="post.php?id=<?= $d["id"] ?>" style="text-decoration: none; color: inherit;"><h5 class="heading mt-2"><?= $d['judul']; ?></h5></a>
             <?php
               $tags = $d["tag"];
