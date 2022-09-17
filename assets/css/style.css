@@ -33,20 +33,18 @@
 
 /* Utility */
 
-
 .tombol {
   border-radius: 40px;
 }
 
 /* Start Desktop Responsive */
 @media (min-width: 992px) {
-
   .nav-link {
     margin-right: 20px;
   }
 
   .nav-link:hover::after {
-    content: '';
+    content: "";
     display: block;
     border-bottom: 3px solid white;
     width: 50%;
@@ -80,10 +78,8 @@
     border-radius: 15px !important;
   }
   /* End Panel Admin */
-
 }
 /* End Desktop Responsive */
-
 
 /* Highlight JS Number */
 /* for block of numbers */
@@ -162,24 +158,23 @@ code {
   color: rgb(245, 245, 245);
   /*border: 1px solid #E1E4E5;*/
   border: 1px solid rgba(110, 118, 129, 0.4);
-
 }
 
-pre code.hljs {
+/* pre code.hljs {
   border: none;
-}
+} */
 
 .hljs-ln-numbers {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-    text-align: center;
-    color: #6c757d;
-    /*border-right: medium solid #6c757d;*/
+  text-align: center;
+  color: #6c757d;
+  /*border-right: medium solid #6c757d;*/
 }
 
 .hljs-ln .hljs-ln-code {
@@ -188,10 +183,10 @@ pre code.hljs {
 
 .code-badge {
   margin: 1px;
-  opacity: .75 !important;
+  opacity: 0.75 !important;
   /*border-radius: 0 4px 0 5px !important;*/
   border-radius: 5px !important;
-  background: rgb(15 23 42) !important; 
+  background: rgb(15 23 42) !important;
 }
 
 .code-badge:hover {
@@ -261,4 +256,19 @@ h3:after {
   float: right;*/
   background: #484f58;
   margin: 7px 0 15px 0;
+}
+
+.code-theme {
+  position: absolute;
+  right: 7px;
+  top: -30px;
+  cursor: pointer;
+  background: rgb(15 23 42) !important;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+}
+
+pre {
+  overflow: unset;
+  margin-top: 40px;
 }

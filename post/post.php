@@ -222,6 +222,7 @@ $relateds_count = count($relateds);
 	<!--<script src="../assets/js/highlight/highlight-badge.js"></script>-->
 	<script src="../assets/js/highlight/highlight-badge-init.js"></script>
 	<script src="../assets/js/script.js"></script>
+	<script src="../assets/js/code.js"></script>
 	<script src="../assets/js/theme.js"></script>
 	<script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
 	<?php if (isset($_SESSION["login"])) : ?>
