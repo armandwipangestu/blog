@@ -122,7 +122,7 @@ $relateds_count = count($relateds);
 
 	<div class="container mt-5">
 		<div class="row justify-content-md-center">
-			<div class="col-lg-9 mt-5">
+			<div class="col-lg-8 mt-5">
 				<?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "svg") : ?>
 					<a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
 						<div class="ratio ratio-16x9">
@@ -134,7 +134,9 @@ $relateds_count = count($relateds);
 				<?php if (pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "png" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "jpeg" || pathinfo($data["thumbnail"], PATHINFO_EXTENSION) == "gif") : ?>
 					<!-- <a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank"> -->
 					<a href="../assets/img/post/<?= $data['thumbnail']; ?>" target="_blank">
-						<img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid" alt="<?= $data['thumbnail']; ?>">
+						<div class="text-center">
+													<img src="../assets/img/post/<?= $data['thumbnail']; ?>" class="card-img-top rounded mb-3 img-fluid thumbnail" alt="<?= $data['thumbnail']; ?>">
+						</div>
 					</a>
 				<?php endif; ?>
 				<div class="mt-3 mb-3">
@@ -218,8 +220,8 @@ $relateds_count = count($relateds);
 	<script src="../assets/js/bootstrap/bootstrap.js"></script>
 	<script src="../assets/js/highlight/highlight.min.js"></script>
 	<!--<script src="../assets/js/highlight/highlightjs-line-numbers.min.js"></script>-->
-	<script src="../assets/js/highlight/highlight-badge.min.js"></script>
-	<!--<script src="../assets/js/highlight/highlight-badge.js"></script>-->
+	<!-- <script src="../assets/js/highlight/highlight-badge.min.js"></script> -->
+	<script src="../assets/js/highlight/highlight-badge.js"></script>
 	<script src="../assets/js/highlight/highlight-badge-init.js"></script>
 	<script src="../assets/js/script.js"></script>
 	<script src="../assets/js/code.js"></script>

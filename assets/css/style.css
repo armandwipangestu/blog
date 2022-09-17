@@ -81,6 +81,35 @@
 }
 /* End Desktop Responsive */
 
+::-webkit-scrollbar {
+  width: 15px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #f7f4ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #383a42;
+  border-radius: 100vh;
+  border: 3px solid transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555967;
+}
+
+h3 a {
+  scroll-margin-top: 60px;
+}
+
+.thumbnail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* Highlight JS Number */
 /* for block of numbers */
 .hljs-ln-numbers {
