@@ -106,9 +106,9 @@ h3 a {
   scroll-margin-top: 60px;
 }
 
-.thumbnail {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+/* .thumbnail { */
+/*   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+/* } */
 
 /* Highlight JS Number */
 /* for block of numbers */
