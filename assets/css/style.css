@@ -81,7 +81,7 @@
 }
 /* End Desktop Responsive */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 15px;
   height: 20px;
 }
@@ -100,6 +100,23 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555967;
+} */
+
+::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px !important;
+  height: 5px !important;
+  background: content-box rgba(94, 109, 122, 0.54);
+  border-radius: 17px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
 }
 
 h3 a {
