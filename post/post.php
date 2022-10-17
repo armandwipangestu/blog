@@ -163,6 +163,11 @@ $relateds_count = count($relateds);
 						<a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning"><i class="fas fa-pen me-1"></i> Ubah Post</a>
 					</div>
 				<?php endif; ?>
+
+				<section id="toc">
+					<h4><i class="fas fa-book me-2"></i>Daftar Isi:</h4>
+				</section>
+
 				<div class="mt-3">
 					<?= $parsedown->text($data['konten']); ?>
 				</div>
@@ -227,6 +232,16 @@ $relateds_count = count($relateds);
 	<script src="../assets/js/code.js"></script>
 	<script src="../assets/js/theme.js"></script>
 	<script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>
+	<script src="../assets/js/toc.js"></script>
+	<script>
+		// remove fragment as much as it can go without adding an entry in browser history:
+		window.location.replace("#");
+
+		// slice off the remaining '#' in HTML5:    
+		if (typeof window.history.replaceState == 'function') {
+			history.replaceState({}, '', window.location.href.slice(0, -1));
+		}
+	</script>
 	<?php if (isset($_SESSION["login"])) : ?>
 		<script>
 			const logout = document.querySelector('.logout');

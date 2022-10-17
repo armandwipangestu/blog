@@ -4,11 +4,11 @@ hljs.highlightAll();
 //hljs.initLineNumbersOnLoad();
 
 const errorAlert = document.querySelectorAll("#errorAlert");
-errorAlert.forEach(eA => {
+errorAlert.forEach((eA) => {
   eA.addEventListener("click", function () {
     Swal.fire({
-      icon: 'error',
-      title: 'Error'
+      icon: "error",
+      title: "Error",
     });
   });
 });
@@ -22,10 +22,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -48,11 +45,10 @@ function backToTop() {
   event.preventDefault();
 })*/
 
-
 // Get h3
 const headings3 = document.querySelectorAll("h3");
 
-headings3.forEach(h3 => {
+headings3.forEach((h3) => {
   const anchor = document.createElement("a");
   const iconAnchor = document.createElement("i");
   //const nodeAnchor = document.createTextNode("# ");
@@ -62,6 +58,7 @@ headings3.forEach(h3 => {
   iconAnchor.setAttribute("style", "font-size: 20px");
   anchor.setAttribute("href", `#${h3.innerHTML}`);
   anchor.setAttribute("name", `${h3.innerHTML}`);
+  anchor.setAttribute("id", "tocTarget");
   //anchor.setAttribute("id", `${h3.innerHTML}`);
   //console.log(anchor);
   h3.insertBefore(anchor, h3.firstChild);
